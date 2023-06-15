@@ -5,7 +5,7 @@
 a{color: inherit}            
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 body{
-    background: black url('../img/backCard.jpg') center center / 100% 100% no-repeat;
+    background-color: black;
     margin: 10px; height: 100vh;
 }
 article{
