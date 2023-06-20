@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:#010101}
+        </style>
+    </defs>
+    <g id="ico_coupon_benefits" transform="translate(6 11.5)">
+        <g id="빼기_60" fill="#fff" stroke="none">
+            <path d="M-916-1609.5h-46v-30h46v10.028c-2.247.25-4 2.16-4 4.472 0 2.312 1.753 4.222 4 4.472v11.028z" transform="translate(963 1643)"/>
+            <path fill="#010101" d="M-917-1610.5v-9.208c-2.306-.655-4-2.78-4-5.292 0-2.513 1.694-4.637 4-5.292v-8.208h-44v28h44m2 2h-48v-32h48v12.036c-.162-.023-.33-.036-.5-.036-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5c.168 0 .336-.012.5-.036v13.036z" transform="translate(963 1643)"/>
+        </g>
+        <path id="사각형_813" d="M0 0H2V2H0z" class="cls-3" transform="translate(32 7.5)"/>
+        <path id="사각형_814" d="M0 0H2V2H0z" class="cls-3" transform="translate(32 13.5)"/>
+        <path id="사각형_815" d="M0 0H2V2H0z" class="cls-3" transform="translate(32 19.5)"/>
+        <path id="사각형_816" d="M0 0H2V2H0z" class="cls-3" transform="translate(32 25.5)"/>
+    </g>
+</svg>

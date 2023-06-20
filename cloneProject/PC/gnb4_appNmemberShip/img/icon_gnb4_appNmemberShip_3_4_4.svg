@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:#fff}.cls-2{stroke:#010101;stroke-width:2px}.cls-8{fill:none}.cls-7,.cls-9{stroke:none}.cls-9{fill:#010101}
+        </style>
+    </defs>
+    <g id="ico_stemp_gift" transform="translate(-1674 -2019)">
+        <g id="사각형_536" class="cls-2">
+            <path d="M0 0h36v9a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V0z" class="cls-7" transform="translate(1682 2062)"/>
+            <path d="M2 1h32a1 1 0 0 1 1 1v7H1V2a1 1 0 0 1 1-1z" class="cls-8" transform="translate(1682 2062)"/>
+        </g>
+        <g id="합치기_22" class="cls-3">
+            <path d="M14.212 31H5.788L1.282 12.376l-.001-.005-.001-.005c-.015-.058-.03-.117-.043-.176l-.001-.005-.001-.005-.048-.198-.05-.285C1.047 11.175 1 10.64 1 10.104 1 5.084 5.037 1 10 1s9 4.084 9 9.104c0 .535-.046 1.07-.137 1.593l-.023.131-.005.02-.004.021c-.052.27-.117.54-.194.803l-.006.021-.005.022L14.212 31z" class="cls-7" transform="translate(1690 2020)"/>
+            <path d="M13.425 30l4.229-17.52.01-.043.013-.044c.068-.234.126-.474.172-.714l.01-.045.001-.01.018-.098c.08-.466.122-.945.122-1.422C18 5.636 14.411 2 10 2s-8 3.636-8 8.104c0 .478.041.956.122 1.422l.044.253.04.166.003.01.002.01.038.157.003.01.002.009L6.574 30h6.85M15 32H5.001L.31 12.61c-.017-.064-.032-.13-.047-.195L.13 11.87h.022C.052 11.296 0 10.707 0 10.104 0 4.524 4.477 0 10 0s10 4.524 10 10.104c0 .603-.052 1.192-.152 1.765h.011l-.046.191c-.059.302-.13.599-.215.89L14.999 32z" class="cls-9" transform="translate(1690 2020)"/>
+        </g>
+        <g id="합치기_21" class="cls-3">
+            <path d="M42 17H0V4.731c0-.403.292-.73.65-.73H14V1h14v3h13.35c.358 0 .65.328.65.731V17z" class="cls-7" transform="translate(1679 2048)"/>
+            <path d="M41 16V5H27V2H15v3H1v11h40m1.45 2H-.45c-.304 0-.55-.258-.55-.577V4.731c0-.955.739-1.73 1.65-1.73H13V1c0-.552.448-1 1-1h14c.552 0 1 .448 1 1v2h12.35C42.26 3 43 3.777 43 4.732v12.692c0 .319-.246.577-.55.577z" class="cls-9" transform="translate(1679 2048)"/>
+        </g>
+        <g id="plus" transform="translate(5520 -1895)">
+            <path id="사각형_818" fill="#fff" d="M0 0H11V8H0z" transform="translate(-3811 3959)"/>
+            <g id="타원_165" class="cls-2" transform="translate(-3809 3953)">
+                <circle cx="10" cy="10" r="10" class="cls-7"/>
+                <circle cx="10" cy="10" r="9" class="cls-8"/>
+            </g>
+            <g id="사각형_808" fill="#fff" stroke="#010101">
+                <path d="M0 0H2V8H0z" class="cls-7" transform="translate(-3800 3959)"/>
+                <path d="M0.5 0.5H1.5V7.5H0.5z" class="cls-8" transform="translate(-3800 3959)"/>
+            </g>
+            <path id="패스_3089" fill="none" stroke="#010101" stroke-width="2px" d="M-3802.125 3962.063L-3799 3959l3.063 3.063"/>
+        </g>
+    </g>
+</svg>

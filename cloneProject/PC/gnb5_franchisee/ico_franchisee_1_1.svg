@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_store" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-3{fill:#fff}.cls-6,.cls-9{stroke:none}.cls-7{fill:none}.cls-9{fill:#000}
+        </style>
+    </defs>
+    <g id="사각형_647" fill="#fff" stroke="#010101">
+        <path d="M0 0H107V2H0z" class="cls-6" transform="translate(7 104)"/>
+        <path d="M0.5 0.5H106.5V1.5H0.5z" class="cls-7" transform="translate(7 104)"/>
+    </g>
+    <g id="패스_2828" class="cls-3">
+        <path d="M65 76H1V.594l32-17.455L65 .594V76z" class="cls-6" transform="translate(28 29)"/>
+        <path fill="#010101" d="M33-15.722L2 1.188V75h62V1.187L33-15.722M33-18L66 0v77H0V0l33-18z" transform="translate(28 29)"/>
+    </g>
+    <g id="합치기_17" class="cls-3">
+        <path d="M-1667.5 2306.5h-1v-5h1v5zm-12 0h-1v-5h1v5zm-12 0h-1v-5h1v5zm-12 0h-1v-5h1v5z" class="cls-6" transform="translate(1747 -2260)"/>
+        <path d="M-1667 2307h-2v-6h2v6zm-12 0h-2v-6h2v6zm-12 0h-2v-6h2v6zm-12 0h-2v-6h2v6z" class="cls-9" transform="translate(1747 -2260)"/>
+    </g>
+    <g id="합치기_18" class="cls-3">
+        <path d="M-1667.5 2306.5h-1v-5h1v5zm-12 0h-1v-5h1v5zm-12 0h-1v-5h1v5zm-12 0h-1v-5h1v5z" class="cls-6" transform="translate(1747 -2245)"/>
+        <path d="M-1667 2307h-2v-6h2v6zm-12 0h-2v-6h2v6zm-12 0h-2v-6h2v6zm-12 0h-2v-6h2v6z" class="cls-9" transform="translate(1747 -2245)"/>
+    </g>
+    <g id="사각형_656" fill="#fff" stroke="#000">
+        <path d="M0 0H66V2H0z" class="cls-6" transform="translate(28 76)"/>
+        <path d="M0.5 0.5H65.5V1.5H0.5z" class="cls-7" transform="translate(28 76)"/>
+    </g>
+    <g id="사각형_657" fill="#fff" stroke="#000" stroke-width="2px">
+        <path d="M0 0H16V18H0z" class="cls-6" transform="translate(53 88)"/>
+        <path d="M1 1H15V17H1z" class="cls-7" transform="translate(53 88)"/>
+    </g>
+</svg>

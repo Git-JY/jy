@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:#fff}.cls-2,.cls-4{stroke:#010101;stroke-width:2px}.cls-4,.cls-6{fill:none}.cls-5,.cls-7{stroke:none}.cls-7{fill:#010101}
+        </style>
+    </defs>
+    <g id="ico_cake" transform="translate(3 22)">
+        <g id="케익" transform="translate(6 -14.378)">
+            <g id="사각형_354" class="cls-2" transform="translate(13 54.378)">
+                <path d="M2 0h72a2 2 0 0 1 2 2v30H0V2a2 2 0 0 1 2-2z" class="cls-5"/>
+                <rect width="74" height="30" x="1" y="1" class="cls-6" rx="1"/>
+            </g>
+            <g id="사각형_795" class="cls-2" transform="translate(19 30.378)">
+                <path d="M2 0h60a2 2 0 0 1 2 2v24H0V2a2 2 0 0 1 2-2z" class="cls-5"/>
+                <rect width="62" height="24" x="1" y="1" class="cls-6" rx="1"/>
+            </g>
+            <g id="초" transform="translate(0 -17)">
+                <g id="패스_2902" class="cls-3">
+                    <path d="M4.5 11.078c-1.93 0-3.5-1.782-3.5-3.972C1 5.626 2.915 2.691 4.5.662 6.085 2.691 8 5.626 8 7.106c0 2.19-1.57 3.972-3.5 3.972z" class="cls-5" transform="translate(68 26.3)"/>
+                    <path d="M4.5 2.336c-.2.276-.407.57-.613.876C2.053 5.932 2 6.994 2 7.106c0 1.639 1.122 2.972 2.5 2.972S7 8.745 7 7.106c0-.112-.053-1.175-1.887-3.894-.206-.306-.413-.6-.613-.876m0-3.258S9 4.36 9 7.106c0 2.746-2.015 4.972-4.5 4.972S0 9.852 0 7.106C0 4.36 4.5-.922 4.5-.922z" class="cls-7" transform="translate(68 26.3)"/>
+                </g>
+                <g id="패스_2912" class="cls-3">
+                    <path d="M4.5 11.078c-1.93 0-3.5-1.782-3.5-3.972C1 5.626 2.915 2.691 4.5.662 6.085 2.691 8 5.626 8 7.106c0 2.19-1.57 3.972-3.5 3.972z" class="cls-5" transform="translate(47 26.3)"/>
+                    <path d="M4.5 2.336c-.2.276-.407.57-.613.876C2.053 5.932 2 6.994 2 7.106c0 1.639 1.122 2.972 2.5 2.972S7 8.745 7 7.106c0-.112-.053-1.175-1.887-3.894-.206-.306-.413-.6-.613-.876m0-3.258S9 4.36 9 7.106c0 2.746-2.015 4.972-4.5 4.972S0 9.852 0 7.106C0 4.36 4.5-.922 4.5-.922z" class="cls-7" transform="translate(47 26.3)"/>
+                </g>
+                <g id="패스_2913" class="cls-3">
+                    <path d="M4.5 11.078c-1.93 0-3.5-1.782-3.5-3.972C1 5.626 2.915 2.691 4.5.662 6.085 2.691 8 5.626 8 7.106c0 2.19-1.57 3.972-3.5 3.972z" class="cls-5" transform="translate(26 26.3)"/>
+                    <path d="M4.5 2.336c-.2.276-.407.57-.613.876C2.053 5.932 2 6.994 2 7.106c0 1.639 1.122 2.972 2.5 2.972S7 8.745 7 7.106c0-.112-.053-1.175-1.887-3.894-.206-.306-.413-.6-.613-.876m0-3.258S9 4.36 9 7.106c0 2.746-2.015 4.972-4.5 4.972S0 9.852 0 7.106C0 4.36 4.5-.922 4.5-.922z" class="cls-7" transform="translate(26 26.3)"/>
+                </g>
+                <path id="선_6" d="M0 0L0 10" class="cls-4" transform="translate(72.5 37.878)"/>
+                <path id="선_7" d="M0 0L0 10" class="cls-4" transform="translate(51.5 37.878)"/>
+                <path id="선_8" d="M0 0L0 10" class="cls-4" transform="translate(30.5 37.878)"/>
+            </g>
+            <g id="사각형_800" class="cls-2">
+                <path d="M0 0h96v4a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V0z" class="cls-5" transform="translate(3 84.378)"/>
+                <path d="M2 1h92a1 1 0 0 1 1 1v2a7 7 0 0 1-7 7H8a7 7 0 0 1-7-7V2a1 1 0 0 1 1-1z" class="cls-6" transform="translate(3 84.378)"/>
+            </g>
+            <path id="패스_2929" d="M19 40.878h64" class="cls-4" transform="translate(0 -.5)"/>
+        </g>
+    </g>
+</svg>
