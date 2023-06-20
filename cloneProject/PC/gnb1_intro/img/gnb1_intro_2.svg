@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+    <defs>
+        <style>
+            .cls-1{fill:#010101}
+        </style>
+    </defs>
+    <g id="img_p_vision" transform="translate(-1419 -554)">
+        <path id="사각형_710" d="M0 0H150V1H0z" class="cls-1" transform="translate(1419 628)"/>
+        <path id="사각형_711" d="M0 0H150V1H0z" class="cls-1" transform="rotate(90 470.5 1024.5)"/>
+        <path id="사각형_712" d="M0 0H150V1H0z" class="cls-1" transform="rotate(45 26.767 2027.794)"/>
+        <path id="사각형_713" d="M0 0H150V1H0z" class="cls-1" transform="rotate(-45 1542.62 -1398.908)"/>
+    </g>
+</svg>

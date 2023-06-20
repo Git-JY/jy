@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:#fff;stroke:#010101;stroke-width:2px}.cls-4{stroke:none}.cls-6{fill:none}
+        </style>
+    </defs>
+    <g id="ico_shop_select">
+        <g id="매장" transform="translate(-12.667 -16.255)">
+            <g id="빼기_59" fill="#fff">
+                <path d="M38 33.001H24.25v-9c0-2.757-2.243-5-5-5s-5 2.243-5 5v9H0V1h38v32.001z" class="cls-4" transform="translate(23.667 35.255)"/>
+                <path fill="#010101" d="M37 32.001V2H1v30h12.25v-8c0-3.308 2.691-6 6-6 3.308 0 6 2.692 6 6v8l11.75.001m2 2H23.249V24c0-2.206-1.794-4-3.999-4-2.206 0-4 1.794-4 4v10H-1V0h40v34.001z" transform="translate(23.667 35.255)"/>
+            </g>
+            <g id="사각형_801" class="cls-3">
+                <path d="M0 0h16v12a8 8 0 0 1-8 8 8 8 0 0 1-8-8V0z" class="cls-4" transform="translate(20.667 23.255)"/>
+                <path d="M1.778 1h12.444a.778.778 0 0 1 .778.778V12a7 7 0 0 1-7 7 7 7 0 0 1-7-7V1.778A.778.778 0 0 1 1.778 1z" class="cls-6" transform="translate(20.667 23.255)"/>
+            </g>
+            <g id="사각형_805" class="cls-3">
+                <path d="M0 0h16v12a8 8 0 0 1-8 8 8 8 0 0 1-8-8V0z" class="cls-4" transform="translate(34.667 23.255)"/>
+                <path d="M1.778 1h12.444a.778.778 0 0 1 .778.778V12a7 7 0 0 1-7 7 7 7 0 0 1-7-7V1.778A.778.778 0 0 1 1.778 1z" class="cls-6" transform="translate(34.667 23.255)"/>
+            </g>
+            <g id="사각형_806" class="cls-3">
+                <path d="M0 0h16v12a8 8 0 0 1-8 8 8 8 0 0 1-8-8V0z" class="cls-4" transform="translate(48.667 23.255)"/>
+                <path d="M1.778 1h12.444a.778.778 0 0 1 .778.778V12a7 7 0 0 1-7 7 7 7 0 0 1-7-7V1.778A.778.778 0 0 1 1.778 1z" class="cls-6" transform="translate(48.667 23.255)"/>
+            </g>
+        </g>
+    </g>
+</svg>

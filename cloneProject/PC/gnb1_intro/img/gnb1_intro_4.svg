@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-3{fill:#fff;stroke:#010101}.cls-4{stroke:none}.cls-5{fill:none}
+        </style>
+    </defs>
+    <g id="ico_information" transform="translate(-21.033 -16)">
+        <g id="사각형_635" fill="#fff" stroke="#010101" stroke-width="2px">
+            <path d="M0 0H73V58H0z" class="cls-4" transform="translate(45.033 44)"/>
+            <path d="M1 1H72V57H1z" class="cls-5" transform="translate(45.033 44)"/>
+        </g>
+        <g id="사각형_636" class="cls-3">
+            <path d="M0 0H96V2H0z" class="cls-4" transform="translate(33.033 100)"/>
+            <path d="M0.5 0.5H95.5V1.5H0.5z" class="cls-5" transform="translate(33.033 100)"/>
+        </g>
+        <g id="사각형_637" class="cls-3">
+            <path d="M0 0H2V9H0z" class="cls-4" transform="translate(81.033 35)"/>
+            <path d="M0.5 0.5H1.5V8.5H0.5z" class="cls-5" transform="translate(81.033 35)"/>
+        </g>
+        <g id="사각형_638" class="cls-3">
+            <path d="M0 0H2V18H0z" class="cls-4" transform="translate(81.033 101)"/>
+            <path d="M0.5 0.5H1.5V17.5H0.5z" class="cls-5" transform="translate(81.033 101)"/>
+        </g>
+        <g id="사각형_639" class="cls-3">
+            <path d="M0 0H2V24H0z" class="cls-4" transform="rotate(45 -82.901 141.28)"/>
+            <path d="M0.5 0.5H1.5V23.5H0.5z" class="cls-5" transform="rotate(45 -82.901 141.28)"/>
+        </g>
+        <g id="사각형_640" class="cls-3">
+            <path d="M0 0H2V24H0z" class="cls-4" transform="rotate(135 28.484 80.318)"/>
+            <path d="M0.5 0.5H1.5V23.5H0.5z" class="cls-5" transform="rotate(135 28.484 80.318)"/>
+        </g>
+        <g id="사각형_641" class="cls-3">
+            <path d="M0 0H2V10H0z" class="cls-4" transform="translate(69.033 74)"/>
+            <path d="M0.5 0.5H1.5V9.5H0.5z" class="cls-5" transform="translate(69.033 74)"/>
+        </g>
+        <g id="사각형_642" class="cls-3">
+            <path d="M0 0H2V22H0z" class="cls-4" transform="translate(81.033 62)"/>
+            <path d="M0.5 0.5H1.5V21.5H0.5z" class="cls-5" transform="translate(81.033 62)"/>
+        </g>
+        <g id="사각형_643" class="cls-3">
+            <path d="M0 0H2V14H0z" class="cls-4" transform="translate(93.033 70)"/>
+            <path d="M0.5 0.5H1.5V13.5H0.5z" class="cls-5" transform="translate(93.033 70)"/>
+        </g>
+    </g>
+</svg>
