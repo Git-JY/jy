@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:#fff}.cls-2{stroke:#010101;stroke-width:2px}.cls-6{fill:none}.cls-5,.cls-7{stroke:none}.cls-7{fill:#010101}
+        </style>
+    </defs>
+    <g id="ico_giftshop" transform="translate(3515 -4067)">
+        <g id="그룹_412" transform="translate(0 1)">
+            <g id="사각형_789" class="cls-2">
+                <path d="M0 0H94V20H0z" class="cls-5" transform="translate(-3502 4103)"/>
+                <path d="M1 1H93V19H1z" class="cls-6" transform="translate(-3502 4103)"/>
+            </g>
+            <g id="사각형_790" class="cls-2">
+                <path d="M0 0H80V52H0z" class="cls-5" transform="translate(-3495 4121)"/>
+                <path d="M1 1H79V51H1z" class="cls-6" transform="translate(-3495 4121)"/>
+            </g>
+            <g id="합치기_42" class="cls-3">
+                <path d="M25 25H13c-3.205 0-6.219-1.248-8.485-3.515C2.248 19.22 1 16.205 1 13 1 9.795 2.248 6.78 4.515 4.515 6.78 2.248 9.795 1 13 1c3.205 0 6.219 1.248 8.485 3.515C23.752 6.78 25 9.795 25 13v12z" class="cls-5" transform="translate(-3480 4079)"/>
+                <path d="M24 24V13c0-6.066-4.935-11-11-11C6.934 2 2 6.934 2 13c0 6.065 4.934 11 11 11h11m2 2H13C5.82 26 0 20.18 0 13S5.82 0 13 0s13 5.82 13 13v13z" class="cls-7" transform="translate(-3480 4079)"/>
+            </g>
+            <g id="합치기_43" class="cls-3">
+                <path d="M13 25c-3.205 0-6.219-1.248-8.485-3.514C2.248 19.219 1 16.206 1 13c0-3.206 1.248-6.22 3.515-8.486C6.78 2.248 9.795 1 13 1h12v12c0 3.206-1.248 6.22-3.515 8.486C19.22 23.752 16.205 25 13 25z" class="cls-5" transform="rotate(180 -1715 2052.5)"/>
+                <path d="M13 2C6.934 2 2 6.935 2 13c0 6.066 4.934 11 11 11 6.065 0 11-4.934 11-11V2H13m0-2h13v13c0 7.18-5.82 13-13 13S0 20.18 0 13 5.82 0 13 0z" class="cls-7" transform="rotate(180 -1715 2052.5)"/>
+            </g>
+            <path id="선_9" fill="none" stroke="#010101" stroke-width="2px" d="M0 0L0 68" transform="translate(-3454.5 4105)"/>
+        </g>
+    </g>
+</svg>

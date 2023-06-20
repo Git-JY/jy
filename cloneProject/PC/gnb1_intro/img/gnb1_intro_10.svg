@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_660" fill="#fff" d="M0 0H26V16H0z" transform="translate(.146 -.172)"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:#fff}.cls-2{fill:none}.cls-3{stroke:#010101;stroke-width:2px}.cls-4{clip-path:url(#clip-path)}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_cooperation" transform="translate(-1069 -900)">
+        <path id="area" d="M0 0H60V60H0z" class="cls-2" transform="translate(1069 900)"/>
+        <g id="타원_142" class="cls-3" transform="translate(1106 912)">
+            <circle cx="8" cy="8" r="8" class="cls-5"/>
+            <circle cx="8" cy="8" r="7" class="cls-2"/>
+        </g>
+        <g id="마스크_그룹_22" class="cls-4" transform="translate(1100.854 932.172)">
+            <g id="사각형_659" class="cls-3">
+                <path d="M6 0h14a6 6 0 0 1 6 6v17H0V6a6 6 0 0 1 6-6z" class="cls-5" transform="translate(.146 -.172)"/>
+                <path d="M6 1h14a5 5 0 0 1 5 5v15a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a5 5 0 0 1 5-5z" class="cls-2" transform="translate(.146 -.172)"/>
+            </g>
+        </g>
+        <g id="타원_143" class="cls-3" transform="translate(1076 912)">
+            <circle cx="8" cy="8" r="8" class="cls-5"/>
+            <circle cx="8" cy="8" r="7" class="cls-2"/>
+        </g>
+        <g id="마스크_그룹_23" class="cls-4" transform="translate(1070.854 932.172)">
+            <g id="사각형_661" class="cls-3">
+                <path d="M6 0h14a6 6 0 0 1 6 6v17H0V6a6 6 0 0 1 6-6z" class="cls-5" transform="translate(.146 -.172)"/>
+                <path d="M6 1h14a5 5 0 0 1 5 5v15a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a5 5 0 0 1 5-5z" class="cls-2" transform="translate(.146 -.172)"/>
+            </g>
+        </g>
+    </g>
+</svg>

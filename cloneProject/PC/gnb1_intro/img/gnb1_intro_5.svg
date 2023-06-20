@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-5{fill:none}.cls-2,.cls-3{fill:#fff}.cls-2{stroke:#000}.cls-3{stroke:#010101;stroke-width:2px}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_operational" transform="translate(-21.033 -16)">
+        <path id="area" fill="none" d="M0 0H120V120H0z" opacity="0.15" transform="translate(21.033 16)"/>
+        <g id="사각형_650" class="cls-2">
+            <path d="M0 0H2V36H0z" class="cls-4" transform="rotate(45 15.582 163.943)"/>
+            <path d="M0.5 0.5H1.5V35.5H0.5z" class="cls-5" transform="rotate(45 15.582 163.943)"/>
+        </g>
+        <g id="그룹_389" transform="translate(3 1)">
+            <g id="사각형_651" class="cls-2">
+                <path d="M0 0H2V36H0z" class="cls-4" transform="rotate(-45 91.18 -92.387)"/>
+                <path d="M0.5 0.5H1.5V35.5H0.5z" class="cls-5" transform="rotate(-45 91.18 -92.387)"/>
+            </g>
+            <g id="사각형_648" class="cls-2">
+                <path d="M0 0H2V36H0z" class="cls-4" transform="rotate(90 37.517 85.517)"/>
+                <path d="M0.5 0.5H1.5V35.5H0.5z" class="cls-5" transform="rotate(90 37.517 85.517)"/>
+            </g>
+            <g id="사각형_649" class="cls-2">
+                <path d="M0 0H2V36H0z" class="cls-4" transform="translate(104.033 31)"/>
+                <path d="M0.5 0.5H1.5V35.5H0.5z" class="cls-5" transform="translate(104.033 31)"/>
+            </g>
+            <g id="사각형_644" class="cls-2">
+                <path d="M0 0H2V64H0z" class="cls-4" transform="translate(63.033 55)"/>
+                <path d="M0.5 0.5H1.5V63.5H0.5z" class="cls-5" transform="translate(63.033 55)"/>
+            </g>
+            <g id="사각형_645" class="cls-2">
+                <path d="M0 0H2V64H0z" class="cls-4" transform="rotate(90 4.516 91.517)"/>
+                <path d="M0.5 0.5H1.5V63.5H0.5z" class="cls-5" transform="rotate(90 4.516 91.517)"/>
+            </g>
+            <g id="사각형_646" class="cls-2">
+                <path d="M0 0H2V64H0z" class="cls-4" transform="rotate(45 -35.318 136.659)"/>
+                <path d="M0.5 0.5H1.5V63.5H0.5z" class="cls-5" transform="rotate(45 -35.318 136.659)"/>
+            </g>
+            <g id="사각형_647" class="cls-2">
+                <path d="M0 0H2V64H0z" class="cls-4" transform="rotate(-45 100.685 -16.324)"/>
+                <path d="M0.5 0.5H1.5V63.5H0.5z" class="cls-5" transform="rotate(-45 100.685 -16.324)"/>
+            </g>
+            <g id="타원_134" class="cls-3" transform="translate(37.033 61)">
+                <circle cx="27" cy="27" r="27" class="cls-4"/>
+                <circle cx="27" cy="27" r="26" class="cls-5"/>
+            </g>
+            <g id="타원_135" class="cls-3" transform="translate(91.033 35)">
+                <circle cx="14" cy="14" r="14" class="cls-4"/>
+                <circle cx="14" cy="14" r="13" class="cls-5"/>
+            </g>
+            <g id="타원_137" class="cls-3" transform="translate(62.033 86)">
+                <circle cx="2" cy="2" r="2" class="cls-4"/>
+                <circle cx="2" cy="2" r="1" class="cls-5"/>
+            </g>
+            <g id="타원_138" class="cls-3" transform="translate(103.033 47)">
+                <circle cx="2" cy="2" r="2" class="cls-4"/>
+                <circle cx="2" cy="2" r="1" class="cls-5"/>
+            </g>
+        </g>
+    </g>
+</svg>

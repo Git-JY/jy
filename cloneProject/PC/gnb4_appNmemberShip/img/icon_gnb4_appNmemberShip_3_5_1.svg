@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:#fff;stroke:#010101}.cls-4{stroke:none}.cls-5{fill:none}
+        </style>
+    </defs>
+    <g id="ico_cardadd" transform="translate(-574 -2245)">
+        <g id="ico">
+            <g id="사각형_813" fill="#fff" stroke="#010101" stroke-width="2px">
+                <path d="M0 0H48V36H0z" class="cls-4" transform="translate(580 2257)"/>
+                <path d="M1 1H47V35H1z" class="cls-5" transform="translate(580 2257)"/>
+            </g>
+            <g id="사각형_814" class="cls-3">
+                <path d="M0 0H12V2H0z" class="cls-4" transform="translate(598 2274)"/>
+                <path d="M0.5 0.5H11.5V1.5H0.5z" class="cls-5" transform="translate(598 2274)"/>
+            </g>
+            <g id="사각형_815" class="cls-3">
+                <path d="M0 0H12V2H0z" class="cls-4" transform="rotate(90 -832 1437)"/>
+                <path d="M0.5 0.5H11.5V1.5H0.5z" class="cls-5" transform="rotate(90 -832 1437)"/>
+            </g>
+        </g>
+    </g>
+</svg>
