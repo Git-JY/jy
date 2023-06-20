@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- css -->
-    <link rel="stylesheet" href="./scss/reset.css">
+    <link rel="stylesheet" href="./css/reset.css">
     
     <!-- 파비콘 -->
     <!-- <link rel="icon" type="image/png" href="../../img_파비콘N오픈그래프N그외/favicon/favicon-32x32.png" sizes="32x32" /> -->
@@ -115,6 +115,12 @@
 
     <!-- - - - - - - - - - - Navigation↓ - - - - - - - - - - -->
     <nav>
+        <!-- 로고와 x버튼 -->
+        <div class="head_gnb_vertical_top_Wrap">
+            <p class="Logo"><img src="" alt=""></p>
+            <div class="xBtn">X</div>
+        </div>
+
         <!-- 세로 메뉴내용 -->
         <ul class="head_gnb_vertical">
             <!-- (gnb1_투썸플레이스 소개) -->
@@ -194,6 +200,19 @@
             </li>
 
         </ul><!-- head_gnb_vertical -->
+
+        <div class="head_gnb_vertical_bottom">
+            <ul class="sideMenu">
+                <li><a href="#">기업 및 단체구매안내</a></li>
+                <li><a href="#">가맹상담신청</a></li>
+                <li><a href="#">사이버신문고</a></li>
+            </ul>
+            <ul class="snsIcons">
+                <li><a href="#"><img src="" alt=""></a></li>
+                <li><a href="#"><img src="" alt=""></a></li>
+                <li><a href="#"><img src="" alt=""></a></li>
+            </ul>
+        </div>
     </nav>
     <!-- - - - - - - - - - - Navigation↑ - - - - - - - - - - -->
 
@@ -203,44 +222,47 @@
         <section class="main">
             <div class="main_slice">
                 <picture><!-- 메인_1 커피배경 -->
-
+                    <source>
+                    <img src="" alt="커피배경">
                 </picture>
                 <picture><!-- 메인_2 여러 케잌배경 -->
-
+                    <source>
+                    <img src="" alt="여러 케잌배경">
                 </picture>
             </div>
+
             <div class="pagination_wrap">
                 <!-- :after 좌측 화살표 올자리 -->
                 <span class="pagination_pageNumber">
-                    <span>전체페이지수</span>
-                    <span>/</span>
                     <span>현제페이지수</span>
+                    <span>/</span>
+                    <span>전체페이지수</span>
                 </span>
                 <!-- :before 우측 화살표 올자리 -->
             </div>
+
         </section><!-- main -->
 
         <!-- article2_menuStory -->
         <section class="menuStory">
             <h1>MENU STORY</h1>
-            <div class="text_btn">
-                <ul>
-                    <li>
-                        <span>전문가의 섬세함으로 완성한 최상의 커피</span>
-                        <b>COFFEE STORY</b>
-                    </li>
-                    <li>
-                        <span>다양한 프리미엄 케이크 & 디저트</span>
-                        <b>DESSERT STORY</b>
-                        
-                    </li>
-                    <li>
-                        <span>가볍게 즐기는 맛있는 식사, 델리</span>
-                        <b>DELI STORY</b>   
-                    </li>
-                </ul>
-            </div>
-            <div>
+            <ul class="text_btn">
+                <li>
+                    <span>전문가의 섬세함으로 완성한 최상의 커피</span>
+                    <b>COFFEE STORY</b>
+                </li>
+                <li>
+                    <span>다양한 프리미엄 케이크 & 디저트</span>
+                    <b>DESSERT STORY</b>
+                    
+                </li>
+                <li>
+                    <span>가볍게 즐기는 맛있는 식사, 델리</span>
+                    <b>DELI STORY</b>   
+                </li>
+            </ul>
+            
+            <div class="slides_wrapper"><!-- 슬라이드 + 페이지네이션 -->
                 <div class="img_slides">
                     <ul class="img_slide1_coffeeStory">
                         <li>
@@ -337,17 +359,18 @@
                     <span>음식이름</span>
                     <!-- :before 우측 화살표 올자리 -->
                 </div>
-            </div>
+
+            </div><!-- div.slides_wrapper --> <!-- 슬라이드 + 페이지네이션 --> 
         </section><!-- menuStory -->
 
         <!-- article3_aList -->
         <section class="aList">
             <div class="text_wrap">
                 <h1>에이리스트</h1>
-                <div>
+                <strong>
                     TWOSOME
                     IN TOUR MUG, A LIST
-                </div>
+                </strong>
                 <span>언제 어디서나 여유롭게 즐기는 에이리스트</span>
                 <p>       
                     좋은 커피를 마셔야 비로소 하루가 시작되는 느낌이라면 
@@ -364,8 +387,8 @@
                 BRAND<br>
                 SUPPORT
             </h1>
-            <div class="slide">
-                <ul class="img_slide">
+            <div class="slides_wrapper"><!-- 슬라이드 + 페이지네이션 -->
+                <ul class="img_slide"><!-- 슬라이드 -->
                     <li>
                         <span>- Roasting Plant</span>
                         <p><img src="" alt=""></p><!-- 사진1 -->
@@ -374,6 +397,7 @@
                             <p><img src="" alt=""></p><!-- 미니 아이콘1 -->
                             <a href="#">
                                 <strong>로스팅 플랜트</strong>
+                                <!-- 화살표자리 -->
                             </a>
                             <p>
                                 원두 로스팅부터 고객의 손에 들리는
@@ -433,8 +457,19 @@
                             </p>
                         </div>
                     </li>
-                </ul>
-            </div>
+                </ul><!-- 슬라이드 -->
+
+                <div class="pagination_wrap"><!-- 페이지네이션 -->
+                    <!-- :after 좌측 화살표 올자리 -->
+                    <span class="pagination_pageNumber">
+                        <span>현제페이지수</span>
+                        <span>/</span>
+                        <span>전체페이지수</span>
+                    </span>
+                    <!-- :before 우측 화살표 올자리 -->
+                </div><!-- 페이지네이션 -->
+
+            </div><!-- div.slides_wrapper --> <!-- 슬라이드 + 페이지네이션 -->
         </section><!-- brandSupport -->
 
         <!-- article5_franchise -->

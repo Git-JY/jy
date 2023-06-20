@@ -1,0 +1,496 @@
+// - - - - - - - - - - header↓ - - - - - - - - - - 
+header{
+    .head_El{ 
+        h1.Logo{ 
+            a{
+
+            }
+        }//h1.Logo
+
+        ul.head_gnb_horizontal{
+
+            //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
+
+            }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
+
+            //- - - - - - - - - -(gnb2_메뉴이야기)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb2_메뉴이야기의 lnb)
+
+            }//li //(gnb2_메뉴이야기(gnb의 a태그 + ul.head_lnb))
+
+            //- - - - - - - - - -(gnb3_브랜드 지원)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb3_브랜드 지원의 lnb)
+
+            }//li //(gnb3_브랜드 지원(gnb의 a태그 + ul.head_lnb))
+
+            //- - - - - - - - - -(gnb4_투썸플레이스 앱 & 멤버십)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb4_투썸플레이스 앱 & 멤버십의 lnb)
+
+            }//li //(gnb4_투썸플레이스 앱 & 멤버십(gnb의 a태그 + ul.head_lnb))
+
+            //- - - - - - - - - -(gnb5_가맹점 창업안내)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb5_가맹점 창업안내의 lnb)
+
+            }//li //(gnb5_가맹점 창업안내(gnb의 a태그 + ul.head_lnb))
+
+            //- - - - - - - - - -(gnb6_새소식 & 공지)- - - - - - - - - -
+            li{
+                a{
+                    
+                }
+
+                ul.head_lnb{
+                    li{// 공지사항(총 1개의 li의 lnb)
+                        a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb6_새소식 & 공지의 lnb)
+
+            }//li //(gnb6_새소식 & 공지(gnb의 a태그 + ul.head_lnb))
+
+
+
+        }//ul.head_gnb_horizontal //가로 메뉴내용
+
+        
+        div.head_right{
+            .Language{
+
+            }
+            .verMenu_btn{
+
+            }
+        }//div.head_right
+
+    }//.head_El //헤더요소들
+
+
+
+}//header //헤더배경
+// - - - - - - - - - - header↑ - - - - - - - - - -
+
+
+//- - - - - - - - - - Navigation↓ - - - - - - - - - -
+nav{
+
+    div.head_gnb_vertical_top_Wrap{
+        p.Logo{
+            img{
+
+            }
+        }
+        div.xBtn{
+
+        }
+    }//div.head_gnb_vertical_top_Wrap //로고와 x버튼
+
+    ul.head_gnb_vertical{
+
+        //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
+
+        }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
+
+        //- - - - - - - - - -(gnb2_메뉴이야기)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb2_메뉴이야기의 lnb)
+
+        }//li //(gnb2_메뉴이야기(gnb의 a태그 + ul.head_lnb))
+
+        //- - - - - - - - - -(gnb3_브랜드 지원)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb3_브랜드 지원의 lnb)
+
+        }//li //(gnb3_브랜드 지원(gnb의 a태그 + ul.head_lnb))
+
+        //- - - - - - - - - -(gnb4_투썸플레이스 앱 & 멤버십)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb4_투썸플레이스 앱 & 멤버십의 lnb)
+
+        }//li //(gnb4_투썸플레이스 앱 & 멤버십(gnb의 a태그 + ul.head_lnb))
+
+        //- - - - - - - - - -(gnb5_가맹점 창업안내)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb5_가맹점 창업안내의 lnb)
+
+        }//li //(gnb5_가맹점 창업안내(gnb의 a태그 + ul.head_lnb))
+
+        //- - - - - - - - - -(gnb6_새소식 & 공지)- - - - - - - - - -
+        li{
+            a{
+                
+            }
+
+            ul.head_lnb{
+                li{// 공지사항(총 1개의 li의 lnb)
+                    a{
+
+                    }
+                }
+            }//ul.head_lnb //(gnb6_새소식 & 공지의 lnb)
+
+        }//li //(gnb6_새소식 & 공지(gnb의 a태그 + ul.head_lnb))
+
+
+
+    }//ul.head_gnb_vertical //세로 메뉴내용
+
+    div.head_gnb_vertical_bottom{
+        ul.sideMenu{
+            li{
+                a{
+
+                }
+            }
+        }//ul.sideMenu
+
+        ul.snsIcons{
+            li{
+                a{
+                    img{
+
+                    }
+                }
+            }
+        }//ul.snsIcons
+
+    }//div.head_gnb_vertical_bottom //사이드메뉴 + SNS아이콘들
+
+
+}//nav //세로 메뉴배경
+//- - - - - - - - - - Navigation↑ - - - - - - - - - -
+
+//- - - - - - - - - - div.wrapper↓ - - - - - - - - - -
+div.wrapper{
+
+    section.main{//1page
+        .main_slice{//슬라이드
+            picture{ //메인_1 커피배경 + 메인_2 여러 케잌배경
+                source{
+
+                }
+                img{
+
+                }
+            }
+        }//.main_slice //슬라이스
+
+        div.pagination_wrap{//페이지네이션
+            // :after 좌측 화살표 올자리
+            &:after{
+
+            }
+            // 전체페이지수/현제페이지수
+            span.pagination_pageNumber{
+                span:nth-of-type(1){
+
+                }
+                span:nth-of-type(2){
+
+                }
+                span:nth-of-type(3){
+
+                }
+            }
+            //:before 우측 화살표 올자리
+            &:before{
+
+            }
+        }//div.pagination_wrap //페이지네이션
+
+    }//section.main //1페이지
+
+
+
+    section.menuStory{//2page
+        h1{//MENU STORY
+
+        }
+
+        ul.text_btn{
+            li{
+                span{
+
+                }
+                b{
+
+                }
+            }//ul.text_btn //COFFEE STORY~DELI STORY(각각의 버튼+설명)
+        }//ul.text_btn //COFFEE STORY~DELI STORY(버튼+설명 총 3개 묶음)
+
+        div.slides_wrapper{ //슬라이드 + 페이지네이션
+            div.img_slides{ //슬라이드
+                ul.img_slide1_coffeeStory{
+                    li{
+                        a{
+                            img{
+
+                            }
+                        }
+                    }
+                }//ul.img_slide1_coffeeStory // 슬라이드1_coffeeStory(총4개의 li태그)
+
+                ul.img_slide2_dessertStory{
+                    li{
+                        a{
+                            img{
+
+                            }
+                        }
+                    }
+                }//ul.img_slide2_dessertStory // 슬라이드2_dessertStory(총7개의 li태그)
+
+                ul.img_slide3_deliStory{
+                    li{
+                        a{
+                            img{
+
+                            }
+                        }
+                    }
+                }//ul.img_slide3_deliStory // 슬라이드3_deliStory(총5개의 li태그)
+            }//div.img_slides //슬라이드 //총 3개의 슬라이드 묶음 COFFEE STORY~DELI STORY
+
+            div.img_slide_pagination{//페이지네이션
+                // :after 좌측 화살표 올자리
+                &::after{
+
+                }
+                //음식이름
+                span{
+
+                }
+                // :before 우측 화살표 올자리
+                &::before{
+
+                }
+            }//div.img_slide_pagination //페이지네이션
+
+
+        }//div.slides_wrapper //슬라이드 + 페이지네이션
+
+
+
+    }//section.menuStory //2페이지
+
+
+    section.aList{//3page
+        div.text_wrap{
+            h1{//에이리스트
+
+            }
+            strong{
+
+            }
+            span{
+
+            }
+            p{
+
+            }
+        }//div.text_wrap //텍스트 전체 묶음
+
+    }//section.aList //3페이지
+
+    section.brandSupport{//4page
+        h1{
+
+        }
+        div.slides_wrapper{//슬라이드 + 페이지네이션
+
+            ul.img_slide{//슬라이드
+                li{
+                    span{
+
+                    }
+                    p{
+                        img{
+
+                        }
+                    }
+
+                    div.ex{
+                        p{//아이콘 이미지
+                            img{
+
+                            }
+                        }
+                        a{//글씨
+                           strong{
+
+                           }
+                           &::after{//화살표
+                            
+                           }
+                        }
+                        p{
+
+                        }
+                    }//div.ex //글씨설명 묶음
+                }//li //슬라이드의 각 요소
+
+            }//ul.img_slide //슬라이드
+
+            div.pagination_wrap{//페이지네이션 
+                // :after 좌측 화살표 올자리
+                &:after{
+    
+                }
+                // 전체페이지수/현제페이지수
+                span.pagination_pageNumber{
+                    span:nth-of-type(1){
+    
+                    }
+                    span:nth-of-type(2){
+    
+                    }
+                    span:nth-of-type(3){
+    
+                    }
+                }
+                //:before 우측 화살표 올자리
+                &:before{
+    
+                }
+            }//div.pagination_wrap //페이지네이션
+
+        }//div.slides_wrapper //슬라이드 + 페이지네이션
+
+    }//section.brandSupport //4페이지
+
+    //////////////////이제 5페이지, 6페이지, 푸터, 전체페이지표시버튼, 기업 단체 구매버튼, ↑버튼 남음
+
+
+
+}//div.wrapper //모든 컨텐츠 모아둔 거(1~6페이지)
+//- - - - - - - - - - div.wrapper↑ - - - - - - - - - -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
