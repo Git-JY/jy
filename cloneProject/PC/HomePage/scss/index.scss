@@ -308,7 +308,7 @@ div.wrapper{
 
     }//section.main //1페이지
 
-
+//////////////////////////////////////////////////////////////////////
 
     section.menuStory{//2page
         h1{//MENU STORY
@@ -381,6 +381,7 @@ div.wrapper{
 
     }//section.menuStory //2페이지
 
+//////////////////////////////////////////////////////////////////////
 
     section.aList{//3page
         div.text_wrap{
@@ -399,6 +400,8 @@ div.wrapper{
         }//div.text_wrap //텍스트 전체 묶음
 
     }//section.aList //3페이지
+
+//////////////////////////////////////////////////////////////////////
 
     section.brandSupport{//4page
         h1{
@@ -466,13 +469,185 @@ div.wrapper{
 
     }//section.brandSupport //4페이지
 
+
+//////////////////////////////////////////////////////////////////////
+
     //////////////////이제 5페이지, 6페이지, 푸터, 전체페이지표시버튼, 기업 단체 구매버튼, ↑버튼 남음
+    
+    section.franchise{//5page
+        div.background{
+            ul.dots{
+                li{
+
+                }
+            }//ul.dots //점 배경
+
+            ul.imgs{
+                li{
+                    p{
+                        img{
+
+                        }
+                    }
+                    span{
+
+                    }
+                }
+            }//ul.imgs //사진 배경
+        }//div.background
+
+
+        div.ex_wrap{
+            h1{
+
+            }
+            strong{
+
+            }
+            p{
+
+            }
+            div.btn{
+                div{
+                    a{
+                        &::after{//화살표
+                            
+                        }
+                    }
+                }
+            }//div.btn            
+        }//div.ex_wrap
+
+    }//section.franchise //5페이지
+
+//////////////////////////////////////////////////////////////////////
+
+section.newAndNotice{//6page
+    div.left{
+        h1{
+
+        }
+        span{
+
+        }
+        p{
+            img{
+
+            }
+        }
+    }//div.left
+
+    ul.right{
+        li{
+            a{
+                em{
+
+                }
+                strong{
+
+                }
+                span{
+
+                }
+            }
+        }
+    }//ul.right
+
+}//section.newAndNotice //6페이지
+
+//전체 페이지 알려주는 선
+div.fullPage{
+    >span{
+
+    }
+    >p{
+        span{
+
+        }
+    }
+
+}//div.fullPage //전체 페이지 알려주는 선
+
+//기업단체구매 버튼 + 스크롤최상단이동 버튼
+div.wrapper_Btn{
+    >a.bulkPurchase_btn{
+
+        &::after{
+            //선물상자 아이콘
+        }
+    }
+    >div.moveScrollTop_btn{
+
+    }
+}//div.wrapper_Btn //기업단체구매 버튼 + 스크롤최상단이동 버튼
+
 
 
 
 }//div.wrapper //모든 컨텐츠 모아둔 거(1~6페이지)
 //- - - - - - - - - - div.wrapper↑ - - - - - - - - - -
 
+//- - - - - - - - - - footer↓ - - - - - - - - - -
+footer{
+    >div.footer_top{
+        >div.topLeft{
+            >a{
+
+            }
+        }//div.topLeft //상단좌측
+
+        >div.topRight{
+            >div.Address{
+                >b{
+
+                }
+                >span{
+
+                }
+            }//div.Address
+
+            >div.CustomerCenter{
+                >b{
+
+                }
+                >ul{
+                    >li{
+
+                    }
+                }
+            }//div.CustomerCenter
+
+        }//div.topRight //상단우측
+
+    }//div.footer_top //상단 묶음
+
+    div.footer_bottom{
+        >ul.footer_bottom_menu_Btn{
+            >li>a{
+
+            }
+        }//ul.footer_bottom_menu_Btn 
+
+        >ul.grayInfo{
+            >li{
+
+            }
+        }//ul.grayInfo
+
+    }//div.footer_bottom //하단 묶음
+
+    div.footer_bottom_snsIcons{
+        >li{
+            >a{
+                >img{
+
+                }
+            }
+        }
+    }//div.footer_bottom_snsIcons //SNS아이콘버튼들
+
+}//footer //푸터배경
+//- - - - - - - - - - footer↑ - - - - - - - - - -
 
 
 
