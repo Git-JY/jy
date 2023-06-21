@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('../../common_font/Mark-Pro/transfonter/MarkPro-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mark Pro';
+    src: url('../../common_font/Mark-Pro/transfonter/MarkPro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display+SC:ital,wght@1,400;1,700;1,900&family=Playfair+Display:wght@400;600;700;800;900&family=Roboto:wght@100&display=swap');
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+html{
+    font-family: 'Mark Pro','Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+    font-size: 18px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    line-height: 100%;
+}
+//- - - - - - - - - - - - - - - - - - - -
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul, ol, li{
+    list-style-type: none;   
+}
+
+
+

@@ -1,23 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
+
+@mixin flex($x: center, $y: center){
+    display: flex; justify-content: $x; align-items: $y;
+    @content;
+}
+@import './_reset';
+// - - - - - - - - - - @mixin, 변수 등 - - - - - - - - - - 
+
 // - - - - - - - - - - header↓ - - - - - - - - - - 
 header{
-    .head_El{ 
-        h1.Logo{ 
-            a{
+    width: 100%; height: 100px;   
+    position: fixed; top: 0; right: 0;
+    background-color: rgba(255, 255, 255,0);
+    color: rgb(255, 255, 255);
 
+    @include flex(center, center); //.head_El요소를 중앙에 둠
+    z-index: 9999; //header를 가장 앞에 두기
+
+
+    
+    >.head_El{ 
+        width: 100%;
+        @include flex(space-between, center);
+        margin: 0 50px;
+        >h1.Logo{ 
+            >a{
+                >img{
+                    
+                }
             }
         }//h1.Logo
+        //- - - - - - - - - -(gnb와 lnb전체)- - - - - - - - - -
+        >ul.head_gnb_horizontal{
+            @include flex(space-between, center);
+            width: 1010px;
+            >li{
+                >a{
+                    color: inherit;
+                    font-weight: 700;
+                }
 
-        ul.head_gnb_horizontal{
+                >ul.head_lnb{
+                    display: none;
+                    >li{//lnb 요소들
+                        >a{
+
+                        }
+                    }
+                }//ul.head_lnb //(gnb의 lnb)
+
+            }//li //(gnb (gnb의 a태그 + ul.head_lnb))
+
+
 
             //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                        a{
+                >ul.head_lnb{
+                    >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                        >a{
 
                         }
                     }
@@ -26,14 +70,14 @@ header{
             }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
 
             //- - - - - - - - - -(gnb2_메뉴이야기)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
-                        a{
+                >ul.head_lnb{
+                    >li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
+                        >a{
 
                         }
                     }
@@ -42,14 +86,14 @@ header{
             }//li //(gnb2_메뉴이야기(gnb의 a태그 + ul.head_lnb))
 
             //- - - - - - - - - -(gnb3_브랜드 지원)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
-                        a{
+                >ul.head_lnb{
+                    >li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
+                        >a{
 
                         }
                     }
@@ -58,14 +102,14 @@ header{
             }//li //(gnb3_브랜드 지원(gnb의 a태그 + ul.head_lnb))
 
             //- - - - - - - - - -(gnb4_투썸플레이스 앱 & 멤버십)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
-                        a{
+                >ul.head_lnb{
+                    >li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
+                        >a{
 
                         }
                     }
@@ -74,14 +118,14 @@ header{
             }//li //(gnb4_투썸플레이스 앱 & 멤버십(gnb의 a태그 + ul.head_lnb))
 
             //- - - - - - - - - -(gnb5_가맹점 창업안내)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
-                        a{
+                >ul.head_lnb{
+                    >li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
+                        >a{
 
                         }
                     }
@@ -90,14 +134,14 @@ header{
             }//li //(gnb5_가맹점 창업안내(gnb의 a태그 + ul.head_lnb))
 
             //- - - - - - - - - -(gnb6_새소식 & 공지)- - - - - - - - - -
-            li{
-                a{
+            >li{
+                >a{
                     
                 }
 
-                ul.head_lnb{
-                    li{// 공지사항(총 1개의 li의 lnb)
-                        a{
+                >ul.head_lnb{
+                    >li{// 공지사항(총 1개의 li의 lnb)
+                        >a{
 
                         }
                     }
@@ -110,12 +154,22 @@ header{
         }//ul.head_gnb_horizontal //가로 메뉴내용
 
         
-        div.head_right{
-            .Language{
-
+        >div.head_right{
+            @include flex(center, center);
+            >.Language{
+                @include flex(center, center);
+                border:1px solid white;
+                border-radius: 15px;
+                width: 100px; height: 30px;
+                margin-right: 40px;
+                font-size: 14px;
+                cursor: pointer;
+                line-height: 100%;
             }
-            .verMenu_btn{
-
+            >.verMenu_btn{
+                >img{
+                    
+                }
             }
         }//div.head_right
 
@@ -129,29 +183,29 @@ header{
 
 //- - - - - - - - - - Navigation↓ - - - - - - - - - -
 nav{
-
-    div.head_gnb_vertical_top_Wrap{
-        p.Logo{
-            img{
+    display: none;
+    >div.head_gnb_vertical_top_Wrap{
+        >p.Logo{
+            >img{
 
             }
         }
-        div.xBtn{
+        >div.xBtn{
 
         }
     }//div.head_gnb_vertical_top_Wrap //로고와 x버튼
 
-    ul.head_gnb_vertical{
+    >ul.head_gnb_vertical{
 
         //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                    a{
+            >ul.head_lnb{
+                >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                    >a{
 
                     }
                 }
@@ -160,14 +214,14 @@ nav{
         }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
 
         //- - - - - - - - - -(gnb2_메뉴이야기)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
-                    a{
+            >ul.head_lnb{
+                >li{// 커피이야기 ~ 델리이야기(총 3개의 li의 lnb)
+                    >a{
 
                     }
                 }
@@ -176,14 +230,14 @@ nav{
         }//li //(gnb2_메뉴이야기(gnb의 a태그 + ul.head_lnb))
 
         //- - - - - - - - - -(gnb3_브랜드 지원)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
-                    a{
+            >ul.head_lnb{
+                >li{// 어썸 페어링 플랜트 ~ SEP센터(총 4개의 li의 lnb)
+                    >a{
 
                     }
                 }
@@ -192,14 +246,14 @@ nav{
         }//li //(gnb3_브랜드 지원(gnb의 a태그 + ul.head_lnb))
 
         //- - - - - - - - - -(gnb4_투썸플레이스 앱 & 멤버십)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
-                    a{
+            >ul.head_lnb{
+                >li{// 투썸플레이스 앱 소개 ~ 등급 및 혜택(총 4개의 li의 lnb[1,3 개로 나뉨])
+                    >a{
 
                     }
                 }
@@ -208,14 +262,14 @@ nav{
         }//li //(gnb4_투썸플레이스 앱 & 멤버십(gnb의 a태그 + ul.head_lnb))
 
         //- - - - - - - - - -(gnb5_가맹점 창업안내)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
-                    a{
+            >ul.head_lnb{
+                >li{// 가맹점 개설 안내 ~ 가맹점 전용 금융상품(총 5개의 li의 lnb)
+                    >a{
 
                     }
                 }
@@ -224,14 +278,14 @@ nav{
         }//li //(gnb5_가맹점 창업안내(gnb의 a태그 + ul.head_lnb))
 
         //- - - - - - - - - -(gnb6_새소식 & 공지)- - - - - - - - - -
-        li{
-            a{
+        >li{
+            >a{
                 
             }
 
-            ul.head_lnb{
-                li{// 공지사항(총 1개의 li의 lnb)
-                    a{
+            >ul.head_lnb{
+                >li{// 공지사항(총 1개의 li의 lnb)
+                    >a{
 
                     }
                 }
@@ -243,19 +297,19 @@ nav{
 
     }//ul.head_gnb_vertical //세로 메뉴내용
 
-    div.head_gnb_vertical_bottom{
-        ul.sideMenu{
-            li{
-                a{
+    >div.head_gnb_vertical_bottom{
+        >ul.sideMenu{
+            >li{
+                >a{
 
                 }
             }
         }//ul.sideMenu
 
-        ul.snsIcons{
-            li{
-                a{
-                    img{
+        >ul.snsIcons{
+            >li{
+                >a{
+                    >img{
 
                     }
                 }
@@ -270,39 +324,71 @@ nav{
 
 //- - - - - - - - - - div.wrapper↓ - - - - - - - - - -
 div.wrapper{
+    width: 100vw;
 
-    section.main{//1page
-        .main_slice{//슬라이드
-            picture{ //메인_1 커피배경 + 메인_2 여러 케잌배경
-                source{
+    //전체 페이지
+    >section{width: 100%; height: 100vh;}
+
+    >section.main{//1page
+        >.main_slice{//슬라이드
+            width: 100%; height: 100%;
+            position: relative;
+            @include flex();
+            >picture{ //메인_1 커피배경 + 메인_2 여러 케잌배경
+                height: 100%;
+                position: absolute;
+                top: 50%; left:50%; transform: translate(-50%, -50%);
+                >&:nth-of-type(1){
+                    z-index: 1;
+                }
+                >&:nth-of-type(2){
+                    z-index: 0;
+                }
+                >source{
 
                 }
-                img{
-
+                >img{
+                    height: 100%;
                 }
             }
         }//.main_slice //슬라이스
 
-        div.pagination_wrap{//페이지네이션
+        >div.pagination_wrap{//페이지네이션
+            position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+            z-index: 9999;
+            width: 240px; height: 56px; border-radius: 28px;
+            background-color: rgba(0,0,0,0.6);
+            @include flex(space-between,center);
+            color: white;
+            
             // :after 좌측 화살표 올자리
-            &:after{
-
+            >&:after{
+                content: '';
+                display: inline-block;
+                width: 24px; height: 24px;
+                background: url('../img/ico_arrow_right.svg') center center / 100% 100% no-repeat scroll;
             }
             // 전체페이지수/현제페이지수
-            span.pagination_pageNumber{
-                span:nth-of-type(1){
-
+            >span.pagination_pageNumber{
+                font-size: 16px;
+                font-weight: 600;
+                >span:nth-of-type(1){
+                    
                 }
-                span:nth-of-type(2){
-
+                >span:nth-of-type(2){
+                    color: #999;
                 }
-                span:nth-of-type(3){
-
+                >span:nth-of-type(3){
+                    color: #999;
                 }
             }
             //:before 우측 화살표 올자리
-            &:before{
-
+            >&:before{
+                content: '';
+                display: inline-block;
+                width: 24px; height: 24px;
+                background: url('../img/ico_arrow_left.svg') center center / 100% 100% no-repeat scroll;
+                
             }
         }//div.pagination_wrap //페이지네이션
 
@@ -310,48 +396,48 @@ div.wrapper{
 
 //////////////////////////////////////////////////////////////////////
 
-    section.menuStory{//2page
-        h1{//MENU STORY
+    >section.menuStory{//2page
+        >h1{//MENU STORY
 
         }
 
-        ul.text_btn{
-            li{
-                span{
+        >ul.text_btn{
+            >li{
+                >span{
 
                 }
-                b{
+                >b{
 
                 }
             }//ul.text_btn //COFFEE STORY~DELI STORY(각각의 버튼+설명)
         }//ul.text_btn //COFFEE STORY~DELI STORY(버튼+설명 총 3개 묶음)
 
-        div.slides_wrapper{ //슬라이드 + 페이지네이션
-            div.img_slides{ //슬라이드
-                ul.img_slide1_coffeeStory{
-                    li{
-                        a{
-                            img{
+        >div.slides_wrapper{ //슬라이드 + 페이지네이션
+            >div.img_slides{ //슬라이드
+                >ul.img_slide1_coffeeStory{
+                    >li{
+                        >a{
+                            >img{
 
                             }
                         }
                     }
                 }//ul.img_slide1_coffeeStory // 슬라이드1_coffeeStory(총4개의 li태그)
 
-                ul.img_slide2_dessertStory{
-                    li{
-                        a{
-                            img{
+                >ul.img_slide2_dessertStory{
+                    >li{
+                        >a{
+                            >img{
 
                             }
                         }
                     }
                 }//ul.img_slide2_dessertStory // 슬라이드2_dessertStory(총7개의 li태그)
 
-                ul.img_slide3_deliStory{
-                    li{
-                        a{
-                            img{
+                >ul.img_slide3_deliStory{
+                    >li{
+                        >a{
+                            >img{
 
                             }
                         }
@@ -359,17 +445,17 @@ div.wrapper{
                 }//ul.img_slide3_deliStory // 슬라이드3_deliStory(총5개의 li태그)
             }//div.img_slides //슬라이드 //총 3개의 슬라이드 묶음 COFFEE STORY~DELI STORY
 
-            div.img_slide_pagination{//페이지네이션
+            >div.img_slide_pagination{//페이지네이션
                 // :after 좌측 화살표 올자리
-                &::after{
+                >&::after{
 
                 }
                 //음식이름
-                span{
+                >span{
 
                 }
                 // :before 우측 화살표 올자리
-                &::before{
+                >&::before{
 
                 }
             }//div.img_slide_pagination //페이지네이션
@@ -383,18 +469,18 @@ div.wrapper{
 
 //////////////////////////////////////////////////////////////////////
 
-    section.aList{//3page
-        div.text_wrap{
-            h1{//에이리스트
+    >section.aList{//3page
+        >div.text_wrap{
+            >h1{//에이리스트
 
             }
-            strong{
+            >strong{
 
             }
-            span{
+            >span{
 
             }
-            p{
+            >p{
 
             }
         }//div.text_wrap //텍스트 전체 묶음
@@ -403,38 +489,38 @@ div.wrapper{
 
 //////////////////////////////////////////////////////////////////////
 
-    section.brandSupport{//4page
-        h1{
+    >section.brandSupport{//4page
+        >h1{
 
         }
-        div.slides_wrapper{//슬라이드 + 페이지네이션
+        >div.slides_wrapper{//슬라이드 + 페이지네이션
 
-            ul.img_slide{//슬라이드
-                li{
-                    span{
+            >ul.img_slide{//슬라이드
+                >li{
+                    >span{
 
                     }
-                    p{
-                        img{
+                    >p{
+                        >img{
 
                         }
                     }
 
-                    div.ex{
-                        p{//아이콘 이미지
-                            img{
+                    >div.ex{
+                        >p{//아이콘 이미지
+                            >img{
 
                             }
                         }
-                        a{//글씨
-                           strong{
+                        >a{//글씨
+                           >strong{
 
                            }
-                           &::after{//화살표
+                           >&::after{//화살표
                             
                            }
                         }
-                        p{
+                        >p{
 
                         }
                     }//div.ex //글씨설명 묶음
@@ -442,25 +528,25 @@ div.wrapper{
 
             }//ul.img_slide //슬라이드
 
-            div.pagination_wrap{//페이지네이션 
+            >div.pagination_wrap{//페이지네이션 
                 // :after 좌측 화살표 올자리
-                &:after{
+                >&:after{
     
                 }
                 // 전체페이지수/현제페이지수
-                span.pagination_pageNumber{
-                    span:nth-of-type(1){
+                >span.pagination_pageNumber{
+                    >span:nth-of-type(1){
     
                     }
-                    span:nth-of-type(2){
+                    >span:nth-of-type(2){
     
                     }
-                    span:nth-of-type(3){
+                    >span:nth-of-type(3){
     
                     }
                 }
                 //:before 우측 화살표 올자리
-                &:before{
+                >&:before{
     
                 }
             }//div.pagination_wrap //페이지네이션
@@ -474,22 +560,22 @@ div.wrapper{
 
     //////////////////이제 5페이지, 6페이지, 푸터, 전체페이지표시버튼, 기업 단체 구매버튼, ↑버튼 남음
     
-    section.franchise{//5page
-        div.background{
-            ul.dots{
-                li{
+    >section.franchise{//5page
+        >div.background{
+            >ul.dots{
+                >li{
 
                 }
             }//ul.dots //점 배경
 
-            ul.imgs{
-                li{
-                    p{
-                        img{
+            >ul.imgs{
+                >li{
+                    >p{
+                        >img{
 
                         }
                     }
-                    span{
+                    >span{
 
                     }
                 }
@@ -497,20 +583,20 @@ div.wrapper{
         }//div.background
 
 
-        div.ex_wrap{
-            h1{
+        >div.ex_wrap{
+            >h1{
 
             }
-            strong{
+            >strong{
 
             }
-            p{
+            >p{
 
             }
-            div.btn{
-                div{
-                    a{
-                        &::after{//화살표
+            >div.btn{
+                >div{
+                    >a{
+                        >&::after{//화살표
                             
                         }
                     }
@@ -522,31 +608,31 @@ div.wrapper{
 
 //////////////////////////////////////////////////////////////////////
 
-section.newAndNotice{//6page
-    div.left{
-        h1{
+>section.newAndNotice{//6page
+    >div.left{
+        >h1{
 
         }
-        span{
+        >span{
 
         }
-        p{
-            img{
+        >p{
+            >img{
 
             }
         }
     }//div.left
 
-    ul.right{
-        li{
-            a{
-                em{
+    >ul.right{
+        >li{
+            >a{
+                >em{
 
                 }
-                strong{
+                >strong{
 
                 }
-                span{
+                >span{
 
                 }
             }
@@ -555,31 +641,65 @@ section.newAndNotice{//6page
 
 }//section.newAndNotice //6페이지
 
-//전체 페이지 알려주는 선
-div.fullPage{
-    >span{
-
-    }
-    >p{
-        span{
-
+    //전체 페이지 알려주는 선
+    >div.fullPage{
+        position:fixed; top: 50%; right: 74px; transform: translateY(-50%);
+        z-index: 9999;
+        width: 22px; height: 190px;
+        // border: 1px solid black;
+        font-weight: bold;
+        font-family: 'Mark Pro';
+        @include flex(space-between){flex-direction: column;}
+        >span{
+            
         }
-    }
-
-}//div.fullPage //전체 페이지 알려주는 선
-
-//기업단체구매 버튼 + 스크롤최상단이동 버튼
-div.wrapper_Btn{
-    >a.bulkPurchase_btn{
-
-        &::after{
-            //선물상자 아이콘
+        >p{
+            position: relative;
+            width: 2px; height: 120px;
+            background-color: rgba(120,120,120,0.2);
+            >span{
+                position: absolute;
+                width: 2px; height: 30px;
+                background-color: rgb(0, 0, 0);
+            }
         }
-    }
-    >div.moveScrollTop_btn{
 
-    }
-}//div.wrapper_Btn //기업단체구매 버튼 + 스크롤최상단이동 버튼
+    }//div.fullPage //전체 페이지 알려주는 선
+
+    //기업단체구매 버튼 + 스크롤최상단이동 버튼
+    >div.wrapper_Btn{
+        position: fixed; right: 24px; bottom: 24px;
+        z-index: 9999;
+        color: white;
+        @include flex(center,end){flex-direction: column};
+
+        >a.bulkPurchase_btn{
+            width: 191px; height: 72px; border-radius: 36px;
+            background-color: rgba(213,0,55,0.9);
+            color: inherit;
+            vertical-align: middle;
+            font-weight: 600;
+
+            @include flex();
+            >&::after{
+                //선물상자 아이콘
+                content: '';
+                display: inline-block;
+                width: 37px; height: 37px;
+                background: url('../img/icon_presentBox.svg') center center / 100% 100% no-repeat scroll;
+                margin-left: 12px;
+            }
+        }
+        >div.moveScrollTop_btn{
+            width: 64px; height: 64px;
+            background-color: rgba(120,120,120,0.7);
+            cursor: pointer;
+            @include flex();
+            font-family: 'Material Symbols Outlined';
+            font-size: 28px;
+            margin: 16px 4px 0 0;
+        }
+    }//div.wrapper_Btn //기업단체구매 버튼 + 스크롤최상단이동 버튼
 
 
 
@@ -621,7 +741,7 @@ footer{
 
     }//div.footer_top //상단 묶음
 
-    div.footer_bottom{
+    >div.footer_bottom{
         >ul.footer_bottom_menu_Btn{
             >li>a{
 
@@ -636,7 +756,7 @@ footer{
 
     }//div.footer_bottom //하단 묶음
 
-    div.footer_bottom_snsIcons{
+    >div.footer_bottom_snsIcons{
         >li{
             >a{
                 >img{
@@ -649,6 +769,7 @@ footer{
 }//footer //푸터배경
 //- - - - - - - - - - footer↑ - - - - - - - - - -
 
+@import '_m_index.scss';
 
 
 

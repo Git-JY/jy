@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- css -->
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
     
     <!-- 파비콘 -->
     <!-- <link rel="icon" type="image/png" href="../../img_파비콘N오픈그래프N그외/favicon/favicon-32x32.png" sizes="32x32" /> -->
@@ -22,7 +22,7 @@
         <div class="head_El"><!-- 헤더요소들 -->
             <!-- 로고 -->
             <h1 class="Logo">
-                <a href="index.html">A TWOSOME PLACE - COFFEE & DESSERT</a>
+                <a href="#"><img src="../header/img/logo_white.svg" alt="A Twosome Place 로고 하얀색"></a>
             </h1>
             
             <!-- 가로 메뉴내용 -->
@@ -107,7 +107,7 @@
                     
             <div class="head_right">
                 <div class="Language">English</div>
-                <div class="verMenu_btn"></div>
+                <div class="verMenu_btn"><img src="../header/img/icon_headerLogo_white.svg" alt=""></div>
             </div><!-- head_right -->                                 
         </div><!-- head_El -->
     </header>
@@ -222,21 +222,25 @@
         <section class="main">
             <div class="main_slice">
                 <picture><!-- 메인_1 커피배경 -->
-                    <source>
-                    <img src="" alt="커피배경">
+                    <!-- <source>  -->
+                    <source media="(max-width: 767px)" srcset="./img/img_1_1_max767.jpg"> 
+                    <source media="(max-width: 1023px)" srcset="./img/img_1_1_max1023.jpg">
+                    <img src="./img/img_1_1.jpg" alt="커피배경">
                 </picture>
                 <picture><!-- 메인_2 여러 케잌배경 -->
-                    <source>
-                    <img src="" alt="여러 케잌배경">
+                    <!-- <source>  --> 
+                    <source media="(max-width: 767px)" srcset="./img/img_1_2_max767.jpg"> 
+                    <source media="(max-width: 1023px)" srcset="./img/img_1_2_max1023.jpg">
+                    <img src="./img/img_1_2.jpg" alt="여러 케잌배경">
                 </picture>
             </div>
 
             <div class="pagination_wrap">
                 <!-- :after 좌측 화살표 올자리 -->
                 <span class="pagination_pageNumber">
-                    <span>현제페이지수</span>
+                    <span>1</span>
                     <span>/</span>
-                    <span>전체페이지수</span>
+                    <span>2</span>
                 </span>
                 <!-- :before 우측 화살표 올자리 -->
             </div>
@@ -557,14 +561,14 @@
         </section><!-- newAndNotice -->
 
         <div class="fullPage">
-            <span>현제page</span>
-            <p><span>검은선</span>회색선</p>
-            <span>전체page</span>
+            <span>01<!-- 현제page --></span>
+            <p><span><!-- 검은선 --></span><!-- 회색선 --></p>
+            <span>02<!-- 전체page --></span>
         </div>
 
         <div class="wrapper_Btn">
             <a class="bulkPurchase_btn" href="#">기업 단체 구매</a>
-            <div class="moveScrollTop_btn">↑</div>
+            <div class="moveScrollTop_btn">arrow_upward</div>
         </div>
 
     </div>
