@@ -3,6 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display+SC:ital,wght@1,400;1,700;1,900&family=Playfair+Display:wght@400;600;700;800;900&family=Roboto:wght@100&display=swap");
 @font-face {
   font-family: "Mark Pro";
+  src: url("../../common_font/Mark-Pro/transfonter/MarkPro-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mark Pro";
   src: url("../../common_font/Mark-Pro/transfonter/MarkPro-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
@@ -10,7 +17,14 @@
 }
 @font-face {
   font-family: "Mark Pro";
-  src: url("../../common_font/Mark-Pro/transfonter/MarkPro.woff2") format("woff2");
+  src: url("../../common_font/Mark-Pro/transfonter/MarkPro-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "../../common_font/Mark-Pro/transfonter/Mark Pro";
+  src: url("MarkPro.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -41,6 +55,12 @@ ul, ol, li {
   list-style-type: none;
 }
 
+body {
+  background-color: #333;
+  min-width: 1285px;
+  border: 1px solid blueviolet;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -49,6 +69,7 @@ header {
   right: 0;
   background-color: rgba(255, 255, 255, 0);
   color: rgb(255, 255, 255);
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,17 +80,28 @@ header > .head_El {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
+}
+header > .head_El > h1.Logo > a {
+  display: inline-block;
+  width: 152px;
+  height: 21px;
+}
+header > .head_El > h1.Logo > a > img {
+  width: 100%;
 }
 header > .head_El > ul.head_gnb_horizontal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1010px;
+  width: 884px;
 }
-header > .head_El > ul.head_gnb_horizontal > li > a {
+header > .head_El > ul.head_gnb_horizontal > li {
   color: inherit;
   font-weight: 700;
+  font-size: 14px;
+}
+header > .head_El > ul.head_gnb_horizontal > li > a {
+  color: black;
 }
 header > .head_El > ul.head_gnb_horizontal > li > ul.head_lnb {
   display: none;
@@ -96,11 +128,23 @@ nav {
   display: none;
 }
 div.wrapper {
-  width: 100vw;
+  width: 100%;
 }
 div.wrapper > section {
   width: 100%;
   height: 100vh;
+}
+div.wrapper > section h1 {
+  font-size: 96px;
+  font-weight: 800;
+}
+div.wrapper > section h1::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(213, 0, 55);
+  margin-left: 16px;
 }
 div.wrapper > section.main > .main_slice {
   width: 100%;
@@ -168,13 +212,203 @@ div.wrapper > section.main > div.pagination_wrap:before {
 }
 div.wrapper > section.menuStory {
   background-color: white;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0 48px;
+  padding: 145px 0;
+  padding-left: 48px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
-div.wrapper > section.menuStory > h1 {
-  font-size: 96px;
+div.wrapper > section.menuStory > div.menuStory_exWrapper {
+  max-width: 1250px;
+  min-width: 1030px;
+  height: 516px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > h1 {
+  position: absolute;
+  top: -32px;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn {
+  min-width: 320px;
+  height: 370px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li {
+  flex-grow: 1;
+  color: #999;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li > span {
+  display: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li > b {
+  font-size: 32px;
+  font-weight: 800;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li:active {
+  color: black;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li:active > span {
+  display: inline-block;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > ul.text_btn > li:active > b {
+  text-decoration: underline;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper {
+  width: 60%;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul {
+  display: none;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul:nth-of-type(1) {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  overflow: hidden;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul > li {
+  flex-shrink: 0;
+  margin-right: 32px;
+  width: 177px;
+  height: 177px;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul > li:nth-of-type(1) {
+  width: 488px;
+  height: 488px;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul > li > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slides > ul > li > a > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slide_pagination {
+  position: absolute;
+  transform: translate(32px, -50%);
+  width: 424px;
+  height: 56px;
+  background-color: black;
+  padding: 0 14px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slide_pagination::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/ico_arrow_right.svg") center center/100% 100% no-repeat scroll;
+  cursor: pointer;
+}
+div.wrapper > section.menuStory > div.menuStory_exWrapper > div.slides_wrapper > div.img_slide_pagination::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../img/ico_arrow_left.svg") center center/100% 100% no-repeat scroll;
+  cursor: pointer;
+}
+div.wrapper > section.aList {
+  background: url("../img/img_3.jpg") center center/cover no-repeat scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 48px;
+}
+div.wrapper > section.aList > div.text_wrap {
+  min-width: 1216px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+div.wrapper > section.aList > div.text_wrap > h1 {
+  margin-bottom: 96px;
+}
+div.wrapper > section.aList > div.text_wrap > strong {
+  white-space: pre-line;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+div.wrapper > section.aList > div.text_wrap > span {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+div.wrapper > section.aList > div.text_wrap > p {
+  white-space: pre-line;
+  color: #534d49;
+  line-height: normal;
+}
+div.wrapper > section.brandSupport {
+  background-color: white;
+  padding: 145px 0;
+  padding-left: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper {
+  outline: 1px solid rgb(255, 61, 61);
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  position: relative;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > h1 {
+  position: absolute;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper {
+  outline: 1px solid black;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper > ul.img_slide > li {
+  outline: 1px solid black;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper > ul.img_slide > li > span {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 200px;
+  outline: 1px solid black;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper > ul.img_slide > li > span::before {
+  content: "─";
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper > ul.img_slide > li > p {
+  flex-shrink: 0;
+  width: 552px;
+  height: 552px;
+  outline: 1px solid black;
+}
+div.wrapper > section.brandSupport div.brandSupport_exWrapper > div.slides_wrapper > ul.img_slide > li > p > img {
+  width: 100%;
 }
 div.wrapper > div.fullPage {
   position: fixed;

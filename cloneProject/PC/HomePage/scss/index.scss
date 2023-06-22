@@ -1,3 +1,4 @@
+// 스크롤 화살표 아이콘
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 
 @mixin flex($x: center, $y: center){
@@ -8,12 +9,17 @@
 // - - - - - - - - - - @mixin, 변수 등 - - - - - - - - - - 
 
 // - - - - - - - - - - header↓ - - - - - - - - - - 
+body{
+    background-color: #333;
+    min-width: 1285px; //임시
+    border: 1px solid blueviolet;
+}
 header{
     width: 100%; height: 100px;   
     position: fixed; top: 0; right: 0;
     background-color: rgba(255, 255, 255,0);
     color: rgb(255, 255, 255);
-
+    padding: 0 20px;
     @include flex(center, center); //.head_El요소를 중앙에 둠
     z-index: 9999; //header를 가장 앞에 두기
 
@@ -22,29 +28,35 @@ header{
     >.head_El{ 
         width: 100%;
         @include flex(space-between, center);
-        margin: 0 50px;
         >h1.Logo{ 
             >a{
+                display: inline-block;
+                width: 152px; height: 21px;
                 >img{
-                    
+                    width: 100%
                 }
             }
         }//h1.Logo
         //- - - - - - - - - -(gnb와 lnb전체)- - - - - - - - - -
         >ul.head_gnb_horizontal{
             @include flex(space-between, center);
-            width: 1010px;
+            // width: 1010px;
+            width: 884px;
+
             >li{
+                color: inherit;
+                font-weight: 700;
+                // font-size: 18px
+                font-size: 14px; 
                 >a{
-                    color: inherit;
-                    font-weight: 700;
+                    // color: inherit;
+                    color: black; //임시
                 }
 
                 >ul.head_lnb{
                     display: none;
                     >li{//lnb 요소들
                         >a{
-
                         }
                     }
                 }//ul.head_lnb //(gnb의 lnb)
@@ -324,10 +336,24 @@ nav{
 
 //- - - - - - - - - - div.wrapper↓ - - - - - - - - - -
 div.wrapper{
-    width: 100vw;
+    width: 100%; //100vw는 스크롤 크기도 계산되기에 %로 쓰삼
 
     //모든 페이지
-    >section{width: 100%; height: 100vh;}
+    >section{
+        width: 100%; height: 100vh;
+        h1{
+            font-size: 96px;
+            font-weight: 800;
+            
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 20px; height: 20px;
+                background-color: rgb(213, 0, 55);
+                margin-left: 16px;
+            }
+        }
+    }
 
     >section.main{//1page
         >.main_slice{//슬라이드
@@ -403,73 +429,152 @@ div.wrapper{
 
     >section.menuStory{//2page
         background-color: white;
-        position: relative; left: 50%; transform: translateX(-50%);
-        padding: 0 48px;
-        >h1{//MENU STORY
-            font-size: 96px;
-        }
+        padding: 145px 0; padding-left: 48px;
+        @include flex(end, center);
 
-        >ul.text_btn{
-            >li{
-                >span{
+        >div.menuStory_exWrapper{
+            max-width: 1250px; 
+            min-width: 1030px; 
+            height: 516px;
+            position: relative;
+            @include flex(space-between, end);
+            >h1{//MENU STORY
+                position: absolute; top: -32px;
+            }//h1
+            
+            >ul.text_btn{
+                min-width: 320px; height: 370px;
+                @include flex(space-between, start){
+                    flex-direction: column;
+                };
+                >li{
+                    flex-grow: 1;
+                    color: #999;
+                    cursor: pointer;
+                    transition: 0.2s;
 
+                    @include flex(center, start){flex-direction: column;};
+                    >span{
+                        display: none;
+
+                        font-size: 16px;
+                        font-weight: 700;   
+                        margin-bottom: 12px;       
+                    }
+                    >b{
+                        font-size: 32px;
+                        font-weight: 800;
+    
+                    }
+                }//ul.text_btn //COFFEE STORY~DELI STORY(각각의 버튼+설명)
+                >li:active{
+                    color: black;
+                    >span{
+                        display: inline-block;
+                    }
+                    >b{
+                        text-decoration:underline;
+                    }
                 }
-                >b{
+            }//ul.text_btn //COFFEE STORY~DELI STORY(버튼+설명 총 3개 묶음)
+    
+            >div.slides_wrapper{ //슬라이드 + 페이지네이션
 
-                }
-            }//ul.text_btn //COFFEE STORY~DELI STORY(각각의 버튼+설명)
-        }//ul.text_btn //COFFEE STORY~DELI STORY(버튼+설명 총 3개 묶음)
+                width: 60%;
+                >div.img_slides{ //슬라이드
+                    >ul{ //총 3개의 모든 슬라이드
+                        display: none;
+                        &:nth-of-type(1){//첫번째 슬라이드
+                            @include flex(start, end);
+                            overflow: hidden;
+                        }
+                        
+                        >li{//각각의 사진
 
-        >div.slides_wrapper{ //슬라이드 + 페이지네이션
-            >div.img_slides{ //슬라이드
-                >ul.img_slide1_coffeeStory{
-                    >li{
-                        >a{
-                            >img{
+                            flex-shrink: 0;
+                            margin-right: 32px;
+                            width: 177px; height: 177px;
+                            &:nth-of-type(1){//첫번째 사진
+                                width: 488px; height: 488px;
+                            }
+                            >a{
+                                display: inline-block;
+                                width: 100%; height: 100%;
+                                overflow: hidden;
+                                >img{
+                                    width: 100%; height: 100%;
+                                    object-fit: cover;
+                                }
 
                             }
+
                         }
                     }
-                }//ul.img_slide1_coffeeStory // 슬라이드1_coffeeStory(총4개의 li태그)
 
-                >ul.img_slide2_dessertStory{
-                    >li{
-                        >a{
-                            >img{
-
+                    >ul.img_slide1_coffeeStory{
+                        >li{
+                            >a{
+                                >img{
+    
+                                }
                             }
                         }
-                    }
-                }//ul.img_slide2_dessertStory // 슬라이드2_dessertStory(총7개의 li태그)
-
-                >ul.img_slide3_deliStory{
-                    >li{
-                        >a{
-                            >img{
-
+                    }//ul.img_slide1_coffeeStory // 슬라이드1_coffeeStory(총4개의 li태그)
+    
+                    >ul.img_slide2_dessertStory{
+                        >li{
+                            >a{
+                                >img{
+    
+                                }
                             }
                         }
+                    }//ul.img_slide2_dessertStory // 슬라이드2_dessertStory(총7개의 li태그)
+    
+                    >ul.img_slide3_deliStory{
+                        >li{
+                            >a{
+                                >img{
+    
+                                }
+                            }
+                        }
+                    }//ul.img_slide3_deliStory // 슬라이드3_deliStory(총5개의 li태그)
+                }//div.img_slides //슬라이드 //총 3개의 슬라이드 묶음 COFFEE STORY~DELI STORY
+    
+                >div.img_slide_pagination{//페이지네이션
+                    position: absolute;
+                    transform: translate(32px, -50%);
+                    width: 424px; height: 56px;
+                    background-color: black;
+                    padding: 0 14px; 
+                    color: white;
+                    @include flex(space-between, center);
+                    // :after 좌측 화살표 올자리
+                    >&::after{
+                        content: '';
+                        display: inline-block;
+                        width: 24px; height: 24px;
+                        background: url('../img/ico_arrow_right.svg') center center / 100% 100% no-repeat scroll;
+                        cursor: pointer;
                     }
-                }//ul.img_slide3_deliStory // 슬라이드3_deliStory(총5개의 li태그)
-            }//div.img_slides //슬라이드 //총 3개의 슬라이드 묶음 COFFEE STORY~DELI STORY
-
-            >div.img_slide_pagination{//페이지네이션
-                // :after 좌측 화살표 올자리
-                >&::after{
-
-                }
-                //음식이름
-                >span{
-
-                }
-                // :before 우측 화살표 올자리
-                >&::before{
-
-                }
-            }//div.img_slide_pagination //페이지네이션
-
-
-        }//div.slides_wrapper //슬라이드 + 페이지네이션
+                    //음식이름
+                    >span{
+    
+                    }
+                    // :before 우측 화살표 올자리
+                    >&::before{
+                        content: '';
+                        display: inline-block;
+                        width: 24px; height: 24px;
+                        background: url('../img/ico_arrow_left.svg') center center / 100% 100% no-repeat scroll;
+                        cursor: pointer;
+                    }
+                }//div.img_slide_pagination //페이지네이션
+    
+    
+            }//div.slides_wrapper //슬라이드 + 페이지네이션
+        }//div.menuStory_exWrapper
 
 
 
@@ -478,18 +583,30 @@ div.wrapper{
 //////////////////////////////////////////////////////////////////////
 
     >section.aList{//3page
+        background: url('../img/img_3.jpg') center center / cover no-repeat scroll;
+        @include flex(); padding-left: 48px;
         >div.text_wrap{
-            >h1{//에이리스트
+            min-width: 1216px;
+            @include flex(center, start){flex-direction: column};
 
+            >h1{//에이리스트
+                margin-bottom: 96px;
             }
             >strong{
-
+                white-space: pre-line;
+                font-size: 32px;
+                font-weight: 800;
+                margin-bottom: 40px;
             }
             >span{
-
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 16px;
             }
             >p{
-
+                white-space: pre-line;
+                color: #534d49;
+                line-height: normal;
             }
         }//div.text_wrap //텍스트 전체 묶음
 
@@ -498,68 +615,96 @@ div.wrapper{
 //////////////////////////////////////////////////////////////////////
 
     >section.brandSupport{//4page
-        >h1{
-
-        }
-        >div.slides_wrapper{//슬라이드 + 페이지네이션
-
+        background-color: white;
+        padding: 145px 0; padding-left: 48px;
+        @include flex(center, center);
+        position: relative;
+        
+        div.brandSupport_exWrapper{
+            // width: 1016px;
+            // width: 1012px; //?????
+            outline: 1px solid rgb(255, 61, 61);
+            @include flex(start, end){};
+            position: relative;
+            
+            >h1{
+                position: absolute;
+                
+            }
+            >div.slides_wrapper{//슬라이드 + 페이지네이션
+            // width: 1012px;
+            outline: 1px solid black;
             >ul.img_slide{//슬라이드
                 >li{
-                    >span{
-
-                    }
-                    >p{
-                        >img{
-
-                        }
-                    }
-
-                    >div.ex{
-                        >p{//아이콘 이미지
-                            >img{
-
+                    
+                        outline: 1px solid black;
+                        @include flex(start, end);
+                        
+                        >span{
+                            @include flex(start, center);
+                            width: 200px;
+                            &::before{
+                                content:'─';                           
                             }
-                        }
-                        >a{//글씨
-                           >strong{
-
-                           }
-                           >&::after{//화살표
-                            
-                           }
+                            outline: 1px solid black;
+                            // transform-origin: left bottom; transform: translateX(100%) rotate(-90deg);             
                         }
                         >p{
-
+                            flex-shrink: 0;
+                            width: 552px; height: 552px; 
+                            outline: 1px solid black;                          
+                            >img{
+                                width: 100%;
+                            }
                         }
-                    }//div.ex //글씨설명 묶음
-                }//li //슬라이드의 각 요소
-
-            }//ul.img_slide //슬라이드
-
-            >div.pagination_wrap{//페이지네이션 
-                // :after 좌측 화살표 올자리
-                >&:after{
     
-                }
-                // 전체페이지수/현제페이지수
-                >span.pagination_pageNumber{
-                    >span:nth-of-type(1){
+                        >div.ex{
+                            >p{//아이콘 이미지
+                                >img{
     
+                                }
+                            }
+                            >a{//글씨
+                               >strong{
+    
+                               }
+                               >&::after{//화살표
+                                
+                               }
+                            }
+                            >p{
+    
+                            }
+                        }//div.ex //글씨설명 묶음
+                    }//li //슬라이드의 각 요소
+    
+                }//ul.img_slide //슬라이드
+    
+                >div.pagination_wrap{//페이지네이션 
+                    // :after 좌측 화살표 올자리
+                    >&:after{
+        
                     }
-                    >span:nth-of-type(2){
-    
+                    // 전체페이지수/현제페이지수
+                    >span.pagination_pageNumber{
+                        >span:nth-of-type(1){
+        
+                        }
+                        >span:nth-of-type(2){
+        
+                        }
+                        >span:nth-of-type(3){
+        
+                        }
                     }
-                    >span:nth-of-type(3){
-    
+                    //:before 우측 화살표 올자리
+                    >&:before{
+        
                     }
-                }
-                //:before 우측 화살표 올자리
-                >&:before{
+                }//div.pagination_wrap //페이지네이션
     
-                }
-            }//div.pagination_wrap //페이지네이션
-
-        }//div.slides_wrapper //슬라이드 + 페이지네이션
+            }//div.slides_wrapper //슬라이드 + 페이지네이션
+        }//div.brandSupport_exWrapper
 
     }//section.brandSupport //4페이지
 
