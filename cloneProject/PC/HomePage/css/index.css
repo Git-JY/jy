@@ -109,10 +109,10 @@ header > .head_El > ul.head_gnb_horizontal {
   width: 884px;
 }
 header > .head_El > ul.head_gnb_horizontal > li {
-  transform: translateY(9px);
+  transform: translateY(7px);
 }
 header > .head_El > ul.head_gnb_horizontal > li > a {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: inherit;
 }
