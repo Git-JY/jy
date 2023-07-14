@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-2,.cls-3{fill:#fff;stroke:#010101}.cls-2{stroke-width:2px}.cls-6{fill:none}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_giftcard_s" transform="translate(-794 -2245)">
+        <g id="ico" transform="translate(220)">
+            <g id="사각형_813" class="cls-2">
+                <path d="M0 0H48V36H0z" class="cls-5" transform="translate(580 2257)"/>
+                <path d="M1 1H47V35H1z" class="cls-6" transform="translate(580 2257)"/>
+            </g>
+            <g id="사각형_818" class="cls-3">
+                <path d="M0 0H46V2H0z" class="cls-5" transform="translate(580 2273)"/>
+                <path d="M0.5 0.5H45.5V1.5H0.5z" class="cls-6" transform="translate(580 2273)"/>
+            </g>
+            <g id="사각형_819" class="cls-3">
+                <path d="M0 0H2V34H0z" class="cls-5" transform="translate(613 2258)"/>
+                <path d="M0.5 0.5H1.5V33.5H0.5z" class="cls-6" transform="translate(613 2258)"/>
+            </g>
+            <g id="사각형_824" class="cls-2" transform="translate(606 2267)">
+                <rect width="9" height="9" class="cls-5" rx="4.5"/>
+                <rect width="7" height="7" x="1" y="1" class="cls-6" rx="3.5"/>
+            </g>
+            <g id="사각형_825" class="cls-2" transform="translate(613 2267)">
+                <rect width="9" height="9" class="cls-5" rx="4.5"/>
+                <rect width="7" height="7" x="1" y="1" class="cls-6" rx="3.5"/>
+            </g>
+            <path id="패스_3090" fill="none" stroke="#010101" stroke-width="2px" d="M7.861 1891.416l5.287-7.724 4.943 7.93" transform="translate(601 390)"/>
+        </g>
+    </g>
+</svg>

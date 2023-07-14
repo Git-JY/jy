@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-4{fill:#fff;stroke:#010101}.cls-6{fill:none}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_cardrecharge" transform="translate(-684 -2245)">
+        <g id="ico" transform="translate(110)">
+            <g id="사각형_813" fill="#fff" stroke="#010101" stroke-width="2px">
+                <path d="M0 0H48V36H0z" class="cls-5" transform="translate(580 2257)"/>
+                <path d="M1 1H47V35H1z" class="cls-6" transform="translate(580 2257)"/>
+            </g>
+            <path id="패스_3089" fill="none" stroke="#010101" stroke-width="2px" d="M595.078 2268.136l3.377 9.844h.216l3.328-5.844 3.328 5.844h.266l3.406-9.844" transform="translate(2.422 2.364)"/>
+            <g id="사각형_822" class="cls-4">
+                <path d="M0 0H4V2H0z" class="cls-5" transform="translate(595 2274)"/>
+                <path d="M0.5 0.5H3.5V1.5H0.5z" class="cls-6" transform="translate(595 2274)"/>
+            </g>
+            <g id="사각형_823" class="cls-4">
+                <path d="M0 0H4V2H0z" class="cls-5" transform="translate(610 2274)"/>
+                <path d="M0.5 0.5H3.5V1.5H0.5z" class="cls-6" transform="translate(610 2274)"/>
+            </g>
+        </g>
+    </g>
+</svg>

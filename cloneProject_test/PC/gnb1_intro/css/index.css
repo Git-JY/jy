@@ -73,7 +73,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 header {
@@ -85,8 +84,8 @@ header {
   top: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   color: white;
   padding: 0 25px;
   padding-top: 36px;
@@ -105,8 +104,7 @@ header > .head_El > h1.Logo > a {
   display: inline-block;
   width: 152px;
   height: 21px;
-  background: url("../../header/img/logo_white.svg") center center/100% 100% no-repeat scroll;
-  vertical-align: text-top;
+  background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
 }
 header > .head_El > ul.head_gnb_horizontal {
   display: flex;
@@ -233,55 +231,45 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
   }
 }
 
-/* 
-//타블렛 1022px이하
-@media(max-width: 1022px){
+div.padding {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 172px 48px 0px;
+}
+@media (max-width: 1022px) {
+  div.padding {
     padding: 136px 48px 0px;
-}// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-//모바일 896px이하
-@media(max-width: 896px){
+  }
+}
+@media (max-width: 896px) {
+  div.padding {
     padding: 88px 32px 0px;
-
-}// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- */
-div.wrapper {
-  margin-top: 172px;
+  }
+}
+div.padding div.wrapper {
+  max-width: 1216px;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
 }
-div.wrapper h2 {
+div.padding div.wrapper h2 {
   font-size: 40px;
   font-weight: 700;
   color: black;
   line-height: 1.5;
   margin: 24px 0px;
 }
-div.wrapper > nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.wrapper > nav > div.nav_wrapper {
-  margin-left: 48px;
-  margin-right: 48px;
-  max-width: 1216px;
-  width: 100%;
+div.padding div.wrapper > nav {
   font-size: 14px;
   font-weight: inherit;
   color: #707070;
   margin-bottom: 56px;
 }
-div.wrapper > nav > div.nav_wrapper > span {
+div.padding div.wrapper > nav > span {
   vertical-align: middle;
 }
-div.wrapper > nav > div.nav_wrapper > span::after {
+div.padding div.wrapper > nav > span::after {
   content: "";
   display: inline-block;
   width: 3px;
@@ -290,12 +278,12 @@ div.wrapper > nav > div.nav_wrapper > span::after {
   background: #333;
   vertical-align: middle;
 }
-div.wrapper > nav > div.nav_wrapper > span:nth-of-type(3) {
+div.padding div.wrapper > nav > span:nth-of-type(3) {
   font-size: inherit;
   font-weight: 600;
   color: #d50037;
 }
-div.wrapper > nav > div.nav_wrapper > span:nth-of-type(3)::after {
+div.padding div.wrapper > nav > span:nth-of-type(3)::after {
   content: "expand_more";
   font-family: "Material Symbols Outlined";
   width: 12px;
@@ -304,301 +292,190 @@ div.wrapper > nav > div.nav_wrapper > span:nth-of-type(3)::after {
   margin-bottom: 8px;
   cursor: pointer;
 }
-div.wrapper > article {
-  max-width: 1216px;
-  margin-top: 120px;
-  margin-left: 48px;
-  margin-right: 48px;
-}
-div.wrapper > article:nth-of-type(1) {
-  margin-top: 0px;
-}
-div.wrapper > article.contents1 > h1 {
+div.padding div.wrapper > article.contents1 > h1 {
   font-size: 72px;
   font-weight: 700;
   color: black;
   line-height: 1.5;
 }
-div.wrapper > article.contents1 > ul {
-  margin-top: 64px;
-  height: 385px;
+div.padding div.wrapper > article.contents1 > div.contents1_1 {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-bottom: 32px;
 }
-div.wrapper > article.contents1 > ul > li.left {
-  width: 537px;
-  height: 100%;
-  margin-right: 192px;
+@keyframes rotate_ani {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
-div.wrapper > article.contents1 > ul > li.left > dl > dt {
-  font-size: 56px;
-  font-weight: 700;
-  color: black;
-}
-div.wrapper > article.contents1 > ul > li.left > dl > dd {
-  font-size: 32px;
-  font-weight: 700;
-  color: black;
-  margin-top: 32px;
-  word-break: keep-all;
-  word-wrap: break-word;
-}
-div.wrapper > article.contents1 > ul > li.left > p {
-  font-size: inherit;
-  font-weight: inherit;
-  color: #333;
-  margin-top: 64px;
-}
-div.wrapper > article.contents1 > ul > li.left > p > em {
-  color: #d50037;
-  font-style: normal;
-}
-div.wrapper > article.contents1 > ul > li.right > i > img {
-  width: 100%;
-}
-div.wrapper > article.contents2 > ul.twosome_box_list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-div.wrapper > article.contents2 > ul.twosome_box_list > li {
-  border: 1px solid #d6d6d6;
-  display: block;
-  width: 30%;
-  height: 375px;
-  padding: 48px 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-div.wrapper > article.contents2 > ul.twosome_box_list > li > dl > dt {
-  font-size: 24px;
-  font-weight: 700;
-  color: black;
-}
-div.wrapper > article.contents2 > ul.twosome_box_list > li > dl > dd {
-  font-size: inherit;
-  font-weight: inherit;
-  color: #333;
-  margin: 16px 0px;
-}
-div.wrapper > article.contents3 {
-  width: 100%;
-  max-width: none;
-  margin-right: 0px;
-  margin-left: 0px;
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl {
   position: relative;
+  width: 100%;
+  height: 314px;
+  padding: 68px 72px;
+  background-color: #f5f5f5;
+  overflow: hidden;
 }
-div.wrapper > article.contents3 > div.MobileBtns_wrapper {
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl::before {
+  content: "";
+  display: inline-block;
+  width: 216px;
+  height: 216px;
+  background: url("../img/gnb1_intro_1.svg") center center/100% 100% no-repeat scroll;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: none;
+  right: -80px;
+  top: -80px;
+  animation: rotate_ani 35s linear infinite;
 }
-div.wrapper > article.contents3 > div.MobileBtns_wrapper > span {
-  width: 32px;
-  height: 32px;
-  padding: 5px;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2) {
+  margin-left: 32px;
 }
-div.wrapper > article.contents3 > div.MobileBtns_wrapper > span > img {
-  width: 100%;
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2)::before {
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: url("../img/gnb1_intro_2.svg") center center/100% 100% no-repeat scroll;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  animation: rotate_ani 35s linear infinite;
 }
-div.wrapper > article.contents3 > div.slide_frame {
-  height: 616px;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide {
-  transform: translateX(-100%);
-  transition: 1s;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  background: #f5f5f5;
-  padding-bottom: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper {
-  margin-left: 48px;
-  margin-right: 48px;
-  max-width: 1216px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left {
-  height: 100%;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > strong {
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dt {
+  display: block;
   font-size: 18px;
-  color: #333;
+  font-weight: 700;
+  color: #d50037;
+  margin-bottom: 52px;
+}
+div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dl {
+  font-size: 32px;
+  font-weight: 600;
+  color: black;
   line-height: 1.5;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > strong > em {
+div.padding div.wrapper > article.contents1 > dl.contents1_2 {
+  width: 100%;
+  height: 327px;
+  padding: 68px 72px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+div.padding div.wrapper > article.contents1 > dl.contents1_2 > dt {
+  font-size: 18px;
+  font-weight: 700;
   color: #d50037;
+  margin-bottom: 32px;
+}
+div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd {
+  font-size: 24px;
+  font-weight: 600;
+  color: inherit;
+}
+div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd > em {
   font-style: normal;
+  text-decoration: underline;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > h2 {
+div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd > strong {
   margin-top: 16px;
+  font-size: 48px;
+  font-weight: 700;
+  color: inherit;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul {
-  margin-top: 80px;
+div.padding div.wrapper > article.contents2 {
+  margin: 120px 0px;
+}
+div.padding div.wrapper > article.contents2 > ul {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 311px;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li {
+div.padding div.wrapper > article.contents2 > ul > li {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d6d6d6;
+  margin-right: 32px;
+  padding: 48px 20px 42px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li:not(:first-child) {
-  margin-left: 64px;
+div.padding div.wrapper > article.contents2 > ul > li:nth-of-type(3) {
+  margin-right: 0px;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li > i {
+div.padding div.wrapper > article.contents2 > ul > li > i {
+  width: 120px;
+  height: 120px;
+}
+div.padding div.wrapper > article.contents2 > ul > li > i > img {
+  width: 100%;
+}
+div.padding div.wrapper > article.contents2 > ul > li > strong {
+  margin: 20px 0px 16px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #d50037;
+}
+div.padding div.wrapper > article.contents2 > ul > li > p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+div.padding div.wrapper > article.contents3 > ul {
+  height: 246px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d6d6d6;
+}
+div.padding div.wrapper > article.contents3 > ul > li {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #d6d6d6;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+div.padding div.wrapper > article.contents3 > ul > li:nth-of-type(5) {
+  border: none;
+}
+div.padding div.wrapper > article.contents3 > ul > li > i {
   width: 60px;
   height: 60px;
 }
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li > i > img {
-  width: 100%;
-  height: 100%;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li > span {
-  white-space: nowrap;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.right > i {
-  display: inline-block;
-  width: 284px;
-  height: 600px;
-}
-div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.right > i > img {
+div.padding div.wrapper > article.contents3 > ul > li > i > img {
   width: 100%;
 }
-div.wrapper > article.contents3 > div.pagination {
-  width: 100vw;
-  position: absolute;
-  left: 0px;
-  bottom: 64px;
-  padding-left: 48px;
-  padding-right: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper {
-  max-width: 1216px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper > ul.pageBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper > ul.pageBtn > li {
-  width: 10px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.4);
-  opacity: 0.15;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper > ul.pageBtn > li:nth-of-type(1) {
-  width: 20px;
-  background: black;
-  opacity: 1;
-  border-radius: 10px;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper div.page {
-  color: #707070;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper div.page strong {
-  font-size: 18px;
-  font-weight: 700;
-  color: black;
-}
-div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper div.page em {
-  font-size: 16px;
-  font-weight: 700;
-  color: #707070;
-  font-style: normal;
-}
-div.wrapper > article.Download {
-  width: 100%;
-  padding-left: 48px;
-  padding-right: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-div.wrapper > article.Download > h2 {
-  white-space: nowrap;
-}
-div.wrapper > article.Download > div.apps {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 560px;
-}
-div.wrapper > article.Download > div.apps > div.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 240px;
-  height: 64px;
-  border: 1px solid #d6d6d6;
-  vertical-align: middle;
-  cursor: pointer;
-}
-div.wrapper > article.Download > div.apps > div.app > i {
-  margin-right: 16px;
-  vertical-align: top;
-}
-div.wrapper > article.Download > div.apps > div.app > em {
-  font-style: normal;
-  vertical-align: middle;
-}
-div.wrapper > article.Download > div.apps > div.qrCode {
-  border: 1px solid #d6d6d6;
+div.padding div.wrapper > article.contents3 > ul > li > p {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
 }
 @media (max-width: 1022px) {
-  div.wrapper h2 {
+  div.padding div.wrapper h2 {
     font-size: 32px;
     font-weight: 700;
     color: black;
   }
-  div.wrapper > nav {
+  div.padding div.wrapper > nav {
     font-size: 14px;
     font-weight: inherit;
     color: #707070;
     margin-bottom: 24px;
   }
-  div.wrapper > nav > span {
+  div.padding div.wrapper > nav > span {
     vertical-align: middle;
   }
-  div.wrapper > nav > span::after {
+  div.padding div.wrapper > nav > span::after {
     content: "";
     display: inline-block;
     width: 3px;
@@ -607,12 +484,12 @@ div.wrapper > article.Download > div.apps > div.qrCode {
     background: #333;
     vertical-align: middle;
   }
-  div.wrapper > nav > span:nth-of-type(3) {
+  div.padding div.wrapper > nav > span:nth-of-type(3) {
     font-size: inherit;
     font-weight: 600;
     color: #d50037;
   }
-  div.wrapper > nav > span:nth-of-type(3)::after {
+  div.padding div.wrapper > nav > span:nth-of-type(3)::after {
     content: "expand_more";
     font-family: "Material Symbols Outlined";
     width: 12px;
@@ -621,344 +498,224 @@ div.wrapper > article.Download > div.apps > div.qrCode {
     margin-bottom: 8px;
     cursor: pointer;
   }
-  div.wrapper > article {
-    margin-left: 48px;
-    margin-right: 48px;
-  }
-  div.wrapper > article.contents1 > h1 {
+  div.padding div.wrapper > article.contents1 > h1 {
     font-size: 56px;
     font-weight: 700;
     color: black;
   }
-  div.wrapper > article.contents1 > ul {
-    margin-top: 48px;
-    height: 336px;
+  div.padding div.wrapper > article.contents1 > div.contents1_1 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
   }
-  div.wrapper > article.contents1 > ul > li.left {
-    width: auto;
-    height: 100%;
-    margin-right: 5vw;
-    flex-basis: 49%;
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl {
+    height: 236px;
+    padding: 52px 56px;
   }
-  div.wrapper > article.contents1 > ul > li.left > dl > dt {
-    font-size: 48px;
-    font-weight: 700;
-    color: black;
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl::before {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    right: -55px;
+    top: -55px;
   }
-  div.wrapper > article.contents1 > ul > li.left > dl > dd {
-    font-size: 24px;
-    font-weight: 700;
-    color: black;
-    margin-top: 24px;
-  }
-  div.wrapper > article.contents1 > ul > li.left > p {
-    font-size: 16px;
-    font-weight: inherit;
-    color: #333;
-    margin-top: 48px;
-  }
-  div.wrapper > article.contents1 > ul > li.left > p > em {
-    color: #d50037;
-    font-style: normal;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list > li {
-    width: 30%;
-    height: 337px;
-    padding: 48px 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list > li > dl > dt {
-    font-size: 18px;
-    font-weight: 700;
-    color: black;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list > li > dl > dd {
-    font-size: 16px;
-    font-weight: inherit;
-    color: #333;
-    margin: 8px 0px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame {
-    height: 616px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li {
-    padding-bottom: 64px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper {
-    margin-left: 48px;
-    margin-right: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left {
-    height: 100%;
-    margin-right: 70px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > strong {
-    font-size: 16px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > h2 {
-    margin-top: 16px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > p {
-    font-size: 16px;
-    word-break: keep-all;
-    word-wrap: break-word;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > p > br {
-    display: none;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul {
-    margin-top: 56px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li:not(:first-child) {
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2) {
     margin-left: 32px;
   }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.right > i {
-    width: 284px;
-    height: 600px;
-  }
-  div.wrapper > article.contents3 > div.pagination {
-    width: 100vw;
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2)::before {
+    width: 120px;
+    height: 120px;
     position: absolute;
-    left: 0px;
-    bottom: 64px;
-    padding-left: 48px;
-    padding-right: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: -20px;
+    top: -20px;
   }
-  div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper div.page strong {
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dt {
     font-size: 16px;
     font-weight: 700;
+    color: #d50037;
+    margin-bottom: 36px;
+  }
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dl {
+    font-size: 24px;
+    font-weight: 600;
     color: black;
   }
-  div.wrapper > article.Download {
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 48px;
-    padding-right: 48px;
+    height: 270px;
+    padding: 60px 64px;
   }
-  div.wrapper > article.Download > div.apps {
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 > dt {
+    font-size: 16px;
+    font-weight: 700;
+    color: #d50037;
+    margin-bottom: 28px;
+  }
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd {
+    font-size: 20px;
+    font-weight: 600;
+    color: inherit;
+  }
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd > strong {
+    margin-top: 8px;
+    font-size: 40px;
+    font-weight: 700;
+    color: inherit;
+  }
+  div.padding div.wrapper > article.contents2 {
+    margin: 80px 0px;
+  }
+  div.padding div.wrapper > article.contents2 > ul {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 438px;
+    align-items: flex-start;
+    height: 276px;
   }
-  div.wrapper > article.Download > div.apps > div.app {
-    width: 179px;
-    height: 64px;
+  div.padding div.wrapper > article.contents2 > ul > li {
+    margin-right: 32px;
+    padding: 40px 10px;
+  }
+  div.padding div.wrapper > article.contents2 > ul > li:nth-of-type(3) {
+    margin-right: 0px;
+  }
+  div.padding div.wrapper > article.contents2 > ul > li > strong {
+    margin: 12px 0px 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #d50037;
+  }
+  div.padding div.wrapper > article.contents2 > ul > li > p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+  }
+  div.padding div.wrapper > article.contents3 > ul {
+    height: 208px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.padding div.wrapper > article.contents3 > ul > li {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #d6d6d6;
+    padding: 48px 16px;
+  }
+  div.padding div.wrapper > article.contents3 > ul > li > p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
   }
 }
 @media (max-width: 896px) {
-  div.wrapper {
-    margin-top: 100px;
-  }
-  div.wrapper h2 {
+  div.padding div.wrapper h2 {
     font-size: 24px;
     font-weight: 700;
     color: black;
   }
-  div.wrapper > nav {
+  div.padding div.wrapper > nav {
     display: none;
   }
-  div.wrapper > article {
-    padding-left: 32px;
-    padding-right: 32px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  div.wrapper > article.contents1 > h1 {
+  div.padding div.wrapper > article.contents1 > h1 {
     font-size: 32px;
     font-weight: 700;
     color: black;
   }
-  div.wrapper > article.contents1 > ul {
-    margin-top: 32px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  div.wrapper > article.contents1 > ul > li.left {
-    width: 100%;
-    height: auto;
-    margin-right: 0px;
-    flex-basis: auto;
-  }
-  div.wrapper > article.contents1 > ul > li.left > dl > dt {
-    font-size: 32px;
-    font-weight: 700;
-    color: black;
-  }
-  div.wrapper > article.contents1 > ul > li.left > dl > dd {
-    font-size: 20px;
-    font-weight: 700;
-    color: black;
-    margin-top: 16px;
-  }
-  div.wrapper > article.contents1 > ul > li.left > p {
-    word-break: keep-all;
-    word-wrap: break-word;
-  }
-  div.wrapper > article.contents1 > ul > li.right {
-    margin-top: 56px;
-    width: 100%;
-  }
-  div.wrapper > article.contents1 > ul > li.right > i {
-    display: inline-block;
-    width: 100%;
-  }
-  div.wrapper > article.contents1 > ul > li.right > i > img {
-    width: 100%;
-  }
-  div.wrapper > article.contents2 {
-    width: 100%;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 32px;
-  }
-  div.wrapper > article.contents2 > ul.twosome_box_list > li {
-    width: 100%;
-    height: 337px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  div.wrapper > article.contents3 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  div.wrapper > article.contents3 > div.MobileBtns_wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  div.wrapper > article.contents3 > div.slide_frame {
-    height: auto;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li {
-    padding-bottom: 76px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper {
-    margin-left: 32px;
-    margin-right: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left {
-    height: 100%;
-    margin-right: 0px;
-    margin-top: 70px;
-    text-align: center;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > h2 {
-    font-size: 24px;
-    margin-top: 40px;
-    margin-bottom: 12px;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul {
+  div.padding div.wrapper > article.contents1 > div.contents1_1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li {
-    width: 50%;
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl {
+    height: 230px;
+    padding: 44px 32px;
   }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.left > ul > li:not(:first-child) {
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl::before {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: -44px;
+    top: -44px;
+  }
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2) {
     margin-left: 0px;
+    margin-top: 32px;
   }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.right {
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl:nth-of-type(2)::before {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: -13px;
+    top: -13px;
+  }
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dt {
+    margin-bottom: 28px;
+  }
+  div.padding div.wrapper > article.contents1 > div.contents1_1 > dl > dl {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 {
+    width: 100%;
+    height: 300px;
+    padding: 44px 32px;
+  }
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd {
+    font-size: 16px;
+    font-weight: 600;
+    color: inherit;
+  }
+  div.padding div.wrapper > article.contents1 > dl.contents1_2 > dd > strong {
+    font-size: 32px;
+    font-weight: 700;
+    color: inherit;
+  }
+  div.padding div.wrapper > article.contents2 {
+    margin: 64px 0px;
+  }
+  div.padding div.wrapper > article.contents2 > ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
-  div.wrapper > article.contents3 > div.slide_frame > ul.slide > li div.slideLiWrapper > div.right > i {
-    margin: auto;
-    width: 70%;
+    flex-direction: column;
     height: auto;
   }
-  div.wrapper > article.contents3 > div.pagination {
-    width: 100vw;
-    height: 76px;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+  div.padding div.wrapper > article.contents2 > ul > li {
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+  div.padding div.wrapper > article.contents2 > ul > li:nth-of-type(3) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  div.padding div.wrapper > article.contents2 > ul > li > p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+  }
+  div.padding div.wrapper > article.contents3 > ul {
+    border: 1px solid #d6d6d6;
+    height: 519px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
-  div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  div.padding div.wrapper > article.contents3 > ul > li {
+    width: 50%;
+    height: 155px;
+    border-right: none;
+    padding: 48px 10px 0px;
   }
-  div.wrapper > article.contents3 > div.pagination > div.pagination_wrapper div.page {
-    display: none;
-  }
-  div.wrapper > article.Download {
+  div.padding div.wrapper > article.contents3 > ul > li:nth-of-type(5) {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 32px;
-    padding-right: 32px;
   }
-  div.wrapper > article.Download > div.apps {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 112px;
-  }
-  div.wrapper > article.Download > div.apps > div.app {
-    width: 100%;
-    height: 48px;
-  }
-  div.wrapper > article.Download > div.apps > div.qrCode {
-    display: none;
+  div.padding div.wrapper > article.contents3 > ul > li > p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
   }
 }
 

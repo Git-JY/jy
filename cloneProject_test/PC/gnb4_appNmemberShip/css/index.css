@@ -105,7 +105,7 @@ header > .head_El > h1.Logo > a {
   display: inline-block;
   width: 152px;
   height: 21px;
-  background: url("../../header/img/logo_white.svg") center center/100% 100% no-repeat scroll;
+  background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
   vertical-align: text-top;
 }
 header > .head_El > ul.head_gnb_horizontal {
@@ -396,10 +396,11 @@ div.wrapper > article.contents3 {
 }
 div.wrapper > article.contents3 > div.MobileBtns_wrapper {
   position: absolute;
-  top: 50%;
+  top: 25%;
   transform: translateY(-50%);
   width: 100%;
   display: none;
+  z-index: 10000;
 }
 div.wrapper > article.contents3 > div.MobileBtns_wrapper > span {
   width: 32px;
@@ -501,6 +502,7 @@ div.wrapper > article.contents3 > div.pagination {
   bottom: 64px;
   padding-left: 48px;
   padding-right: 48px;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;

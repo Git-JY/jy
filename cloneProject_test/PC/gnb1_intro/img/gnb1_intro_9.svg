@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:#fff;stroke:#010101;stroke-width:2px}.cls-4{stroke:none}.cls-6{fill:none}
+        </style>
+    </defs>
+    <g id="ico_all" transform="translate(-830 -900)">
+        <g id="그룹_391">
+            <g id="패스_2820" fill="#fff">
+                <path d="M39.093 34H.883L19.987 2.378 39.093 34z" class="cls-4" transform="translate(840 913)"/>
+                <path fill="#010101" d="M19.988 4.311L2.655 33H37.32L19.988 4.311m0-3.867L40.865 35H-.89L19.988.444z" transform="translate(840 913)"/>
+            </g>
+            <g id="타원_144" class="cls-3" transform="translate(854 908)">
+                <circle cx="6" cy="6" r="6" class="cls-4"/>
+                <circle cx="6" cy="6" r="5" class="cls-6"/>
+            </g>
+            <g id="타원_145" class="cls-3" transform="translate(834 941)">
+                <circle cx="6" cy="6" r="6" class="cls-4"/>
+                <circle cx="6" cy="6" r="5" class="cls-6"/>
+            </g>
+            <g id="타원_146" class="cls-3" transform="translate(874 941)">
+                <circle cx="6" cy="6" r="6" class="cls-4"/>
+                <circle cx="6" cy="6" r="5" class="cls-6"/>
+            </g>
+        </g>
+    </g>
+</svg>
