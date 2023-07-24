@@ -11,7 +11,7 @@
     color: $z;
 }
 $gnb_fontSize: 14;
-$headerColor: white;
+$headerColor: black;
 $headHeight: 100px;
 
 @import './_reset';
@@ -30,12 +30,20 @@ $headHeight: 100px;
 */
 
 // - - - - - - - - - - @mixin, 변수 등 - - - - - - - - - - 
+::-webkit-scrollbar{display: none;}
+ 
+body{
+    background-color: #333;   
+    // overflow: hidden;
+    //모바일 896px이하
+    //position: fixed; top: 0; left: 0;
+    @media(max-width: 896px){
+    // overflow: visible;
+        width: auto; height: auto;
+    }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
 
 // - - - - - - - - - - header↓ - - - - - - - - - - 
-body{
-    background-color: #333;
-    //min-width: 1285px; //임시
-}
 header{
     transition: 0.3s;
     width: 100%; height: $headHeight; //태블릿: 88px //모바일: 높이가 56px
@@ -45,7 +53,6 @@ header{
     //1285px부터 hover시 투명에서 흰색이 됨 
     //그리고 모바일 또는 서브페이지 스크롤시 검정색(반투명)이 됨 + 블러처리
     //background-color: rgba(255, 255, 255, 0); 
-    background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px);
     color: $headerColor; //메인: 스크롤시 흰색에서 -> 검정색됨 //서브: 검정에서 스크롤시 (검은배경과 함께)흰색됨
     padding: 0 25px; 
     padding-top: 36px; //태블릿: 33px //모바일: 17px
@@ -208,6 +215,8 @@ header{
 
     //모바일 896px이하
     @media(max-width: 896px){
+        background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px);
+
         height: 56px; //태블릿: 88px //모바일: 높이가 56px
 
         padding-top: 17px; //태블릿: 33px //모바일: 17px 
@@ -233,54 +242,175 @@ header{
         }//.head_El //헤더요소들
     }//@media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }//header //헤더배경
+
+header.firstFloor{
+    color: white;
+    >.head_El>h1.Logo>a{
+        background: url('../../header/img/Logo_white.svg') center center / 100% 100% no-repeat scroll;
+    }
+    >.head_El>div.head_right>.Language{
+        border:1px solid white;
+    }
+    >.head_El>div.head_right>.verMenu_btn{
+        background: url('../../header/img/icon_headerLogo_white.svg') center center / 100% 100% no-repeat scroll;
+    }
+}//header.firstFloor
 // - - - - - - - - - - header↑ - - - - - - - - - -
 
 
 //- - - - - - - - - - Navigation↓ - - - - - - - - - -
 nav{
-    display: none;
-    >div.head_gnb_vertical_top_Wrap{
-        >p.Logo{
-            >img{
+    position: fixed; top: 0;
+    width: 100vw; height: 100vh;
+    background: #222; opacity: 100%;
+    z-index: 10000;
+    padding: 0 64px; //태블릿: 48px //모바일: 32px
+    
 
-            }
+    font-family: 'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
+    @include flex(flex-start, center){flex-direction: column}; //태블릿: (center, flex-start) //모바일: (flex-start, flex-start)
+
+    transform: translateX(100%);
+    opacity: 0%;
+
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);;
+
+    >&.active{
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+
+    // ↓ 모바일은 알아서 맞춰보삼
+    >div.head_gnb_vertical_top_Wrap{
+        //outline: 1px solid red;
+
+        flex-shrink: 0;
+        width: 100%; height: 100px;
+        position: relative;
+        >h1.Logo{
+            position: absolute;
+            top: 35px; left: 0px;
+            width: 216px; height: 30px;
+            background: url('../../header/img/logo_white.svg') center center / 100% 100% no-repeat scroll;
         }
         >div.xBtn{
+            position: absolute;
+            top: 36px; right: 0px;
+            width: 24px; height: 24px;
+            background: url('../../header/img/ico_nav_x.svg') center center / 100% 100% no-repeat scroll;
 
+            cursor: pointer;
         }
     }//div.head_gnb_vertical_top_Wrap //로고와 x버튼
 
     >ul.head_gnb_vertical{
+        position: relative;
+        width: auto; height: auto;
+        @include font(48px, 800, #fff); //태블릿: 32px //모바일: 24px
+        line-height: 71px;
 
+        transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
         //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
         >li{
+            width: 800px;
+            // outline: 1px solid white;
+            margin-top: 40px; //태블릿: 32px //모바일: 24px
             >a{
-                
+                transition: all .3s linear;
+                // outline: 1px solid white;
+                width: auto;
+                color: inherit;
+                line-height: 71px; //태블릿: 48px //모바일: 36px
+
+                white-space: nowrap;
+                transition: all .3s;
+
+                >&::before{
+                    content: '';
+                    display: none;
+                    width: 10px; height: 10px;
+                    background-color: rgb(213, 0, 55);
+                    vertical-align: top;
+                    margin-right: 0px;
+
+                    opacity: 0%;
+                }
+                &:hover{
+                    >&:before{
+                        display: inline-block;
+                        margin-right: 30px;
+                        opacity: 100%;
+                    }
+                }
             }
 
             >ul.head_lnb{
-                >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                    >a{
+                position: absolute; //모바일: relative
+                top: 40px; //태블릿: 32px // 모바일: 0px
+                left: calc(520px + 60px); //태블릿: calc(350px + 60px) // 모바일: 0px
+                display: none;
+                opacity: 0%;
 
+                >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                    >&:not(:first-child){margin-top: 32px;} //태블릿: 24px //모바일: 16px
+                    >a{
+                        @include font(32px, 700, #fff); //태블릿: 24px //모바일: 16px
+                        line-height: 48px; //태블릿: 100%
+                        white-space: nowrap;
                     }
+                    >&.mini{
+                        margin-top: 0px; //태블릿: 14px //모바일: 16px
+                        >a{
+                            @include font(24px, 500, #ccc); //태블릿: 20px //모바일: 14px
+                            line-height: 36px; //태블릿: 100%
+                        }
+                    }
+
                 }
             }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
+            //태블릿, 모바일 알아서 바꿔보삼
+            >&.active{
+                >a{
+                    // color: white;
+                    >&:before{
+                        display: inline-block;
+                        margin-right: 30px;
+                        opacity: 100%;
+                    }
+                }
+                >ul{
+                    display: block;
+                    opacity: 100%;
+                }
+            }//active가 붙은 li태그
+        
         }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
 
     }//ul.head_gnb_vertical //세로 메뉴내용
 
     >div.head_gnb_vertical_bottom{
+        position: absolute; //모바일: relative
+        bottom: 50px; right: 50px; //태블릿: 40x40(어림잡음)  //모바일: bottom: 0px; right: auto;
+
+        //모바일: border-top: 1px solid #999;
+
         >ul.sideMenu{
             >li{
+                text-align: right; //모바일: left
+                >&:not(:last-child){margin-bottom: 20px;} //태블릿: 16px //모바일
                 >a{
-
+                    @include font(20px, 500, #999); //태블릿: 16px //모바일: 14px
                 }
             }
+            margin-bottom: 28px; //태블릿: 20px(어림잡음) //모바일: 32px
         }//ul.sideMenu
 
         >ul.snsIcons{
+            padding-left: 20%; // 모바일: 0px //모바일 padding-right: 20%;
+            @include flex(space-between);
             >li{
+                width: auto;
                 >a{
                     >img{
 
@@ -292,9 +422,248 @@ nav{
     }//div.head_gnb_vertical_bottom //사이드메뉴 + SNS아이콘들
 
 
+
+    //타블렛 1022px이하
+    @media(max-width: 1022px){
+        padding: 0 48px; //태블릿: 48px //모바일: 32px
+        @include flex(flex-start, flex-start){flex-direction: column}; //태블릿: (flex-start, flex-start)
+
+        >&.active{
+        }
+
+        // ↓ 모바일은 알아서 맞춰보삼
+        >div.head_gnb_vertical_top_Wrap{
+
+            width: 100%; height: 100px;
+            position: relative;
+            >h1.Logo{
+                position: absolute;
+                top: 35px; 
+                // left: 64px;
+                width: 216px; height: 30px;
+                background: url('../../header/img/logo_white.svg') center center / 100% 100% no-repeat scroll;
+            }
+            >div.xBtn{
+                position: absolute;
+                top: 36px; 
+                right: 0px; //태블릿: 48px
+                width: 24px; height: 24px;
+                background: url('../../header/img/ico_nav_x.svg') center center / 100% 100% no-repeat scroll;
+
+                cursor: pointer;
+            }
+        }//div.head_gnb_vertical_top_Wrap //로고와 x버튼
+
+        >ul.head_gnb_vertical{
+            @include font(32px, 800, #fff); //태블릿: 32px //모바일: 24px
+            line-height: 100%; //태블릿
+
+            //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
+            >li{
+                margin-top: 32px; //태블릿: 32px //모바일: 24px
+                >a{
+                    line-height: 48px; //태블릿: 48px //모바일: 36px
+
+                    >&::before{
+                    }
+                }
+
+                >ul.head_lnb{
+                    position: absolute; //모바일: relative
+                    top: 32px; //태블릿: 32px // 모바일: 0px
+                    left: calc(350px + 60px); //태블릿: calc(350px + 60px) // 모바일: 0px
+
+                    >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                        >&:not(:first-child){margin-top: 24px;} //태블릿: 24px //모바일: 16px
+                        >a{
+                            @include font(24px, 700, #fff); //태블릿: 24px //모바일: 16px
+                            line-height: 100%; //태블릿: 100%
+                        }
+                        >&.mini{
+                            margin-top: 14px; //태블릿: 14px //모바일: 16px
+                            >a{
+                                @include font(20px, 500, #ccc); //태블릿: 20px //모바일: 14px
+                                line-height: 100%; //태블릿: 100%
+                            }
+                        }
+
+                    }
+                }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
+
+                //태블릿, 모바일 알아서 바꿔보삼
+                >&.active{
+                    >a{
+                        >&:before{
+                            margin-right: 15px;
+                        }
+                    }
+                    >ul{
+                    }
+                }//active가 붙은 li태그
+            
+            }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
+
+        }//ul.head_gnb_vertical //세로 메뉴내용
+
+        >div.head_gnb_vertical_bottom{
+            position: absolute; //모바일: relative
+            bottom: 40px; right: 40px; //태블릿: 40x40(어림잡음)  //모바일: bottom: 0px; right: auto;
+
+            //모바일: border-top: 1px solid #999;
+
+            >ul.sideMenu{
+                >li{
+                    text-align: right; //모바일: left
+                    >&:not(:last-child){margin-bottom: 16px;} //태블릿: 16px //모바일: 14px
+                    >a{
+                        @include font(16px, 500, #999); //태블릿: 16px //모바일: 14px
+                    }
+                }
+                margin-bottom: 25px; //태블릿: 25px(어림잡음) //모바일: 32px
+            }//ul.sideMenu
+
+            >ul.snsIcons{
+                padding-left: 20%; // 모바일: 0px //모바일 padding-right: 20%;
+                @include flex(space-between);
+                >li{
+                    width: auto;
+                    >a{
+                        >img{
+
+                        }
+                    }
+                }
+            }//ul.snsIcons
+
+        }//div.head_gnb_vertical_bottom //사이드메뉴 + SNS아이콘들
+    }// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    //모바일 896px이하
+    @media(max-width: 896px){
+        padding: 0 32px; //태블릿: 48px //모바일: 32px
+        padding-right: calc(100vw - 100% + 32px); //스크롤바까지 계산
+
+        >&.active{
+        }
+
+        // ↓ 모바일은 알아서 맞춰보삼
+        >div.head_gnb_vertical_top_Wrap{
+
+            width: 100%; height: 50px;
+            position: relative;
+            >h1.Logo{
+                position: absolute;
+                top: 17px; 
+                width: 136px; height: 20px;
+            }
+            >div.xBtn{
+                top: 18px; 
+                right: 0px;
+            }
+        }//div.head_gnb_vertical_top_Wrap //로고와 x버튼
+
+        >ul.head_gnb_vertical{
+            @include font(24px, 800, #fff); //태블릿: 32px //모바일: 24px
+
+            //- - - - - - - - - -(gnb1_투썸플레이스 소개)- - - - - - - - - -
+            >li{
+                margin-top: 24px; //태블릿: 32px //모바일: 24px
+                >a{
+                    line-height: 36px; //태블릿: 48px //모바일: 36px
+
+                    >&::before{
+                        width: 8px; height: 8px;
+                    }
+                    &:hover{
+                        >&:before{
+                            display: inline-block;
+                            margin-right: 10px;
+                            opacity: 100%;
+                        }
+                    }
+                    
+                }
+
+                >ul.head_lnb{
+                    position: relative; //모바일: relative
+                    top: 0px; //태블릿: 32px // 모바일: 24px
+                    left: 30px; //태블릿: calc(350px + 60px) // 모바일: 0px
+                    margin: 24px 0px;
+
+                    >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
+                        >&:not(:first-child){margin-top: 16px;} //태블릿: 24px //모바일: 16px
+                        >a{
+                            @include font(16px, 700, #fff); //태블릿: 24px //모바일: 16px
+                        }
+                        >&.mini{
+                            margin-top: 16px; //태블릿: 14px //모바일: 16px
+                            >a{
+                                @include font(14px, 500, #ccc); //태블릿: 20px //모바일: 14px
+                            }
+                        }
+
+                    }
+                }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
+
+                //태블릿, 모바일 알아서 바꿔보삼
+                >&.active{
+                    >a{
+                        >&:before{
+                            margin-right: 10px;
+                        }
+                        
+                    }
+                    >ul{
+                    }
+                }//active가 붙은 li태그
+            
+            }//li //(gnb1_투썸플레이스 소개(gnb의 a태그 + ul.head_lnb))
+
+        }//ul.head_gnb_vertical //세로 메뉴내용
+
+        >div.head_gnb_vertical_bottom{
+            position: relative; //모바일: relative
+            bottom: 0px; right: 0px; //태블릿: 40x40(어림잡음)  //모바일: bottom: 0px; right: auto;
+
+            width: 100%;
+
+            border-top: 1px solid rgba(255,255,255,0.16); //모바일
+            margin-top: 56px; //모바일
+
+            >ul.sideMenu{
+                >li{
+                    text-align: left; //모바일: left
+                    >&:not(:last-child){margin-bottom: 14px;} //태블릿: 16px //모바일: 14px
+                    >a{
+                        @include font(14px, 500, #999); //태블릿: 16px //모바일: 14px
+                    }
+                }
+                margin: 32px 0; //태블릿: 25px(어림잡음) //모바일: 32px
+            }//ul.sideMenu
+
+            >ul.snsIcons{
+                padding-left: 0; // 모바일: 0px 
+                @include flex(flex-start);
+                >li{
+                    width: auto;
+                    margin-right: 15px;
+                    >a{
+                        >img{
+
+                        }
+                    }
+                }
+            }//ul.snsIcons
+
+        }//div.head_gnb_vertical_bottom //사이드메뉴 + SNS아이콘들
+    }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 }//nav //세로 메뉴배경
 //- - - - - - - - - - Navigation↑ - - - - - - - - - -
 
+
+div#view{
 //- - - - - - - - - - div.wrapper↓ - - - - - - - - - -
 div.wrapper{
     width: 100%; //100vw는 스크롤 크기도 계산되기에 %로 쓰삼
@@ -327,7 +696,8 @@ div.wrapper{
             }
         }//@media(max-width: 1022px) //타블렛 1022px이하- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-        @media(max-width: 896px) {           
+        @media(max-width: 896px) {    
+            &:not(:first-child){padding-top: 100px;}       
             h1{
                 @include font(32px, 900, black);//태블릿: 64px //모바일: 32px
                 
@@ -389,6 +759,9 @@ div.wrapper{
             >span.pagination_pageNumber{
                 font-size: 16px; //태블릿: 14px
                 font-weight: 600;
+
+                width: 35px;
+                text-align: center;
                 >span:nth-of-type(1){
                     
                 }
@@ -509,7 +882,7 @@ div.wrapper{
             @include flex(space-between, flex-end);
 
             >h1{//MENU STORY
-                position: absolute; top: 0; left: 0;
+                position: absolute; top: 0; left: 0; z-index: 999;
             }//h1
             
             >ul.text_btn{
@@ -537,7 +910,7 @@ div.wrapper{
                 }//ul.text_btn //COFFEE STORY ~ DELI STORY(각각의 버튼+설명)
 
                 //클릭이벤트 임시
-                >li:active{
+                >li.active{
                     color: black;
                     >span{
                         display: inline;
@@ -555,22 +928,36 @@ div.wrapper{
 
                 width: 60%; 
                 >div.img_slides{ //슬라이드
+                    overflow: hidden;
                     >ul{ //총 3개의 모든 슬라이드
                         display: none;
+                        transition: 0.3s;
+                        /*
                         &:nth-of-type(1){//첫번째 슬라이드
                             @include flex(flex-start, flex-end);
-                            overflow: hidden;
+                            width: calc(177px + 32px);
+                            transform: translateX(calc(100% * -1));
+
+                            outline: 1px solid red;
+                        }
+                        */
+                        &.active{//첫번째 슬라이드
+                            // outline: 1px solid red;
+                            
+                            @include flex(flex-start, flex-end); 
+                            width: calc(177px + 32px);   
+                            
+                            //transform: translateX(calc(100% * -1));
                         }
                         
                         >li{//각각의 사진
 
                             flex-shrink: 0;
-                            margin-right: 32px;
-                            width: 177px; height: 177px; //태블릿: 128x128 //모바일: overflow: hidden에 가려짐
-
-                            //임시 //자바스크립트로 후에 다시 제어
-                            &:nth-of-type(1){//첫번째 사진
-                                width: 488px; height: 488px; //태블릿: 368x368 //모바일: width: 100%
+                            padding-right: 32px;
+                            width: 100%; height: 177px; //태블릿: 128x128 //모바일: overflow: hidden에 가려짐
+ 
+                            &.active{//첫번째 사진
+                                width: calc(488px + 32px); height: 488px; //태블릿: 368x368 //모바일: width: 100%
                             }
                             >a{
                                 display: inline-block;
@@ -673,13 +1060,16 @@ div.wrapper{
                     max-width: 60%; 
                     >div.img_slides{ //슬라이드
                         >ul{ //총 3개의 모든 슬라이드
+                            &.active{//첫번째 슬라이드
+                                width: calc(128px + 32px);   
+                            }
                             
                             >li{//각각의 사진
-                                width: 128px; height: 128px; //태블릿: 128x128 //모바일: overflow: hidden에 가려짐
+                                width: 100%; height: 128px; //태블릿: 128x128 //모바일: overflow: hidden에 가려짐
 
-                                //임시 //자바스크립트로 후에 다시 제어
-                                &:nth-of-type(1){//첫번째 사진
-                                    width: 368px; height: 368px; //태블릿: 368x368 //모바일: width: 100%
+                                //자바스크립트로 후에 다시 제어
+                                &.active{//첫번째 사진
+                                    width: calc(368px + 32px); height: 368px; //태블릿: calc(368px + 32px) x 368 //모바일: width: 100%
                                 }
                                 >a{
                                 }
@@ -712,7 +1102,7 @@ div.wrapper{
         }//@media(max-width: 1022px) //타블렛 1022px이하- - - - - - - - - - - - - - - - - - - - - - -
 
         @media(max-width: 896px) {
-            height: auto;
+            // height: auto;
 
             padding: 80px 32px 80px 32px;
             
@@ -749,7 +1139,7 @@ div.wrapper{
                     }//ul.text_btn //COFFEE STORY ~ DELI STORY(각각의 버튼+설명)
 
                     //클릭이벤트 임시
-                    >li:active{
+                    >li.active{
                         >span{
                             display: none;
                         }
@@ -786,20 +1176,20 @@ div.wrapper{
                         >ul{ //총 3개의 모든 슬라이드
                             width: 100%;
                             display: none;
-                            &:nth-of-type(1){//첫번째 슬라이드
+                            &.active{//첫번째 슬라이드
                                 @include flex(flex-start); //사진을 처음 있는 곳에 놓음
-                                overflow: hidden;
+                                width: 100%;
                             }
                             
                             >li{//각각의 사진
-                                margin-right: 0px; //초기화
+                                padding-right: 0px; //초기화
 
                                 flex-shrink: 0; 
                                 width: 100%; height: 100%; //태블릿: 128x128 //모바일: overflow: hidden에 가려짐
                                 //임시 //자바스크립트로 후에 다시 제어
                                 
                                 //transform: translateX(-100%); 사진변경
-                                &:nth-of-type(1){//첫번째 사진
+                                &.active{//첫번째 사진
                                     width: 100%; height: 100%; //태블릿: 368x368 //모바일: width: 100%
                                 }
                                 >a{
@@ -910,7 +1300,7 @@ div.wrapper{
 
         //모바일 896px이하
         @media(max-width: 896px){
-            height: 80vh;
+            // height: 80vh;
             background: url('../img/img_3_3.jpg') center bottom / cover no-repeat scroll;
             padding: 80px 32px 0px 32px; //모바일: 32px
             @include flex(flex-start, flex-start);
@@ -958,101 +1348,113 @@ div.wrapper{
 
             >h1{
                 position: absolute; left: 0px; top: 0px; //모바일: top: 약 48px //어림잡은 거임 // padding-top으로 약 48px도 넣어주삼
-                z-index: 1;
+                z-index: 999;
                 
             }//h1
             
             >div.slides_wrapper{//슬라이드 + 페이지네이션
-            // width: 1012px;
+                overflow: visible;
+                // width: 1012px;
                 //outline: 5px solid greenyellow;
                 width: 1010px; height: 90%; //1312px이하: 765px //모바일: 100% 100%
                 //ul태그때문에 width: auto말고 1010px로 지정
                 
                // flex-end를 flex-start로 바꿔서 필요없을 듯
                //transform: translateX(-200px);  //1312px이하: 알아서 맞추삼 //모바일: 0px             
-                
-                >ul.img_slide{//슬라이드
-                    @include flex(flex-start, flex-end);
-                    >li{                          
-                        //transform: translateX(-100%);
-                        flex-shrink: 0;                  
-                        //outline: 1px solid black;
-                        @include flex(space-between, flex-end);//모바일: space-between,flex-start direction: column
-                        //display: none;
-                             
-                        >div.spanAndImg{
-                            @include flex(center, flex-end); //모바일: span: display: none
-                            //outline: 5px solid blue;
-                            >span{
-                                white-space: nowrap;
-                                width: 200px; //1312px이하: 127px
-                                //1312px이하: font-size: 14px
-                                &::before{
-                                    content:'';
-                                    border-bottom: 1px solid black;  
-                                    display: inline-block;
-                                    width: 20%; height: 1px;
-                                    margin-right: 8px;
-                                    
-                                    vertical-align: middle;
-                                }
-                                //outline: 1px solid black;
-
-                                vertical-align: middle;
-                                transform-origin: left bottom; 
-                                transform: translateX(100%) rotate(-90deg) translateY(-100%);             
-                            }
-                            >p{
-                                flex-shrink: 0;
-                                width: 552px; height: 552px;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
-                                //outline: 1px solid black;                          
-                                >img{
-                                    width: 100%;
-                                }
-                               
-                            }//p
-
-                        }//div.spanAndImg
-        
-                        >div.ex{
+                >div.slideFlame{
+                    width: 100%; height: 100%;
+                    >ul.img_slide{//슬라이드
+                        @include flex(flex-start, flex-end);
+                        >li{                          
+                            //transform: translateX(-100%);
+                            flex-shrink: 0;                  
                             //outline: 1px solid black;
+                            @include flex(center, flex-end);//모바일: space-between,flex-start direction: column
+                            //display: none;
+                                 
+                            >div.spanAndImg{
+                                @include flex(center, flex-end); //모바일: span: display: none
+                                //outline: 5px solid blue;
+                                position: relative;
+                                >span{
+                                    position: absolute;
+                                    left: 0px;
+    
+                                    white-space: nowrap;
+                                    width: 200px; //1312px이하: 127px
+                                    //1312px이하: font-size: 14px
 
-                            width: 312px; height: 348px; //1312px이하: 240x250 //모바일: auto
-                            margin-left: 72px;  //1312px이하: 48px //모바일: 0px,
-                            >p{//아이콘 이미지
-                                width: 64px; height: 64px; //1312px이하: 48x48 //모바일: 36x36
-                                margin-bottom: 24px;  //1312px이하: 16px //모바일: 0px
-                                >img{
-                                    width: 100%;
+                                    vertical-align: middle;
+                                    transform-origin: left bottom; 
+                                    transform: rotate(-90deg);
+
+                                    &::before{
+                                        content:'';
+                                        border-bottom: 1px solid black;  
+                                        display: inline-block;
+                                        width: 20%; height: 1px;
+                                        margin-right: 8px;
+                                        
+                                        vertical-align: middle;
+                                    }
+                                    //outline: 1px solid black;             
                                 }
-                            }
-                            >a{//글씨
-                            >strong{
-                                @include font(32px, 900, inherit); //1312px이하: 26px //모바일: 24px
-                                text-decoration: underline;
-                                margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
-                            }
-                            >&::after{//화살표
-                                content: '->';
-                                display: inline-block;
-                                width: 30px; height: 30px; //1312px: 25x25
-                                margin-left: 16px; //1312px이하: 8px 
-                            }
-                            }
-                            >div{
-                                @include font(inherit, 400, #333); //1312px: 14px 
-                                white-space: pre-line; //모바일: normal
-                                //모바일: margin-top: 16px
-                                line-height: normal;
-                            }
-                        }//div.ex //글씨설명 묶음
-                    }//li //슬라이드의 각 요소
-                        
-        
-                }//ul.img_slide //슬라이드
+                                >p{
+                                    flex-shrink: 0;
+                                    width: 552px; height: 552px;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
+                                    //outline: 1px solid black;
+                                    margin-left: 37px;                          
+                                    >img{
+                                        width: 100%;
+                                    }
+                                   
+                                }//p
+    
+                            }//div.spanAndImg
+            
+                            >div.ex{
+                                //outline: 1px solid black;
+    
+                                transform: translateY(-20px);//여백의 미
+                                width: 312px; height: 348px; //1312px이하: 240x250 //모바일: auto
+                                margin-left: 72px;  //1312px이하: 48px //모바일: 0px,
+                                >p{//아이콘 이미지
+                                    width: 64px; height: 64px; //1312px이하: 48x48 //모바일: 36x36
+                                    margin-bottom: 24px;  //1312px이하: 16px //모바일: 0px
+                                    >img{
+                                        width: 100%;
+                                    }
+                                }
+                                >a{//글씨
+                                >strong{
+                                    @include font(32px, 900, inherit); //1312px이하: 26px //모바일: 24px
+                                    text-decoration: underline;
+                                    margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
+                                }
+                                >&::after{//화살표
+                                    content: 'arrow_forward_ios';
+                                    font-family: 'Material Symbols Outlined';
+                                    transform: translateY(-2px);
+                                    display: inline-block;
+                                    width: 30px; height: 30px; //1312px: 25x25
+                                    margin-left: 16px; //1312px이하: 8px 
+                                }
+                                }
+                                >div{
+                                    @include font(inherit, 400, #333); //1312px: 14px 
+                                    white-space: pre-line; //모바일: normal
+                                    //모바일: margin-top: 16px
+                                    line-height: normal;
+                                }
+                            }//div.ex //글씨설명 묶음
+                        }//li //슬라이드의 각 요소
+                            
+            
+                    }//ul.img_slide //슬라이드
+                }//>div.slideFlame
     
                 >div.pagination_wrap{//페이지네이션 
-                    position: absolute; left: 824px; transform: translateY(-100%);
+                    position: absolute; left: 679px; transform: translateY(-100%); z-index: 999;
                     width: 312px; height: 56px; //1312px이하: 240x48 //모바일: 100%x48
                     background-color: black;
                     color: white;
@@ -1068,6 +1470,8 @@ div.wrapper{
                     }
                     // 전체페이지수/현제페이지수
                     >span.pagination_pageNumber{
+                        width: 40px;
+                        text-align: center;
                         >span:nth-of-type(1){
         
                         }
@@ -1106,8 +1510,7 @@ div.wrapper{
                 @include flex(flex-start, flex-end); //모바일: flex-direction: column
 
                 >h1{
-                    position: absolute; left: 0px; top: 0px; //모바일: top: 약 48px //어림잡은 거임 // padding-top으로 약 48px도 넣어주삼
-                    z-index: 1;
+                    position: absolute; left: 0px; top: 350px; //모바일: top: 약 48px //어림잡은 거임 // padding-top으로 약 48px도 넣어주삼
 
                     @include font(64px, 900, black);//태블릿: 64px //모바일: 32px
                     
@@ -1125,74 +1528,78 @@ div.wrapper{
                     width: 765px; height: 90%; //1312px이하: 765px //모바일: 100% 100%
                     //ul태그때문에 width: auto말고 1010px로 지정
                     
-                // flex-end를 flex-start로 바꿔서 필요없을 듯
-                //transform: translateX(-200px);  //1312px이하: 알아서 맞추삼 //모바일: 0px             
-                    
-                    >ul.img_slide{//슬라이드
-                        >li{                          
-                            //transform: translateX(-100%);               
-                            //outline: 1px solid black;
-                            @include flex(space-between, flex-end);//모바일: space-between,flex-start direction: column
-                            //display: none;
-                                
-                            >div.spanAndImg{
-                                @include flex(center, flex-end); 
-                                //outline: 5px solid blue;
-                                //모바일: span: display: none
-                                >span{                                
-                                    width: 127px; //1312px이하: 127px
-                                    font-size: 14px; //1312px이하에 추가
-                                    &::before{                                   
-                                    }
-                                    //outline: 1px solid black;         
-                                }
-                                >p{
-                                    width: 350px; height: 350px;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
-                                    //outline: 1px solid black;                          
-                                    >img{
-
-                                    }
-                                
-                                }//p
-
-                            }//div.spanAndImg
-            
-                            >div.ex{
+                    // flex-end를 flex-start로 바꿔서 필요없을 듯
+                    //transform: translateX(-200px);  //1312px이하: 알아서 맞추삼 //모바일: 0px             
+                    >div.slideFlame{
+                        width: 100%; height: 100%;
+                        >ul.img_slide{//슬라이드
+                            >li{                          
+                                //transform: translateX(-100%);               
                                 //outline: 1px solid black;
-
-                                width: 240px; height: 250px; //1312px이하: 240x250 //모바일: auto
-                                margin-left: 48px;  //1312px이하: 48px //모바일: 0px,
-                                >p{//아이콘 이미지
-                                    width: 48px; height: 48px; //1312px이하: 48x48 //모바일: 36x36
-                                    margin-bottom: 16px;  //1312px이하: 16px //모바일: 0px
-                                    >img{
+                                @include flex(center, flex-end);//모바일: space-between,flex-start direction: column
+                                //display: none;
+                                    
+                                >div.spanAndImg{
+                                    @include flex(center, flex-end); 
+                                    //outline: 5px solid blue;
+                                    //모바일: span: display: none
+                                    >span{                             
+                                        width: 127px; //1312px이하: 127px
+                                        font-size: 14px; //1312px이하에 추가
+                                        &::before{                                   
+                                        }
+                                        //outline: 1px solid black;         
                                     }
-                                }
-                                >a{//글씨
-                                >strong{
-                                    @include font(26px, 900, inherit); //1312px이하: 26px //모바일: 24px
-                                    margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
-                                }
-                                >&::after{//화살표
-                                    content: '->';
-                                    display: inline-block;
-                                    width: 25px; height: 25px; //1312px: 25x25
-                                    margin-left: 8px; //1312px이하: 8px 
-                                }
-                                }
-                                >div{
-                                    @include font(14px, 400, #333); //1312px: 14px 
-                                    white-space: pre-line; //모바일: normal
-                                    //모바일: margin-top: 16px
-                                }
-                            }//div.ex //글씨설명 묶음
-                        }//li //슬라이드의 각 요소
-                            
-            
-                    }//ul.img_slide //슬라이드
+                                    >p{
+                                        margin-left: 20px;
+                                        width: 350px; height: 350px;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
+                                        //outline: 1px solid black;                          
+                                        >img{
+    
+                                        }
+                                    
+                                    }//p
+    
+                                }//div.spanAndImg
+                
+                                >div.ex{
+                                    //outline: 1px solid black;
+    
+                                    width: 240px; height: auto; //1312px이하: 240x250 //모바일: auto
+                                    margin-left: 48px;  //1312px이하: 48px //모바일: 0px,
+                                    transform: translateY(calc(-48px + -20px));
+                                    >p{//아이콘 이미지
+                                        width: 48px; height: 48px; //1312px이하: 48x48 //모바일: 36x36
+                                        margin-bottom: 16px;  //1312px이하: 16px //모바일: 0px
+                                        >img{
+                                        }
+                                    }
+                                    >a{//글씨
+                                    >strong{
+                                        @include font(26px, 900, inherit); //1312px이하: 26px //모바일: 24px
+                                        margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
+                                    }
+                                    >&::after{//화살표
+                                        transform: translateY(0px);
+                                        display: inline-block;
+                                        width: 25px; height: 25px; //1312px: 25x25
+                                        margin-left: 8px; //1312px이하: 8px 
+                                    }
+                                    }
+                                    >div{
+                                        @include font(14px, 400, #333); //1312px: 14px 
+                                        white-space: pre-line; //모바일: normal
+                                        //모바일: margin-top: 16px
+                                    }
+                                }//div.ex //글씨설명 묶음
+                            }//li //슬라이드의 각 요소
+                                
+                
+                        }//ul.img_slide //슬라이드
+                    }//>div.slideFlame
         
                     >div.pagination_wrap{//페이지네이션 
-                        position: absolute; left: 525px; transform: translateY(-100%);
+                        position: absolute; left: 471.5px; transform: translateY(-100%);
                         width: 240px; height: 48px; //1312px이하: 240x48 //모바일: 100%x48
                         background-color: black;
                         color: white;
@@ -1234,11 +1641,10 @@ div.wrapper{
 
         //모바일 896px이하
         @media(max-width: 896px){
-            height: auto; //모바일
+            // height: auto; //모바일
             padding: 80px 32px; //1312px이하: 240px 48px //모바일: 80px 32px
             //padding-top: 100px;
             @include flex(flex-start, center);
-
   
             div.brandSupport_exWrapper{
             
@@ -1248,7 +1654,6 @@ div.wrapper{
 
                 >h1{
                     position: absolute; left: 0px; top: -35px; //모바일: top: 약 -48px //어림잡은 거임 // padding-top으로 약 48px도 넣어주삼
-                    z-index: 1;
 
                     @include font(32px, 900, black);//태블릿: 64px //모바일: 32px
                     
@@ -1267,77 +1672,83 @@ div.wrapper{
                     
                 // flex-end를 flex-start로 바꿔서 필요없을 듯
                 //transform: translateX(-200px);  //1312px이하: 알아서 맞추삼 //모바일: 0px             
-                    
-                    >ul.img_slide{//슬라이드
-                        >li{      
-                            width: 100%;                    
-                            //transform: translateX(-100%);               
-                            //outline: 1px solid black;
-                            @include flex(space-between, flex-start){flex-direction: column;};//모바일: space-between,flex-start direction: column
-                            //display: none;
-                                
-                            >div.spanAndImg{
-                                @include flex(center, flex-end); 
-                                width: 100%;
-                                //outline: 5px solid blue;
-                                //모바일: span: display: none
-                                >span{        
-                                    display: none;                        
-                                    width: 127px; //1312px이하: 127px
-                                    font-size: 14px; //1312px이하에 추가
-                                    &::before{                                   
-                                    }
-                                    //outline: 1px solid black;         
-                                }
-                                >p{
-                                    min-width: 419px; min-height: 419px;
-                                    width: 100%; height: 100%;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
-                                    //outline: 1px solid black;                          
-                                    >img{
-
-                                    }
-                                
-                                }//p
-
-                            }//div.spanAndImg
-            
-                            >div.ex{
+                    >div.slideFlame{
+                        width: 100%; height: 100%;
+                        >ul.img_slide{//슬라이드
+                            >li{      
+                                width: 100%;  
+                                height: auto;                  
+                                //transform: translateX(-100%);               
                                 //outline: 1px solid black;
-
-                                margin-top: 30px;
-                                width: 100%; height: auto; //1312px이하: 240x250 //모바일: auto
-                                margin-left: 0px;  //1312px이하: 48px //모바일: 0px,
-                                >p{//아이콘 이미지
-                                    display: inline-block;
-                                    width: 36px; height: 36px; //1312px이하: 48x48 //모바일: 36x36
-                                    margin-right: 0px 12px 0px 0px;
-                                    >img{
+                                @include flex(space-between, flex-start){flex-direction: column;};//모바일: space-between,flex-start direction: column
+                                //display: none;
+                                    
+                                >div.spanAndImg{
+                                    @include flex(center, flex-end); 
+                                    width: 100%;
+                                    //outline: 5px solid blue;
+                                    //모바일: span: display: none
+                                    >span{        
+                                        display: none;                        
+                                        width: 127px; //1312px이하: 127px
+                                        font-size: 14px; //1312px이하에 추가
+                                        &::before{                                   
+                                        }
+                                        //outline: 1px solid black;         
                                     }
-                                    vertical-align: middle;
-                                }
-                                >a{//글씨
-                                >strong{
-                                    @include font(24px, 900, inherit); //1312px이하: 26px //모바일: 24px
-                                    //margin-bottom: 0px; //1312px이하: 알아서 어림잡아보삼
-                                    vertical-align: middle;
-                                }
-                                >&::after{//화살표
-                                }
-                                }
-                                >div{
-                                    margin-top: 10px;
-                                    @include font(14px, 300, #333); //1312px: 14px 
-                                    white-space: normal; //모바일: normal
-                                    //모바일: margin-top: 16px
-                                }
-                            }//div.ex //글씨설명 묶음
-                        }//li //슬라이드의 각 요소
-                            
-            
-                    }//ul.img_slide //슬라이드
+                                    >p{
+                                        margin-left: 0px;
+                                        min-width: 419px; min-height: 419px;
+                                        width: 100%; height: 100%;  //1312px이하: 350x350 //모바일: min-width: 419px min-height: 419px
+                                        //outline: 1px solid black;                          
+                                        >img{
+    
+                                        }
+                                    
+                                    }//p
+    
+                                }//div.spanAndImg
+                
+                                >div.ex{
+                                    //outline: 1px solid black;
+    
+                                    margin-top: 30px;
+                                    width: 100%; height: 104px; //1312px이하: 240x250 //모바일: 104px
+                                    margin-left: 0px;  //1312px이하: 48px //모바일: 0px,
+                                    transform: translateY(0);
+                                    >p{//아이콘 이미지
+                                        display: inline-block;
+                                        width: 36px; height: 36px; //1312px이하: 48x48 //모바일: 36x36
+                                        margin-right: 0px 12px 0px 0px;
+                                        >img{
+                                        }
+                                        vertical-align: middle;
+                                    }
+                                    >a{//글씨
+                                    >strong{
+                                        @include font(24px, 900, inherit); //1312px이하: 26px //모바일: 24px
+                                        //margin-bottom: 0px; //1312px이하: 알아서 어림잡아보삼
+                                        vertical-align: middle;
+                                    }
+                                    >&::after{//화살표
+                                        transform: translateY(2px);
+                                    }
+                                    }
+                                    >div{
+                                        margin-top: 10px;
+                                        @include font(14px, 300, #333); //1312px: 14px 
+                                        white-space: normal; //모바일: normal
+                                        //모바일: margin-top: 16px
+                                    }
+                                }//div.ex //글씨설명 묶음
+                            }//li //슬라이드의 각 요소
+                                
+                
+                        }//ul.img_slide //슬라이드
+                    }//>div.slideFlame
         
                     >div.pagination_wrap{//페이지네이션 
-                        position: absolute; left: 0px; transform: translateY(-168px); z-index:99;
+                        position: absolute; left: 0px; transform: translateY(-160px); z-index:99;
                         width: 100%; height: 48px; //1312px이하: 240x48 //모바일: 100%x48
 
                         @include flex(space-between, center);
@@ -1568,10 +1979,14 @@ div.wrapper{
                         vertical-align: middle;
                         //태블릿: font-size: 14px;
                         >&::after{//화살표
+                            @include flex();
                             //모바일: display: none;
-                            content: "->";
+                            content: "arrow_forward_ios";
+                            // font-family: 'open-arrow', Helvetica, sans-serif;
+                            font-family: 'Material Symbols Outlined';
+                            transform: translateY(-2px);
                             display: inline-block;
-                            width: 28px; height: 28px; //태블릿: 22x22
+                            width: auto; height: auto; //태블릿: 22x22
                             vertical-align: middle;
                         }   
 
@@ -1715,14 +2130,14 @@ div.wrapper{
     
     >section.newAndNotice{//6page
         background-color: white;
-        @include flex(center, flex-start); //모바일: flex();
+        @include flex(); //모바일: flex();
         
         padding: 0 48px; //모바일: 80px 32px
         div.container{
             //outline: 3px solid black;
             
-            max-width: 1216px; height: 100%; //모바일: height: 387px;
-            @include flex(space-between); //모바일: flex-direction: column;
+            max-width: 1216px; height: 680px; //모바일: height: 387px;
+            @include flex(space-between, flex-end); //모바일: flex-direction: column;
             width: 100%;
             >div.left{
                 padding: 56px 0px 93px; //태블릿: padding: 56px 0px 158px //모바일: 0px
@@ -1745,74 +2160,77 @@ div.wrapper{
                 }
             }//div.left
         
-            >ul.right{
-                
-                //태블릿: max-width: 456px;
-                width: 510px; height: 540px; //태블릿: 450x428
-                //모바일: 100%x233px
-                //모바일: flex(flex-start)
+            >div.right{
+                    >&.tbPc{display: block;}
+                    >&.Mb{display: none;}
+                    //태블릿: max-width: 456px;
+                    width: 510px; height: 540px; //태블릿: 450x428
+                    //모바일: 100%x233px
+                    //모바일: flex(flex-start)
 
-                //모바일: border: 2px solid #000; 
-                //모바일: overflow: hidden;
-                >li{
-                    //transform: translateX(-100%);
-                    transition: 0.2s;
-                    
-                    //모바일: flex-shrink: 0;
-                    height: 30%; //모바일: 100% 
-                    position: relative;
-                    border-bottom: 1px solid #ebebeb; //모바일: none
-                    z-index: 0;
-                    
-                    >&::before{//검은배경 //모바일: display: none;
-                        content: '';
-                        display: inline-block;
-                        width: 0%; height: 100%;
-                        background-color: #222;
-                        position: absolute; left: 0px; top: 0px; //position으로 띄우면 자식순서 상관없이 무조건 앞으로 옮
-                        z-index: -1;
-                    }
+                    //모바일: border: 2px solid #000; 
+                    //모바일: overflow: hidden;
+                >ul{
+                    width: 100%; height: 100%;
+                    >li{
+                        //transform: translateX(-100%);
+                        transition: 0.2s;
+                        
+                        //모바일: flex-shrink: 0;
+                        height: 30%; //모바일: 100% 
+                        position: relative;
+                        border-bottom: 1px solid #ebebeb; //모바일: none
+                        z-index: 0;
+                        
+                        >&::before{//검은배경 //모바일: display: none;
+                            content: '';
+                            display: inline-block;
+                            width: 0%; height: 100%;
+                            background-color: #222;
+                            position: absolute; left: 0px; top: 0px; //position으로 띄우면 자식순서 상관없이 무조건 앞으로 옮
+                            z-index: -1;
+                        }
 
-                    >a{
-                        @include flex(space-between, flex-start){flex-direction: column;}
-                        padding: 38px 40px; //태블릿: 30px 32px
-                        //모바일: 28px 24px
-                        height: 100%; //모바일: 149px
-                        color: rgb(0, 0, 0);
-                        >em{
-                            font-style: normal;
-                            @include font(16px, 500, #d50037);
-                            //태블릿: 14px //모바일: 12px
-                        }
-                        >strong{
-                            @include font(24px, 600, inherit);
-                            //태블릿: 16px //모바일: 18px
-                        }
-                        >span{
-                            @include font(16px, inherit, #333);
-                            //태블릿: 14px //모바일: 12px
-                        }
-                    }//a
-
-                    >&:hover{
-                        //모바일: display: none;
-                        >&::before{
-                            width: 100%;
-                            transition: 0.2s;
-                        }
                         >a{
-                            >strong{               
-                                color: white; 
-                                text-decoration: underline;        
+                            @include flex(space-between, flex-start){flex-direction: column;}
+                            padding: 38px 40px; //태블릿: 30px 32px
+                            //모바일: 28px 24px
+                            height: 100%; //모바일: 149px
+                            color: rgb(0, 0, 0);
+                            >em{
+                                font-style: normal;
+                                @include font(16px, 500, #d50037);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                            >strong{
+                                @include font(24px, 600, inherit);
+                                //태블릿: 16px //모바일: 18px
                             }
                             >span{
-                                color: white;
+                                @include font(16px, inherit, #333);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                        }//a
+
+                        >&:hover{
+                            //모바일: display: none;
+                            >&::before{
+                                width: 100%;
+                                transition: 0.2s;
+                            }
+                            >a{
+                                >strong{               
+                                    color: white; 
+                                    text-decoration: underline;        
+                                }
+                                >span{
+                                    color: white;
+                                }
                             }
                         }
-                    }
-                }//li
-                
-            }//ul.right
+                    }//li
+                }
+            }//div.right
 
             >div.pagination_wrap{//페이지네이션 
                 width: 100%; height: 48px; 
@@ -1886,55 +2304,58 @@ div.wrapper{
                 }
             }//div.left
         
-            >ul.right{
+            >div.right{
                 max-width: 450px; // 태블릿 //모바일: none
                 width: 100%; height: 428px; //태블릿: 100%x428
-                //모바일: 233px
-                //모바일: flex(flex-start)
-
-                //모바일: border: 2px solid #000; 
-                //모바일: overflow: hidden;
-                >li{
-                    transition: 0.2s;
-                    
-                    //모바일: flex-shrink: 0;
-                    height: 30%; //모바일: 100% 
-                    border-bottom: 1px solid #ebebeb; //모바일: none
-                    
-                    >&::before{//검은배경 //모바일: display: none;
-                    }
-
-                    >a{
-                        padding: 30px 32px; //태블릿: 30px 32px
-                        //모바일: 28px 24px
-                        height: 100%; //모바일: 149px
-                        >em{
-                            @include font(14px, 500, #d50037);
-                            //태블릿: 14px //모바일: 12px
+                >ul{
+                    width: 100%; height: 100%;
+                    //모바일: 233px
+                    //모바일: flex(flex-start)
+    
+                    //모바일: border: 2px solid #000; 
+                    //모바일: overflow: hidden;
+                    >li{
+                        transition: 0.2s;
+                        
+                        //모바일: flex-shrink: 0;
+                        height: 30%; //모바일: 100% 
+                        border-bottom: 1px solid #ebebeb; //모바일: none
+                        
+                        >&::before{//검은배경 //모바일: display: none;
                         }
-                        >strong{
-                            @include font(16px, 600, inherit);
-                            //태블릿: 16px //모바일: 18px
-                        }
-                        >span{
-                            @include font(14px, inherit, #333);
-                            //태블릿: 14px //모바일: 12px
-                        }
-                    }//a
-
-                    >&:hover{
-                        //모바일: display: none;
-                        >&::before{
-                        }
+    
                         >a{
-                            >strong{                    
+                            padding: 30px 32px; //태블릿: 30px 32px
+                            //모바일: 28px 24px
+                            height: 100%; //모바일: 149px
+                            >em{
+                                @include font(14px, 500, #d50037);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                            >strong{
+                                @include font(16px, 600, inherit);
+                                //태블릿: 16px //모바일: 18px
                             }
                             >span{
+                                @include font(14px, inherit, #333);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                        }//a
+    
+                        >&:hover{
+                            //모바일: display: none;
+                            >&::before{
+                            }
+                            >a{
+                                >strong{                    
+                                }
+                                >span{
+                                }
                             }
                         }
-                    }
-                }//li
-            }//ul.right
+                    }//li
+                }//ul
+            }//div.right
 
 
 
@@ -1999,60 +2420,63 @@ div.wrapper{
                 }
             }//div.left
         
-            >ul.right{
-                
+            >div.right{
+                >&.tbPc{display: none;}
+                >&.Mb{display: block;}
                 max-width: none; // 태블릿 //모바일: none
                 width: 100%; height: 184px; //태블릿: 100%x428
-                //모바일: 233px
-                @include flex(flex-start); //모바일
-
                 border: 2px solid #000; //모바일
                 overflow: hidden; //모바일
-                >li{
-                    transition: 0.2s;
-                    //transform: translateX(-100%);
-
-                    flex-shrink: 0; //모바일
-                    width: 100%; //모바일
-                    height: 100%; //모바일: 100% 
-                    border-bottom: none; //모바일: none
-                    
-                    >&::before{//검은배경 
-                        display: none; //모바일
-                    }
-
-                    >a{
-                        padding: 28px 24px; //태블릿: 30px 32px
-                        //모바일: 28px 24px
-                        height: 149px; //모바일: 149px
-                        >em{
-                            @include font(12px, 500, #d50037);
-                            //태블릿: 14px //모바일: 12px
+                >ul{
+                    width: 100%; height: 100%;
+                    //모바일: 233px
+                    @include flex(flex-start); //모바일
+                    >li{
+                        transition: 0.2s;
+                        //transform: translateX(-100%);
+    
+                        flex-shrink: 0; //모바일
+                        width: 100%; //모바일
+                        height: 100%; //모바일: 100% 
+                        border-bottom: none; //모바일: none
+                        
+                        >&::before{//검은배경 
+                            display: none; //모바일
                         }
-                        >strong{
-                            @include font(18px, 600, inherit);
-                            //태블릿: 16px //모바일: 18px
-                        }
-                        >span{
-                            @include font(12px, inherit, #333);
-                            //태블릿: 14px //모바일: 12px
-                        }
-                    }//a
-
-                    >&:hover{                       
-                        >&::before{
-                        }
+    
                         >a{
-                            >strong{   
-                                color: black;                 
+                            padding: 28px 24px; //태블릿: 30px 32px
+                            //모바일: 28px 24px
+                            height: 149px; //모바일: 149px
+                            >em{
+                                @include font(12px, 500, #d50037);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                            >strong{
+                                @include font(18px, 600, inherit);
+                                //태블릿: 16px //모바일: 18px
                             }
                             >span{
-                                color: black;                 
+                                @include font(12px, inherit, #333);
+                                //태블릿: 14px //모바일: 12px
+                            }
+                        }//a
+    
+                        >&:hover{                       
+                            >&::before{
+                            }
+                            >a{
+                                >strong{   
+                                    color: black;                 
+                                }
+                                >span{
+                                    color: black;                 
+                                }
                             }
                         }
-                    }
-                }//li
-            }//ul.right
+                    }//li
+                }//ul
+            }//div.right
 
 
             >div.pagination_wrap{//페이지네이션 
@@ -2085,139 +2509,6 @@ div.wrapper{
 
 
     }//section.newAndNotice //6페이지
-
-    //전체 페이지 알려주는 선
-    >div.fullPage{
-        position:fixed; top: 50%; right: 74px; transform: translateY(-50%); //태블릿: right: 48px;
-        z-index: 9999;
-        width: 22px; height: 190px; //태블릿: 22x134
-        // border: 1px solid black;
-        @include font(18px, bold, black); //태블릿: 12px
-        font-family: 'Mark Pro';
-        @include flex(space-between){flex-direction: column;}
-        >span{
-            
-        }
-        >p{
-            position: relative;
-            width: 2px; height: 120px; //태블릿: height: 83.6px
-            background-color: rgba(120,120,120,0.2);
-            >span{
-                position: absolute;
-                width: 2px; height: 16.6%;
-                background-color: rgb(0, 0, 0);
-            }
-        }
-
-        //타블렛 1022px이하
-        @media(max-width: 1022px){
-            right: 48px; //태블릿: right: 48px;
-            width: 22px; height: 134px; //태블릿: 22x134
-            // border: 1px solid black;
-            @include font(12px, bold, black); //태블릿: 12px
-            >span{
-                
-            }
-            >p{
-                position: relative;
-                width: 2px; height: 83.6px; //태블릿: height: 83.6px
-                background-color: rgba(120,120,120,0.2);
-                >span{
-                    position: absolute;
-                    width: 2px; height: 16.6%;
-                    background-color: rgb(0, 0, 0);
-                }
-            }
-        }// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-        //모바일 896px이하
-        @media(max-width: 896px){
-            display: none;
-        }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    }//div.fullPage //전체 페이지 알려주는 선
-
-    //기업단체구매 버튼 + 스크롤최상단이동 버튼
-    >div.wrapper_Btn{
-        transition: all .5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
-
-        position: fixed; right: 24px; bottom: 24px;
-        z-index: 9999;
-        color: white; background-color:transparent;
-        @include flex(center,flex-end){flex-direction: column};
-
-        >a.bulkPurchase_btn{
-            width: 191px; height: 72px; //태블릿: 168x56 
-            border-radius: 36px; //태블릿: 18px 
-            background-color: rgba(213,0,55,0.9);
-            vertical-align: middle;
-            @include font(18px, 600, inherit); //태블릿: 16px //모바일: 14px
-
-            @include flex();
-            >&::after{
-                //선물상자 아이콘
-                content: '';
-                display: inline-block;
-                width: 37px; height: 37px; //태블릿: 32x32
-                background: url('../img/icon_presentBox.svg') center center / 100% 100% no-repeat scroll;
-                margin-left: 12px; //태블릿: 8px
-            }
-        }
-        >div.moveScrollTop_btn{
-            width: 64px; height: 64px; //태블릿: 56x56 //모바일: 48x48
-            background-color: rgba(120,120,120,0.7);
-            cursor: pointer;
-            @include flex();
-            font-family: 'Material Symbols Outlined';
-            font-size: 28px; //태블릿: 26px //모바일: 20px
-            margin: 16px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
-        }
-
-         
-        //타블렛 1022px이하
-        @media(max-width: 1022px){
-            >a.bulkPurchase_btn{
-                width: 168px; height: 56px; //태블릿: 168x56 
-                border-radius: 28px; //태블릿: 28px 
-                @include font(16px, 600, inherit); //태블릿: 16px //모바일: 14px
-    
-                @include flex();
-                >&::after{
-                    //선물상자 아이콘
-                    width: 32px; height: 32px; //태블릿: 32x32
-                    margin-left: 8px; //태블릿: 8px
-                }
-            }
-            >div.moveScrollTop_btn{
-                width: 56px; height: 56px; //태블릿: 56x56 //모바일: 48x48
-                font-size: 26px; //태블릿: 26px //모바일: 20px
-                margin: 12px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
-            }
-        }// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-        //모바일 896px이하
-        @media(max-width: 896px){
-            >a.bulkPurchase_btn{
-                @include font(14px, 600, inherit); //태블릿: 16px //모바일: 14px
-    
-                @include flex();
-                >&::after{
-                    //선물상자 아이콘
-                }
-            }
-            >div.moveScrollTop_btn{
-                width: 48px; height: 48px; //태블릿: 56x56 //모바일: 48x48
-                font-size: 20px; //태블릿: 26px //모바일: 20px
-                margin: 8px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
-            }
-        }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-
-    }//div.wrapper_Btn //기업단체구매 버튼 + 스크롤최상단이동 버튼
-
-
-
 
 }//div.wrapper //모든 컨텐츠 모아둔 거(1~6페이지)
 //- - - - - - - - - - div.wrapper↑ - - - - - - - - - -
@@ -2528,6 +2819,138 @@ footer{
     }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }//footer //푸터배경
 //- - - - - - - - - - footer↑ - - - - - - - - - -
+}//div#view
+
+    //전체 페이지 알려주는 선
+div.fullPage{
+    position:fixed; top: 50%; right: 74px; transform: translateY(-50%); //태블릿: right: 48px;
+    z-index: 9999;
+    width: 22px; height: 190px; //태블릿: 22x134
+    // border: 1px solid black;
+    @include font(18px, bold, black); //태블릿: 12px
+    font-family: 'Mark Pro';
+    @include flex(space-between){flex-direction: column;}
+    >span{
+        
+    }
+    >p{
+        position: relative;
+        width: 2px; height: 120px; //태블릿: height: 83.6px
+        background-color: rgba(120,120,120,0.2);
+        >span{
+            position: absolute;
+            width: 2px; height: 16.6%;
+            background-color: rgb(0, 0, 0);
+        }
+    }
+
+    //타블렛 1022px이하
+    @media(max-width: 1022px){
+        right: 48px; //태블릿: right: 48px;
+        width: 22px; height: 134px; //태블릿: 22x134
+        // border: 1px solid black;
+        @include font(12px, bold, black); //태블릿: 12px
+        >span{
+            
+        }
+        >p{
+            position: relative;
+            width: 2px; height: 83.6px; //태블릿: height: 83.6px
+            background-color: rgba(120,120,120,0.2);
+            >span{
+                position: absolute;
+                width: 2px; height: 16.6%;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+    }// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    //모바일 896px이하
+    @media(max-width: 896px){
+        display: none;
+    }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}//div.fullPage //전체 페이지 알려주는 선
+
+//기업단체구매 버튼 + 스크롤최상단이동 버튼
+div.wrapper_Btn{
+    transition: all .5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+
+    position: fixed; right: 24px; bottom: 24px;
+    z-index: 9999;
+    color: white; background-color:transparent;
+    @include flex(center,flex-end){flex-direction: column};
+
+    >a.bulkPurchase_btn{
+        width: 191px; height: 72px; //태블릿: 168x56 
+        border-radius: 36px; //태블릿: 18px 
+        background-color: rgba(213,0,55,0.9);
+        vertical-align: middle;
+        @include font(18px, 600, inherit); //태블릿: 16px //모바일: 14px
+
+        @include flex();
+        >&::after{
+            //선물상자 아이콘
+            content: '';
+            display: inline-block;
+            width: 37px; height: 37px; //태블릿: 32x32
+            background: url('../img/icon_presentBox.svg') center center / 100% 100% no-repeat scroll;
+            margin-left: 12px; //태블릿: 8px
+        }
+    }
+    >div.moveScrollTop_btn{
+        width: 64px; height: 64px; //태블릿: 56x56 //모바일: 48x48
+        background-color: rgba(120,120,120,0.7);
+        cursor: pointer;
+        @include flex();
+        font-family: 'Material Symbols Outlined';
+        font-size: 28px; //태블릿: 26px //모바일: 20px
+        margin: 16px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
+    }
+
+        
+    //타블렛 1022px이하
+    @media(max-width: 1022px){
+        >a.bulkPurchase_btn{
+            width: 168px; height: 56px; //태블릿: 168x56 
+            border-radius: 28px; //태블릿: 28px 
+            @include font(16px, 600, inherit); //태블릿: 16px //모바일: 14px
+
+            @include flex();
+            >&::after{
+                //선물상자 아이콘
+                width: 32px; height: 32px; //태블릿: 32x32
+                margin-left: 8px; //태블릿: 8px
+            }
+        }
+        >div.moveScrollTop_btn{
+            width: 56px; height: 56px; //태블릿: 56x56 //모바일: 48x48
+            font-size: 26px; //태블릿: 26px //모바일: 20px
+            margin: 12px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
+        }
+    }// @media(max-width: 1022px) //타블렛 1022px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+    //모바일 896px이하
+    @media(max-width: 896px){
+        >a.bulkPurchase_btn{
+            @include font(14px, 600, inherit); //태블릿: 16px //모바일: 14px
+
+            @include flex();
+            >&::after{
+                //선물상자 아이콘
+            }
+        }
+        >div.moveScrollTop_btn{
+            width: 48px; height: 48px; //태블릿: 56x56 //모바일: 48x48
+            font-size: 20px; //태블릿: 26px //모바일: 20px
+            margin: 8px 4px 0 0; //태블릿: 12x4 //모바일: 8x4
+        }
+    }// @media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+}//div.wrapper_Btn //기업단체구매 버튼 + 스크롤최상단이동 버튼
+
 
 
 

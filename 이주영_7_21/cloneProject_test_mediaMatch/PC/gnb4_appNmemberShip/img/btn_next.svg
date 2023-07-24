@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+        <style>
+            .cls-2{fill:none}
+        </style>
+    </defs>
+    <g id="btn_next" transform="translate(-1504 -821)">
+        <g id="사각형_547" stroke="#000" stroke-width="2px">
+            <path stroke="none" d="M0 0H64V64H0z" transform="translate(1504 821)"/>
+            <path d="M1 1H63V63H1z" class="cls-2" transform="translate(1504 821)"/>
+        </g>
+        <g id="btn_32_arrow" transform="translate(907 -590)">
+            <path id="사각형_558" d="M0 0H32V32H0z" class="cls-2" transform="translate(613 1427)"/>
+            <path id="패스_2443" fill="none" stroke="#fff" stroke-width="2px" d="M501 76h25.843l-7.066-7.066" transform="translate(114.5 1370.566)"/>
+        </g>
+    </g>
+</svg>
