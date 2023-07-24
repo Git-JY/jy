@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+    <defs>
+        <style>
+            .cls-3,.cls-5{fill:#fff}.cls-3,.cls-4{stroke:#010101}.cls-4{stroke-width:2px}.cls-4,.cls-7{fill:none}.cls-6,.cls-8{stroke:none}.cls-8{fill:#010101}
+        </style>
+    </defs>
+    <g id="ico_giftcard" transform="translate(-21.033 -16)">
+        <g id="사각형_722" fill="#fff" stroke="#010101" stroke-width="2px">
+            <path d="M0 0H94V63H0z" class="cls-6" transform="translate(34.033 45)"/>
+            <path d="M1 1H93V62H1z" class="cls-7" transform="translate(34.033 45)"/>
+        </g>
+        <g id="사각형_724" class="cls-3">
+            <path d="M0 0H94V2H0z" class="cls-6" transform="translate(34.033 73)"/>
+            <path d="M0.5 0.5H93.5V1.5H0.5z" class="cls-7" transform="translate(34.033 73)"/>
+        </g>
+        <g id="사각형_794" class="cls-3">
+            <path d="M0 0H63V2H0z" class="cls-6" transform="rotate(90 27.516 72.517)"/>
+            <path d="M0.5 0.5H62.5V1.5H0.5z" class="cls-7" transform="rotate(90 27.516 72.517)"/>
+        </g>
+        <g id="리본" transform="translate(2 -7)">
+            <path id="패스_2926" d="M111.033 78l-14 14" class="cls-4" transform="translate(-14 3)"/>
+            <path id="패스_2927" d="M97.033 78l14 14" class="cls-4" transform="translate(0 3)"/>
+            <g id="합치기_44" class="cls-5">
+                <path d="M17 17H9c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8v8z" class="cls-6" transform="translate(80.033 64)"/>
+                <path d="M16 16V9c0-3.86-3.14-7-7-7S2 5.14 2 9s3.14 7 7 7h7m2 2H9c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9v9z" class="cls-8" transform="translate(80.033 64)"/>
+            </g>
+            <g id="합치기_45" class="cls-5">
+                <path d="M9 17c-4.411 0-8-3.589-8-8s3.589-8 8-8h8v8c0 4.411-3.589 8-8 8z" class="cls-6" transform="rotate(180 57.017 41)"/>
+                <path d="M9 2C5.14 2 2 5.14 2 9s3.14 7 7 7 7-3.14 7-7V2H9m0-2h9v9c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9z" class="cls-8" transform="rotate(180 57.017 41)"/>
+            </g>
+        </g>
+    </g>
+</svg>

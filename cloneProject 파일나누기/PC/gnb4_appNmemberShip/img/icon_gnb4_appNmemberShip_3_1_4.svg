@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_738" fill="#fff" stroke="#707070" d="M0 0H27V14H0z" opacity="0.1"/>
+        </clipPath>
+        <style>
+            .cls-10{fill:none}.cls-9{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_receive" transform="translate(-.5)">
+        <g id="ico" transform="translate(9.224 7)">
+            <g id="사각형_737" fill="#fff" stroke="#010101">
+                <path d="M0 0H32V2H0z" class="cls-9" transform="translate(5.276 17)"/>
+                <path d="M0.5 0.5H31.5V1.5H0.5z" class="cls-10" transform="translate(5.276 17)"/>
+            </g>
+            <g id="패스_2831" fill="#fff">
+                <path d="M20.8 29H5.2L1.154 1h23.69l-4.044 28z" class="cls-9" transform="translate(8.276 17)"/>
+                <path fill="#010101" d="M2.31 2l3.755 26h13.87L23.69 2H2.31M0 0h26l-4.333 30H4.333L0 0z" transform="translate(8.276 17)"/>
+            </g>
+            <g id="마스크_그룹_19" clip-path="url(#clip-path)" transform="translate(8.276 3)">
+                <g id="타원_136" fill="#fff" stroke="#010101" stroke-width="2px" transform="translate(0 1.077)">
+                    <ellipse cx="12.938" cy="12.385" class="cls-9" rx="12.938" ry="12.385"/>
+                    <ellipse cx="12.938" cy="12.385" class="cls-10" rx="11.938" ry="11.385"/>
+                </g>
+            </g>
+            <path id="패스_54" fill="none" stroke="#010101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" d="M905.35 192.5h-3.129l-3.583 7" transform="translate(-870.362 -192.5)"/>
+            <path id="패스_3084" fill="none" stroke="#010101" stroke-linecap="round" stroke-width="2px" d="M47 76l1 3h36l1-3" transform="translate(-44.724 -33)"/>
+        </g>
+    </g>
+</svg>

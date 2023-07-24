@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="./css/index.css">
+    
+    <!-- 파비콘 -->
+    <!-- <link rel="icon" type="image/png" href="../../img_파비콘N오픈그래프N그외/favicon/favicon-32x32.png" sizes="32x32" /> -->
+    <!-- <link rel="icon" type="image/png" href="../../img_파비콘N오픈그래프N그외/favicon/favicon-16x16.png" sizes="16x16" /> -->
+    
+    <!-- 타이틀 -->
+    <title>투썸플레이스 - Premium Dessert Cafe A Twosome Place.</title>
+</head>
+<body>
+    
+    <script>
+        const md = [
+            window.matchMedia(`(min-width: 897px)`), // 태블릿 + PC
+            window.matchMedia(`(max-width: 896px)`)   // 모바일
+        ];
+    </script>
+
+    <!-- - - - - - - - - - - header↓ - - - - - - - - - - -->
+    <header><!-- 헤더배경 -->
+        <div class="head_El"><!-- 헤더요소들 -->
+            <!-- 로고 -->
+            <h1 class="Logo">
+                <a href="../HomePage/index.html"></a>
+            </h1>
+            
+            <!-- 가로 메뉴내용 -->
+            <ul class="head_gnb_horizontal">
+                <!-- (gnb1_투썸플레이스 소개) -->
+                <li>         
+                    <a href="../gnb1_intro/index.html">투썸플레이스 소개</a>
+                    <ul class="head_lnb"> 
+                        <!-- 투썸플레이스 소개_1 -->
+                        <li><a href="../gnb1_intro/index.html">투썸플레이스</a></li>
+                        <li><a class="mini" href="../gnb1_intro/index.html">비전체계</a></li>
+                        <li><a class="mini" href="">연혁</a></li>
+                        <li><a class="mini" href="">BI</a></li>
+                        <li><a class="mini" href="">20주년 이야기</a></li>
+                        <li><a class="mini" href="">Recruit</a></li>
+
+                        <!-- 투썸플레이스 소개_2 -->
+                        <li class="firstLnb"><a href="">매장</a></li>
+                        <li><a class="mini" href="">DT/DI</a></li>
+
+                        <!-- 투썸플레이스 소개_3 -->
+                        <li class="firstLnb"><a href="">브랜드 브로슈어</a></li>
+                    </ul>
+                </li>
+
+                <!-- (gnb2_메뉴이야기) -->
+                <li>         
+                    <a href="../gnb2_menu/index.html">메뉴이야기</a>
+                    <ul class="head_lnb"> 
+                        <li><a href="../gnb2_menu/index.html">커피이야기</a></li>
+                        <li><a href="">디저트이야기</a></li>
+                        <li><a href="">델리이야기</a></li>
+                    </ul>
+                </li>
+
+                <!-- (gnb3_브랜드 지원) -->
+                <li>         
+                    <a href="../gnb3_brand/index.html">브랜드 지원</a>
+                    <ul class="head_lnb"> 
+                        <li><a href="../gnb3_brand/index.html">어썸 페어링 플랜트</a></li>
+                        <li><a href="">어썸 디저트 플랜트</a></li>
+                        <li><a href="">C&D센터</a></li>
+                        <li><a href="">SEP센터</a></li>
+                    </ul>
+                </li>
+
+                <!-- (gnb4_투썸플레이스 앱 & 멤버십) -->
+                <li>         
+                    <a href="../gnb4_appNmemberShip/index.html">투썸플레이스 앱 & 멤버십</a>
+                    <ul class="head_lnb"> 
+                        <!-- 투썸플레이스 앱 & 멤버십_1 -->
+                        <li><a href="../gnb4_appNmemberShip/index.html">투썸플레이스 앱 소개</a></li>
+                        
+                        <!-- 투썸플레이스 앱 & 멤버십_2 -->
+                        <li><a href="">투썸플레이스 멤버십</a></li>
+                        <li><a class="mini" href="">멤버십 소개</a></li>
+                        <li><a class="mini" href="">등급 및 혜택</a></li>
+                    </ul>
+                </li>
+
+                <!-- (gnb5_가맹점 창업안내) -->
+                <li>         
+                    <a href="">가맹점 창업안내</a>
+                    <ul class="head_lnb"> 
+                        <li><a href="">가맹점 개설 안내</a></li>
+                        <li><a href="">창업 설명회</a></li>
+                        <li><a href="">온라인 창업상담신청</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">가맹점 전용 금융상품</a></li>
+                    </ul>
+                </li>
+
+                <!-- (gnb6_새소식 & 공지) -->
+                <li>         
+                    <a href="">새소식 & 공지</a>
+                    <ul class="head_lnb"> 
+                        <li><a href="">공지사항</a></li>
+                    </ul>
+                </li>
+
+            </ul><!-- head_gnb_horizontal -->                     
+                    
+            <div class="head_right">
+                <div class="Language">English</div>
+                <div class="verMenu_btn"></div>
+            </div><!-- head_right -->                                 
+        </div><!-- head_El -->
+    </header>
+    <!-- - - - - - - - - - - header↑ - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - Navigation↓ - - - - - - - - - - -->
+    <nav>
+        <!-- 로고와 x버튼 -->
+        <div class="head_gnb_vertical_top_Wrap">
+            <h1 class="Logo"></h1>
+            <div class="xBtn"></div>
+        </div>
+
+        <!-- 세로 메뉴내용 -->
+        <ul class="head_gnb_vertical">
+            <!-- (gnb1_투썸플레이스 소개) -->
+            <li>         
+                <a href="../gnb1_intro/index.html">투썸플레이스 소개</a>
+                <ul class="head_lnb"> 
+                    <!-- 투썸플레이스 소개_1 -->
+                    <li><a href="../gnb1_intro/index.html">투썸플레이스</a></li>
+                    <li class="mini"><a href="../gnb1_intro/index.html">비전체계</a></li>
+                    <li class="mini"><a href="#">연혁</a></li>
+                    <li class="mini"><a href="#">BI</a></li>
+                    <li class="mini"><a href="#">20주년 이야기</a></li>
+                    <li class="mini"><a href="#">Recruit</a></li>
+
+                    <!-- 투썸플레이스 소개_2 -->
+                    <li><a href="#">매장</a></li>
+                    <li class="mini"><a href="#">DT/DI</a></li>
+
+                    <!-- 투썸플레이스 소개_3 -->
+                    <li><a href="#">브랜드 브로슈어</a></li>
+                </ul>
+            </li>
+
+            <!-- (gnb2_메뉴이야기) -->
+            <li>         
+                <a href="../gnb2_menu/index.html">메뉴이야기</a>
+                <ul class="head_lnb"> 
+                    <li><a href="../gnb2_menu/index.html">커피이야기</a></li>
+                    <li><a href="#">디저트이야기</a></li>
+                    <li><a href="#">델리이야기</a></li>
+                </ul>
+            </li>
+
+            <!-- (gnb3_브랜드 지원) -->
+            <li>         
+                <a href="../gnb3_brand/index.html">브랜드 지원</a>
+                <ul class="head_lnb"> 
+                    <li><a href="../gnb3_brand/index.html">어썸 페어링 플랜트</a></li>
+                    <li><a href="#">어썸 디저트 플랜트</a></li>
+                    <li><a href="#">C&D센터</a></li>
+                    <li><a href="#">SEP센터</a></li>
+                </ul>
+            </li>
+
+            <!-- (gnb4_투썸플레이스 앱 & 멤버십) -->
+            <li>         
+                <a href="../gnb4_appNmemberShip/index.html">투썸플레이스 앱 & 멤버십</a>
+                <ul class="head_lnb"> 
+                    <!-- 투썸플레이스 앱 & 멤버십_1 -->
+                    <li><a href="../gnb4_appNmemberShip/index.html">투썸플레이스 앱 소개</a></li>
+                    
+                    <!-- 투썸플레이스 앱 & 멤버십_2 -->
+                    <li><a href="#">투썸플레이스 멤버십</a></li>
+                    <li class="mini"><a href="#">멤버십 소개</a></li>
+                    <li class="mini"><a href="#">등급 및 혜택</a></li>
+                </ul>
+            </li>
+
+            <!-- (gnb5_가맹점 창업안내) -->
+            <li>         
+                <a href="#">가맹점 창업안내</a>
+                <ul class="head_lnb"> 
+                    <li><a href="#">가맹점 개설 안내</a></li>
+                    <li><a href="#">창업 설명회</a></li>
+                    <li><a href="#">온라인 창업상담신청</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">가맹점 전용 금융상품</a></li>
+                </ul>
+            </li>
+
+            <!-- (gnb6_새소식 & 공지) -->
+            <li>         
+                <a href="#">새소식 & 공지</a>
+                <ul class="head_lnb"> 
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </li>
+
+        </ul><!-- head_gnb_vertical -->
+
+        <div class="head_gnb_vertical_bottom">
+            <ul class="sideMenu">
+                <li><a href="#">기업 및 단체구매안내</a></li>
+                <li><a href="#">가맹상담신청</a></li>
+                <li><a href="#">사이버신문고</a></li>
+            </ul>
+            <ul class="snsIcons">
+                <li><a href="https://www.instagram.com/atwosomeplace_official/?igshid=1vu3rl2z5ps7n"><img src="../footer/img/icon_footerSns_instagram.svg" alt="인스타그램 로고"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q"><img src="../footer/img/icon_footerSns_youtube.svg" alt="유튜브 로고"></a></li>
+                <li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2FTWOSOMEsays"><img src="../footer/img/icon_footerSns_twitter.svg" alt="트위터 로고"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- nav 옆으로 나오기 -->
+<script>
+    const elHeaderBtn = document.querySelector('header>.head_El>.head_right>.verMenu_btn'),
+          elNav = document.querySelector('nav'),
+          nav_elXBtn = document.querySelector('nav>div.head_gnb_vertical_top_Wrap>div.xBtn');
+
+    elHeaderBtn.onclick = function(){
+        elNav.classList.add('active');
+    }
+    nav_elXBtn.onclick = function(){
+        elNav.classList.remove('active');
+    }
+</script>
+
+<!-- nav lnb나오기 -->
+<script>
+    const nav_elUl = document.querySelector('nav ul.head_gnb_vertical'),
+          nav_elLi = document.querySelectorAll('nav ul.head_gnb_vertical > li'),
+          nav_elA = document.querySelectorAll('nav ul.head_gnb_vertical > li > a');
+    
+    let nav_previous_key = 0, first = true;
+
+    let nav_aTagActive = function(ele, k){
+        nav_elLi[nav_previous_key].classList.remove('active');
+
+        nav_elA.forEach(function(v){
+            v.style.color = '#707070';
+        });
+
+        nav_elLi[k].classList.add('active');
+        if(k == nav_previous_key && !first) nav_elLi[k].classList.remove('active');
+        nav_elA[k].style.color = 'white';
+        nav_previous_key = k;
+
+        if(first) first = false;
+    }//nav_aTagActive()함수정의
+
+    let nav_reset = function(){
+            nav_elLi[nav_previous_key].classList.remove('active');
+            nav_elA.forEach(function(ele){
+                ele.style.color = 'white';
+            });//nav_elA.forEach
+    }//nav_reset()함수정의
+
+    let a_media_event = function(){   
+        nav_elA.forEach(function(ele, k){
+            ele.onmouseenter = function(){//a태그 올려놓을 때 //addEventListner()가 아닌 이 방법으로 매개변수(ele, k)넣는 법?????????????????????????            
+                if(md[0].matches){
+                    nav_aTagActive(ele, k);
+                }
+            };//ele.onmouseenter     
+        
+            ele.onclick = function(e){
+                if(!md[0].matches){
+                    e.preventDefault();
+                    nav_aTagActive(ele, k);
+                }
+            };
+        });//nav_elA.forEach
+    }//a_media_event() 함수정의
+
+    // md.forEach(function(v,k){
+    //     a_media_event();       
+    //     md[k].addListener(a_media_event);//md[k].addListener() 
+    // });// md.forEach(function(v,k)
+
+        a_media_event();       
+        md[0].addListener(a_media_event);//md[k].addListener() 
+
+    nav_elUl.onmouseleave = function(){
+        nav_reset();
+    }//nav_elUl.onmouseleave
+
+</script>
+    <!-- - - - - - - - - - - Navigation↑ - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - div.wrapper↓ - - - - - - - - - - -->
+<div class="padding">
+
+    <div class="wrapper">
+        <nav>
+            <span>홈</span><span>메뉴이야기</span>
+        </nav>
+    
+        <article class="contents1">
+            <h1>커피이야기</h1>
+            <ul>
+                <li class="left">
+                    <dl>
+                        <dt>TWOSOME COFFEE STORY</dt>
+                        <dd>
+                            내 취향이 담긴 커피,<br>투썸플레이스에는<br class="on">
+                            내 취향을 <br>담아 섬세하게 만든<br class="on">
+                            나만의 커피가 있습니다. 
+                        </dd>
+                    </dl>
+                    <p>
+                        투썸플레이스 큐그레이더(Q-Grader)는 좋은 산지의 신선한 원두만을 선별해 각각 다른 개성의 세가지 블렌드를 제공합니다. 원두 타입별 최적의 밸런스를 맞춘 로스팅 포인트, 최상의 에스프레소 추출 기술이 더해져 투썸플레이스만의 커피가 완성됩니다.
+                    </p>
+                </li>
+                <li class="right">
+                    <i><img src="./img/img_gnb2_menu_1.jpg" alt=""></i>
+                </li>
+            </ul>
+        </article>
+    
+        <article class="contents2">
+            <h2>투썸의 특별한 블렌드</h2>
+            <ul class="special_coffee_list">
+                <li>
+                    <h4 class="top">
+                        <i><img src="./img/gnb2_menu_2.svg" alt=""></i>
+                        <strong>BLACK GROUND</strong>
+                        <span>DARK ROAST</span>
+                    </h4>
+                    
+                    <dl>
+                        <dt>블랙그라운드</dt>
+                        <dd>묵직하고 스모키한 첫인상과 입안 가득 꽉 차는 바디감, 다크초콜릿의 달콤쌉싸름한 여운이 매력적인 다크 로스팅 블렌드</dd>
+                    </dl>
+                    <p>Dark Roast</p>
+                    <ul>
+                        <li>Full-Body</li>
+                        <li>Nutty</li>
+                        <li>Chocolaty</li>
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <span>산미</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>바디</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>콜롬비아, 브라질, 에티오피아, 과테말라</dd>
+                    </dl>
+                    
+                </li><!-- li -->
+                
+                <li>
+                    <h4 class="top">
+                        <i><img src="./img/gnb2_menu_3.svg" alt=""></i>
+                        <strong>AROMA NOTE</strong>
+                        <span>MEDIUM ROAST</span>
+                    </h4>
+                    <dl>
+                        <dt>아로마노트</dt>
+                        <dd>잘 익은 과일향, 플로럴한 아로마에 부드럽고 밀도 있는 단맛과 은은한 산미의 밸런스가 좋은 미디엄 로스팅 블렌드</dd>
+                    </dl>
+                    <p>Medium Roast</p>
+                    <ul>
+                        <li>Berry-like</li>
+                        <li>Juicy</li>
+                        <li>Floral</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>산미</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>바디</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>에티오피아(Natural), 과테말라</dd>
+                    </dl>
+                    
+                </li><!-- li -->
+    
+                <li>
+                    <h4 class="top">
+                        <i><img src="./img/gnb2_menu_4.svg" alt=""></i>
+                        <strong>SWP. DECAF</strong>
+                        <span>DARK ROAST</span>
+                    </h4>
+                    <dl>
+                        <dt>SWP. 디카페인</dt>
+                        <dd>친환경 방식의 스위스 워터 프로세스로 카페인을 제거하고 견과류의 고소한 풍미는 그대로 남긴 다크 로스팅 블렌드</dd>
+                    </dl>
+                    <p>Dark Roast</p>
+                    <ul>
+                        <li>Rich</li>
+                        <li>Sweet</li>
+                        <li>Well-Balanced</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span>산미</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>바디</span>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <dl>
+                        <dt>Origin</dt>
+                        <dd>콜롬비아, 브라질</dd>
+                    </dl>
+                    
+                </li>
+            </ul>
+        </article>
+    
+        <article class="contents3">
+            <h2>시그니처 커피&음료</h2>
+            <ul class="coffeeAndDrink_s">
+                <li>
+                    <span>Espresso</span>
+                    <i><img src="./img/img_gnb2_menu_5.png" alt="스페니쉬 연유 라떼"></i>
+                    <dl>
+                        <dt>스페니쉬 연유 라떼</dt>
+                        <dd>Spanish Condensed Milk Café Latte</dd>
+                    </dl>
+                    <p class="txt_up">평화로운 유럽 초원의 감성을 담은 부드럽고 달콤한 스페니쉬 연유라떼</p>
+                    <p class="txt_down">
+                        스페니쉬 라떼 : 야외 활동이 많은 스페인 목동들이 피곤함을 해소하기 위해 즐겨 마시던 커피
+                    </p>
+                </li>
+                <li>
+                    <span>Espresso</span>
+                    <i><img src="./img/img_gnb2_menu_6.png" alt="롱블랙"></i>
+                    <dl>
+                        <dt>롱블랙</dt>
+                        <dd>Long Black</dd>
+                    </dl>
+                    <p class="txt_up">에스프레소보다 짧게 추출한 리스트레또샷을 넣어 깊은 풍미와 풍부한 크레마를 느낄 수 있는 매력적인 커피</p>
+                    <p class="txt_down">
+                        롱블랙 : 호주와 뉴질랜드를 시작으로 영국 등 유럽에서 즐기는 커피로 아메리카노보다 진한 풍미로 즐기는 커피
+                    </p>
+                </li>
+                <li>
+                    <span>Non Coffee</span>
+                    <i><img src="./img/img_gnb2_menu_7.png" alt="허니 레몬티"></i>
+                    <dl>
+                        <dt>허니 레몬티</dt>
+                        <dd>Honey Lemon Tea</dd>
+                    </dl>
+                    <p class="txt_up">진한 TWG 프렌치 얼그레이의 향과 달콤한 꿀, 상큼한 레몬이 녹아든 향긋한 티</p>
+                </li>
+                <li>
+                    <span>Espresso</span>
+                    <i><img src="./img/img_gnb2_menu_8.png" alt="스트로베리 피치 프라페"></i>
+                    <dl>
+                        <dt>스트로베리 피치 프라페</dt>
+                        <dd>Strawberry Peach Frappe</dd>
+                    </dl>
+                    <p class="txt_up">딸기와 복숭아의 상큼함이 조화롭게 어우러져 달콤하고 시원하게 즐길 수 있는 과일 프라페</p>
+                </li>
+            </ul>
+        </article>
+    </div><!-- div.wrapper -->
+</div><!-- div.padding -->
+    
+    <!-- - - - - - - - - - - div.wrapper↑ - - - - - - - - - - -->
+
+    <!-- - - - - - - - - - - footer↓ - - - - - - - - - - -->
+    <footer>
+        <div class="footerWrapper">
+            <div class="footer_top">
+                <div class="topLeft">
+                    <a href="">기업 및 단체구매안내</a>
+                    <a href="">가맹상담신청</a>
+                    <a href="">사이버신문고</a>
+                </div>
+        
+                <div class="topRight">
+                    <div class="Address">
+                        <b>Address</b>
+                        <span>서울특별시 중구 을지로 170, 8층(을지로4가, 을지트윈타워)투썸플레이스(주)</span>
+                    </div>
+    
+                    <div class="CustomerCenter">
+                        <b>Customer Center</b>
+                        <ul>
+                            <li>고객센터 : 1577-4410 </li>
+                            <li>팩스 : 02-2058-6777</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div><!-- footer_top -->
+    
+            <div class="footer_bottom">
+                <ul class="footer_bottom_menu_Btn">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a class="YellowFont" href="#">개인정보처리방침</a></li>
+                    <li><a href="#">위치기반서비스 이용약관</a></li>
+                    <li><a href="#">이메일 무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자정보확인</a></li>
+                </ul>
+    
+                <ul class="grayInfo">
+                    <li>대표이사 : 이영상 </li>
+                    <li>개인정보보호책임자 : 정병구 </li>
+                    <li>사업자등록번호 : 404-86-01054</li>
+                </ul>
+    
+                <ul class="grayInfo">
+                    <li>통신판매업종신고증 : 제 2018-서울중구-0353호 </li>
+                    <li>대표이메일 : helpmaster@twosome.co.kr</li>
+                </ul>
+    
+                <ul class="grayInfo">
+                    <li>Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.</li>
+                    <li>All Rights Reserved.</li>
+                </ul>
+            </div>
+    
+            
+            <ul class="footer_bottom_snsIcons">
+                <li><a href="#"><img src="../footer/img/icon_footerSns_instagram.svg" alt="인스타그램_로고_관련페이지로 이동"></a></li>
+                <li><a href="#"><img src="../footer/img/icon_footerSns_youtube.svg" alt="유튜브_로고_관련페이지로 이동"></a></li>
+                <li><a href="#"><img src="../footer/img/icon_footerSns_twitter.svg" alt="트위터_로고_관련페이지로 이동"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- - - - - - - - - - - footer↑ - - - - - - - - - - -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-4{fill:#fff}.cls-3{fill:#010101}.cls-4{stroke:#010101;stroke-width:2px}.cls-5{stroke:none}.cls-7{fill:none}
+        </style>
+    </defs>
+    <g id="ico_menu_oder" transform="translate(-591 -900)">
+        <g id="그룹_418" transform="translate(578.5 894.572)">
+            <g id="합치기_49" fill="#fff">
+                <path d="M-282.5-1605.713v-4.859h-7v-14h22v14h-9.447l-.283.248-5.27 4.61z" class="cls-5" transform="translate(333 1635)"/>
+                <path fill="#010101" d="M-281.5-1607.917l3.611-3.16.566-.495H-268.5v-12h-20v12h7V-1607.917m-2 4.408v-6.063h-7v-16h24v16h-10.072l-6.928 6.063z" transform="translate(333 1635)"/>
+            </g>
+            <circle id="타원_133" cx="1" cy="1" r="1" class="cls-3" transform="translate(48.5 16.428)"/>
+            <circle id="타원_183" cx="1" cy="1" r="1" class="cls-3" transform="translate(53.5 16.428)"/>
+            <circle id="타원_184" cx="1" cy="1" r="1" class="cls-3" transform="translate(58.5 16.428)"/>
+        </g>
+        <g id="사람" transform="translate(584 897.572)">
+            <g id="타원_132" class="cls-4" transform="translate(23 18.428)">
+                <circle cx="9" cy="9" r="9" class="cls-5"/>
+                <circle cx="9" cy="9" r="8" class="cls-7"/>
+            </g>
+            <g id="사각형_735" class="cls-4">
+                <path d="M15 0a15 15 0 0 1 15 15v5H0v-5A15 15 0 0 1 15 0z" class="cls-5" transform="translate(17 38.428)"/>
+                <path d="M15 1a14 14 0 0 1 14 14v3.125a.875.875 0 0 1-.875.875H1.875A.875.875 0 0 1 1 18.125V15A14 14 0 0 1 15 1z" class="cls-7" transform="translate(17 38.428)"/>
+            </g>
+            <path id="사각형_736" d="M0 0H38V2H0z" class="cls-3" transform="translate(13 56.333)"/>
+        </g>
+    </g>
+</svg>
