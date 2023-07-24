@@ -184,7 +184,7 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
     display: none;
   }
   header:hover {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     height: 100px;
     box-shadow: none;
@@ -204,6 +204,9 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
     height: 88px;
     padding-top: 33px;
   }
+  header:hover {
+    height: 88px;
+  }
   header > .head_El > div.head_right > .Language {
     width: 84px;
     height: 30px;
@@ -218,6 +221,9 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
   header {
     height: 56px;
     padding-top: 17px;
+  }
+  header:hover {
+    height: 56px;
   }
   header > .head_El > h1.Logo > a {
     width: 152px;

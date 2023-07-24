@@ -240,6 +240,42 @@ header{
             }//div.head_right
 
         }//.head_El //헤더요소들
+
+        &{
+            color: white;
+            >.head_El>h1.Logo>a{
+                background: url('../../header/img/Logo_white.svg') center center / 100% 100% no-repeat scroll;
+            }
+            >.head_El>div.head_right>.Language{
+                border:1px solid white;
+            }
+            >.head_El>div.head_right>.verMenu_btn{
+                background: url('../../header/img/icon_headerLogo_white.svg') center center / 100% 100% no-repeat scroll;
+            }
+        }//header.firstFloor
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.8); 
+            color: white;
+            height: 56px;
+            box-shadow: none;
+    
+            >.head_El{
+                >h1.Logo>a{
+                    background: url('../../header/img/Logo_white.svg') center center / 100% 100% no-repeat scroll;
+                }
+                >div.head_right{
+                    >.Language{
+                        border:1px solid white;
+                    }
+                    >.verMenu_btn{
+                        background: url('../../header/img/icon_headerLogo_white.svg') center center / 100% 100% no-repeat scroll;
+                    }
+                }
+            }//&:hover>.head_El
+    
+        }//&:hover
+
     }//@media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 }//header //헤더배경
 
@@ -275,7 +311,7 @@ nav{
 
     transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);;
 
-    >&.active{
+    &.active{
         transform: translateX(0%);
         opacity: 100%;
     }
@@ -325,7 +361,7 @@ nav{
                 white-space: nowrap;
                 transition: all .3s;
 
-                >&::before{
+                &::before{
                     content: '';
                     display: none;
                     width: 10px; height: 10px;
@@ -336,7 +372,7 @@ nav{
                     opacity: 0%;
                 }
                 &:hover{
-                    >&:before{
+                    &:before{
                         display: inline-block;
                         margin-right: 30px;
                         opacity: 100%;
@@ -352,13 +388,13 @@ nav{
                 opacity: 0%;
 
                 >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                    >&:not(:first-child){margin-top: 32px;} //태블릿: 24px //모바일: 16px
+                    &:not(:first-child){margin-top: 32px;} //태블릿: 24px //모바일: 16px
                     >a{
                         @include font(32px, 700, #fff); //태블릿: 24px //모바일: 16px
                         line-height: 48px; //태블릿: 100%
                         white-space: nowrap;
                     }
-                    >&.mini{
+                    &.mini{
                         margin-top: 0px; //태블릿: 14px //모바일: 16px
                         >a{
                             @include font(24px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -370,10 +406,10 @@ nav{
             }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
             //태블릿, 모바일 알아서 바꿔보삼
-            >&.active{
+            &.active{
                 >a{
                     // color: white;
-                    >&:before{
+                    &:before{
                         display: inline-block;
                         margin-right: 30px;
                         opacity: 100%;
@@ -398,7 +434,7 @@ nav{
         >ul.sideMenu{
             >li{
                 text-align: right; //모바일: left
-                >&:not(:last-child){margin-bottom: 20px;} //태블릿: 16px //모바일
+                &:not(:last-child){margin-bottom: 20px;} //태블릿: 16px //모바일
                 >a{
                     @include font(20px, 500, #999); //태블릿: 16px //모바일: 14px
                 }
@@ -428,7 +464,7 @@ nav{
         padding: 0 48px; //태블릿: 48px //모바일: 32px
         @include flex(flex-start, flex-start){flex-direction: column}; //태블릿: (flex-start, flex-start)
 
-        >&.active{
+        &.active{
         }
 
         // ↓ 모바일은 알아서 맞춰보삼
@@ -464,7 +500,7 @@ nav{
                 >a{
                     line-height: 48px; //태블릿: 48px //모바일: 36px
 
-                    >&::before{
+                    &::before{
                     }
                 }
 
@@ -474,12 +510,12 @@ nav{
                     left: calc(350px + 60px); //태블릿: calc(350px + 60px) // 모바일: 0px
 
                     >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                        >&:not(:first-child){margin-top: 24px;} //태블릿: 24px //모바일: 16px
+                        &:not(:first-child){margin-top: 24px;} //태블릿: 24px //모바일: 16px
                         >a{
                             @include font(24px, 700, #fff); //태블릿: 24px //모바일: 16px
                             line-height: 100%; //태블릿: 100%
                         }
-                        >&.mini{
+                        &.mini{
                             margin-top: 14px; //태블릿: 14px //모바일: 16px
                             >a{
                                 @include font(20px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -491,9 +527,9 @@ nav{
                 }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
                 //태블릿, 모바일 알아서 바꿔보삼
-                >&.active{
+                &.active{
                     >a{
-                        >&:before{
+                        &:before{
                             margin-right: 15px;
                         }
                     }
@@ -514,7 +550,7 @@ nav{
             >ul.sideMenu{
                 >li{
                     text-align: right; //모바일: left
-                    >&:not(:last-child){margin-bottom: 16px;} //태블릿: 16px //모바일: 14px
+                    &:not(:last-child){margin-bottom: 16px;} //태블릿: 16px //모바일: 14px
                     >a{
                         @include font(16px, 500, #999); //태블릿: 16px //모바일: 14px
                     }
@@ -544,7 +580,7 @@ nav{
         padding: 0 32px; //태블릿: 48px //모바일: 32px
         padding-right: calc(100vw - 100% + 32px); //스크롤바까지 계산
 
-        >&.active{
+        &.active{
         }
 
         // ↓ 모바일은 알아서 맞춰보삼
@@ -572,11 +608,11 @@ nav{
                 >a{
                     line-height: 36px; //태블릿: 48px //모바일: 36px
 
-                    >&::before{
+                    &::before{
                         width: 8px; height: 8px;
                     }
                     &:hover{
-                        >&:before{
+                        &:before{
                             display: inline-block;
                             margin-right: 10px;
                             opacity: 100%;
@@ -592,11 +628,11 @@ nav{
                     margin: 24px 0px;
 
                     >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                        >&:not(:first-child){margin-top: 16px;} //태블릿: 24px //모바일: 16px
+                        &:not(:first-child){margin-top: 16px;} //태블릿: 24px //모바일: 16px
                         >a{
                             @include font(16px, 700, #fff); //태블릿: 24px //모바일: 16px
                         }
-                        >&.mini{
+                        &.mini{
                             margin-top: 16px; //태블릿: 14px //모바일: 16px
                             >a{
                                 @include font(14px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -607,9 +643,9 @@ nav{
                 }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
                 //태블릿, 모바일 알아서 바꿔보삼
-                >&.active{
+                &.active{
                     >a{
-                        >&:before{
+                        &:before{
                             margin-right: 10px;
                         }
                         
@@ -634,7 +670,7 @@ nav{
             >ul.sideMenu{
                 >li{
                     text-align: left; //모바일: left
-                    >&:not(:last-child){margin-bottom: 14px;} //태블릿: 16px //모바일: 14px
+                    &:not(:last-child){margin-bottom: 14px;} //태블릿: 16px //모바일: 14px
                     >a{
                         @include font(14px, 500, #999); //태블릿: 16px //모바일: 14px
                     }
@@ -1431,7 +1467,7 @@ div.wrapper{
                                     text-decoration: underline;
                                     margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
                                 }
-                                >&::after{//화살표
+                                &::after{//화살표
                                     content: 'arrow_forward_ios';
                                     font-family: 'Material Symbols Outlined';
                                     transform: translateY(-2px);
@@ -1579,7 +1615,7 @@ div.wrapper{
                                         @include font(26px, 900, inherit); //1312px이하: 26px //모바일: 24px
                                         margin-bottom: 32px; //1312px이하: 알아서 어림잡아보삼
                                     }
-                                    >&::after{//화살표
+                                    &::after{//화살표
                                         transform: translateY(0px);
                                         display: inline-block;
                                         width: 25px; height: 25px; //1312px: 25x25
@@ -1730,7 +1766,7 @@ div.wrapper{
                                         //margin-bottom: 0px; //1312px이하: 알아서 어림잡아보삼
                                         vertical-align: middle;
                                     }
-                                    >&::after{//화살표
+                                    &::after{//화살표
                                         transform: translateY(2px);
                                     }
                                     }
@@ -1830,42 +1866,42 @@ div.wrapper{
                     border-radius: 50%;
 
 
-                    >&:nth-of-type(1){
+                    &:nth-of-type(1){
                         position: absolute; left: 0%; top: 10%;
                     }
-                    >&:nth-of-type(2){
+                    &:nth-of-type(2){
                         position: absolute; left: 30%; top: 30%;
                     }
-                    >&:nth-of-type(3){
+                    &:nth-of-type(3){
                         position: absolute; left: 60%; top: 55%;
                     }
-                    >&:nth-of-type(4){
+                    &:nth-of-type(4){
                         position: absolute; left: 90%; top: 85%;
                     }
 
-                    >&:nth-of-type(5){
+                    &:nth-of-type(5){
                         position: absolute; left: 100%; top: 10%;
                     }
-                    >&:nth-of-type(6){
+                    &:nth-of-type(6){
                         position: absolute; left: 130%; top: 30%;
                     }
-                    >&:nth-of-type(7){
+                    &:nth-of-type(7){
                         position: absolute; left: 160%; top: 55%;
                     }
-                    >&:nth-of-type(8){
+                    &:nth-of-type(8){
                         position: absolute; left: 190%; top: 80%;
                     }
 
-                    >&:nth-of-type(9){
+                    &:nth-of-type(9){
                         position: absolute; left: 200%; top: 10%;
                     }
-                    >&:nth-of-type(10){
+                    &:nth-of-type(10){
                         position: absolute; left: 230%; top: 30%;
                     }
-                    >&:nth-of-type(11){
+                    &:nth-of-type(11){
                         position: absolute; left: 260%; top: 55%;
                     }
-                    >&:nth-of-type(12){
+                    &:nth-of-type(12){
                         position: absolute; left: 290%; top: 80%;
                     }
                     
@@ -1881,28 +1917,28 @@ div.wrapper{
 
                 >li{
 
-                    >&:nth-of-type(1){
+                    &:nth-of-type(1){
                         position: absolute; left: 0%; top: 10%;
                     }
-                    >&:nth-of-type(2){
+                    &:nth-of-type(2){
                         position: absolute; left: 40%; top: 35%;
                     }
-                    >&:nth-of-type(3){
+                    &:nth-of-type(3){
                         position: absolute; left: 80%; top: 75%;
                     }
-                    >&:nth-of-type(4){
+                    &:nth-of-type(4){
                         position: absolute; left: 120%; top: 10%;
                     }
-                    >&:nth-of-type(5){
+                    &:nth-of-type(5){
                         position: absolute; left: 160%; top: 35%;
                     }
-                    >&:nth-of-type(6){
+                    &:nth-of-type(6){
                         position: absolute; left: 190%; top: 75%;
                     }
-                    >&:nth-of-type(7){
+                    &:nth-of-type(7){
                         position: absolute; left: 210%; top: 10%;
                     }
-                    >&:nth-of-type(8){
+                    &:nth-of-type(8){
                         position: absolute; left: 240%; top: 35%;
                     }
                     
@@ -1978,7 +2014,7 @@ div.wrapper{
                         height: 100%;
                         vertical-align: middle;
                         //태블릿: font-size: 14px;
-                        >&::after{//화살표
+                        &::after{//화살표
                             @include flex();
                             //모바일: display: none;
                             content: "arrow_forward_ios";
@@ -1990,7 +2026,7 @@ div.wrapper{
                             vertical-align: middle;
                         }   
 
-                        >&::before{//검은배경
+                        &::before{//검은배경
                             content: '';
                             display: inline-block;
                             position: absolute; left: 0px; top: 0px;
@@ -2002,9 +2038,9 @@ div.wrapper{
                         }
 
                         // a hover시
-                        >&:hover{
+                        &:hover{
                             color: white;
-                            >&::before{
+                            &::before{
                                 width: 100%;
                             }
                         }//hover
@@ -2048,17 +2084,17 @@ div.wrapper{
                             padding: 0 16px; //태블릿: 16px;
                             @include flex(space-between, center); //모바일: center
                             font-size: 14px;  //태블릿
-                            >&::after{//화살표
+                            &::after{//화살표
                                 //모바일: display: none;
                                 width: 22px; height: 22px; //태블릿: 22x22
                             }   
     
-                            >&::before{//검은배경
+                            &::before{//검은배경
                             }
     
                             // a hover시
-                            >&:hover{
-                                >&::before{
+                            &:hover{
+                                &::before{
                                 }
                             }//hover
     
@@ -2099,16 +2135,16 @@ div.wrapper{
                         height: 48px; //태블릿: 100%x56px //모바일: height: 48px
                         >a{
                             @include flex(); //모바일: center
-                            >&::after{//화살표
+                            &::after{//화살표
                                 display: none; //모바일
                             }   
     
-                            >&::before{//검은배경
+                            &::before{//검은배경
                             }
     
                             // a hover시
-                            >&:hover{
-                                >&::before{
+                            &:hover{
+                                &::before{
                                 }
                             }//hover
     
@@ -2161,8 +2197,8 @@ div.wrapper{
             }//div.left
         
             >div.right{
-                    >&.tbPc{display: block;}
-                    >&.Mb{display: none;}
+                    &.tbPc{display: block;}
+                    &.Mb{display: none;}
                     //태블릿: max-width: 456px;
                     width: 510px; height: 540px; //태블릿: 450x428
                     //모바일: 100%x233px
@@ -2182,7 +2218,7 @@ div.wrapper{
                         border-bottom: 1px solid #ebebeb; //모바일: none
                         z-index: 0;
                         
-                        >&::before{//검은배경 //모바일: display: none;
+                        &::before{//검은배경 //모바일: display: none;
                             content: '';
                             display: inline-block;
                             width: 0%; height: 100%;
@@ -2212,9 +2248,9 @@ div.wrapper{
                             }
                         }//a
 
-                        >&:hover{
+                        &:hover{
                             //모바일: display: none;
-                            >&::before{
+                            &::before{
                                 width: 100%;
                                 transition: 0.2s;
                             }
@@ -2321,7 +2357,7 @@ div.wrapper{
                         height: 30%; //모바일: 100% 
                         border-bottom: 1px solid #ebebeb; //모바일: none
                         
-                        >&::before{//검은배경 //모바일: display: none;
+                        &::before{//검은배경 //모바일: display: none;
                         }
     
                         >a{
@@ -2342,9 +2378,9 @@ div.wrapper{
                             }
                         }//a
     
-                        >&:hover{
+                        &:hover{
                             //모바일: display: none;
-                            >&::before{
+                            &::before{
                             }
                             >a{
                                 >strong{                    
@@ -2421,8 +2457,8 @@ div.wrapper{
             }//div.left
         
             >div.right{
-                >&.tbPc{display: none;}
-                >&.Mb{display: block;}
+                &.tbPc{display: none;}
+                &.Mb{display: block;}
                 max-width: none; // 태블릿 //모바일: none
                 width: 100%; height: 184px; //태블릿: 100%x428
                 border: 2px solid #000; //모바일
@@ -2440,7 +2476,7 @@ div.wrapper{
                         height: 100%; //모바일: 100% 
                         border-bottom: none; //모바일: none
                         
-                        >&::before{//검은배경 
+                        &::before{//검은배경 
                             display: none; //모바일
                         }
     
@@ -2462,8 +2498,8 @@ div.wrapper{
                             }
                         }//a
     
-                        >&:hover{                       
-                            >&::before{
+                        &:hover{                       
+                            &::before{
                             }
                             >a{
                                 >strong{   
@@ -2889,7 +2925,7 @@ div.wrapper_Btn{
         @include font(18px, 600, inherit); //태블릿: 16px //모바일: 14px
 
         @include flex();
-        >&::after{
+        &::after{
             //선물상자 아이콘
             content: '';
             display: inline-block;
@@ -2917,7 +2953,7 @@ div.wrapper_Btn{
             @include font(16px, 600, inherit); //태블릿: 16px //모바일: 14px
 
             @include flex();
-            >&::after{
+            &::after{
                 //선물상자 아이콘
                 width: 32px; height: 32px; //태블릿: 32x32
                 margin-left: 8px; //태블릿: 8px
@@ -2937,7 +2973,7 @@ div.wrapper_Btn{
             @include font(14px, 600, inherit); //태블릿: 16px //모바일: 14px
 
             @include flex();
-            >&::after{
+            &::after{
                 //선물상자 아이콘
             }
         }

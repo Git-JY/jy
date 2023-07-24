@@ -243,33 +243,6 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
     margin-right: 20px;
     font-size: 12.5px;
   }
-  header {
-    color: white;
-  }
-  header > .head_El > h1.Logo > a {
-    background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
-  }
-  header > .head_El > div.head_right > .Language {
-    border: 1px solid white;
-  }
-  header > .head_El > div.head_right > .verMenu_btn {
-    background: url("../../header/img/icon_headerLogo_white.svg") center center/100% 100% no-repeat scroll;
-  }
-  header:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    height: 56px;
-    box-shadow: none;
-  }
-  header:hover > .head_El > h1.Logo > a {
-    background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
-  }
-  header:hover > .head_El > div.head_right > .Language {
-    border: 1px solid white;
-  }
-  header:hover > .head_El > div.head_right > .verMenu_btn {
-    background: url("../../header/img/icon_headerLogo_white.svg") center center/100% 100% no-repeat scroll;
-  }
 }
 
 header.firstFloor {
@@ -2597,4 +2570,4 @@ div.wrapper_Btn > div.moveScrollTop_btn {
     font-size: 20px;
     margin: 8px 4px 0 0;
   }
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index22.css.map */

@@ -936,6 +936,7 @@ const fullPage = document.querySelector('.fullPage'),
         progressAllBar = fullPage.querySelector('p'),
         progressBar = fullPage.querySelector('p>span'),
         allNum = fullPage.querySelector('span:nth-of-type(2)');
+const   header = document.querySelector('header');
 
 let floor = 0;
 document.body.style = `height: ${view.offsetHeight}px;`;
@@ -978,6 +979,11 @@ document.body.style = `height: ${view.offsetHeight}px;`;
                         let footerHeight = window.getComputedStyle(footer).height;
                         console.log(footerHeight);
                         view.style = `transform: translateY(calc(-100vh*${(floor-1)} - ${footerHeight})); transition: 1s`;
+                    }
+                    
+                    header.classList.remove('firstFloor');
+                    if(floor == 0){
+                        header.classList.add('firstFloor');
                     }
 
                 }, 500);//timer = setTimeout
@@ -1025,6 +1031,40 @@ document.body.style = `height: ${view.offsetHeight}px;`;
             view.style = `transform: translateY(${floor}); transition: 1s`;
         }//topBtn.onclick
     
+
+</script>
+
+<script>
+Hmd = matchMedia('(min-width: 1285px)');
+
+let headerHover = function(){
+    header.onmouseenter = function(){ //마우스 호버
+        if(Hmd.matches) header.classList.remove('firstFloor');
+    }//header.onmouseenter
+
+    header.onmouseleave = function(){//호버 취소
+        if(Hmd.matches){
+            if(floor == 0){
+                header.classList.add('firstFloor');
+            }
+        }
+    }//header.onmouseleave
+}//headerHover() 함수정의
+
+// let headerHover = function(){
+//     header.onmouseenter = function(){ //마우스 호버
+//         header.classList.remove('firstFloor');
+//     }//header.onmouseenter
+
+//     header.onmouseleave = function(){//호버 취소
+//             if(floor == 0){
+//                 header.classList.add('firstFloor');
+//             }
+//     }//header.onmouseleave
+// }//headerHover() 함수정의
+
+headerHover();
+Hmd.addListener(headerHover);
 
 </script>
 

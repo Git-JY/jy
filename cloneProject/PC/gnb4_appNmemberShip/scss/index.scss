@@ -39,6 +39,7 @@ body{
     //min-width: 1285px; //임시
     overflow-x: hidden;
 }
+
 // - - - - - - - - - - header↓ - - - - - - - - - - 
 header{
     transition: 0.3s;
@@ -157,7 +158,8 @@ header{
             display:none;
         }
         &:hover{
-            background-color: rgba(255, 255, 255, 0); 
+            background-color: rgba(0, 0, 0, 0.8);
+            // background-color: rgba(255, 255, 255, 0); 
             color: $headerColor;
             height: $headHeight;
             box-shadow: none;
@@ -181,8 +183,9 @@ header{
 
     //타블렛 1022px이하
     @media(max-width: 1022px){
-        height: 88px; //태블릿: 88px //모바일: 높이가 56px
 
+        height: 88px; //태블릿: 88px //모바일: 높이가 56px
+        &:hover{height: 88px;}
         padding-top: 33px; //태블릿: 33px //모바일: 17px 
     
         >.head_El{            
@@ -213,7 +216,7 @@ header{
     //모바일 896px이하
     @media(max-width: 896px){
         height: 56px; //태블릿: 88px //모바일: 높이가 56px
-
+        &:hover{height: 56px;}
         padding-top: 17px; //태블릿: 33px //모바일: 17px 
     
         >.head_El{            
@@ -235,10 +238,13 @@ header{
             }//div.head_right
 
         }//.head_El //헤더요소들
+
+
+
     }//@media(max-width: 896px) //모바일 896px이하 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 }//header //헤더배경
 // - - - - - - - - - - header↑ - - - - - - - - - -
-
 
 //- - - - - - - - - - Navigation↓ - - - - - - - - - -
 nav{
@@ -257,7 +263,7 @@ nav{
 
     transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);;
 
-    >&.active{
+    &.active{
         transform: translateX(0%);
         opacity: 100%;
     }
@@ -307,7 +313,7 @@ nav{
                 white-space: nowrap;
                 transition: all .3s;
 
-                >&::before{
+                &::before{
                     content: '';
                     display: none;
                     width: 10px; height: 10px;
@@ -318,7 +324,7 @@ nav{
                     opacity: 0%;
                 }
                 &:hover{
-                    >&:before{
+                    &:before{
                         display: inline-block;
                         margin-right: 30px;
                         opacity: 100%;
@@ -334,13 +340,13 @@ nav{
                 opacity: 0%;
 
                 >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                    >&:not(:first-child){margin-top: 32px;} //태블릿: 24px //모바일: 16px
+                    &:not(:first-child){margin-top: 32px;} //태블릿: 24px //모바일: 16px
                     >a{
                         @include font(32px, 700, #fff); //태블릿: 24px //모바일: 16px
                         line-height: 48px; //태블릿: 100%
                         white-space: nowrap;
                     }
-                    >&.mini{
+                    &.mini{
                         margin-top: 0px; //태블릿: 14px //모바일: 16px
                         >a{
                             @include font(24px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -352,10 +358,10 @@ nav{
             }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
             //태블릿, 모바일 알아서 바꿔보삼
-            >&.active{
+            &.active{
                 >a{
                     // color: white;
-                    >&:before{
+                    &:before{
                         display: inline-block;
                         margin-right: 30px;
                         opacity: 100%;
@@ -380,7 +386,7 @@ nav{
         >ul.sideMenu{
             >li{
                 text-align: right; //모바일: left
-                >&:not(:last-child){margin-bottom: 20px;} //태블릿: 16px //모바일
+                &:not(:last-child){margin-bottom: 20px;} //태블릿: 16px //모바일
                 >a{
                     @include font(20px, 500, #999); //태블릿: 16px //모바일: 14px
                 }
@@ -410,7 +416,7 @@ nav{
         padding: 0 48px; //태블릿: 48px //모바일: 32px
         @include flex(flex-start, flex-start){flex-direction: column}; //태블릿: (flex-start, flex-start)
 
-        >&.active{
+        &.active{
         }
 
         // ↓ 모바일은 알아서 맞춰보삼
@@ -446,7 +452,7 @@ nav{
                 >a{
                     line-height: 48px; //태블릿: 48px //모바일: 36px
 
-                    >&::before{
+                    &::before{
                     }
                 }
 
@@ -456,12 +462,12 @@ nav{
                     left: calc(350px + 60px); //태블릿: calc(350px + 60px) // 모바일: 0px
 
                     >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                        >&:not(:first-child){margin-top: 24px;} //태블릿: 24px //모바일: 16px
+                        &:not(:first-child){margin-top: 24px;} //태블릿: 24px //모바일: 16px
                         >a{
                             @include font(24px, 700, #fff); //태블릿: 24px //모바일: 16px
                             line-height: 100%; //태블릿: 100%
                         }
-                        >&.mini{
+                        &.mini{
                             margin-top: 14px; //태블릿: 14px //모바일: 16px
                             >a{
                                 @include font(20px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -473,9 +479,9 @@ nav{
                 }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
                 //태블릿, 모바일 알아서 바꿔보삼
-                >&.active{
+                &.active{
                     >a{
-                        >&:before{
+                        &:before{
                             margin-right: 15px;
                         }
                     }
@@ -496,7 +502,7 @@ nav{
             >ul.sideMenu{
                 >li{
                     text-align: right; //모바일: left
-                    >&:not(:last-child){margin-bottom: 16px;} //태블릿: 16px //모바일: 14px
+                    &:not(:last-child){margin-bottom: 16px;} //태블릿: 16px //모바일: 14px
                     >a{
                         @include font(16px, 500, #999); //태블릿: 16px //모바일: 14px
                     }
@@ -526,7 +532,7 @@ nav{
         padding: 0 32px; //태블릿: 48px //모바일: 32px
         padding-right: calc(100vw - 100% + 32px); //스크롤바까지 계산
 
-        >&.active{
+        &.active{
         }
 
         // ↓ 모바일은 알아서 맞춰보삼
@@ -554,11 +560,11 @@ nav{
                 >a{
                     line-height: 36px; //태블릿: 48px //모바일: 36px
 
-                    >&::before{
+                    &::before{
                         width: 8px; height: 8px;
                     }
                     &:hover{
-                        >&:before{
+                        &:before{
                             display: inline-block;
                             margin-right: 10px;
                             opacity: 100%;
@@ -574,11 +580,11 @@ nav{
                     margin: 24px 0px;
 
                     >li{// 투썸플레이스 ~ 브랜드 브로슈어(총 9개의 li의 lnb [6,2,1 개로 나뉨])
-                        >&:not(:first-child){margin-top: 16px;} //태블릿: 24px //모바일: 16px
+                        &:not(:first-child){margin-top: 16px;} //태블릿: 24px //모바일: 16px
                         >a{
                             @include font(16px, 700, #fff); //태블릿: 24px //모바일: 16px
                         }
-                        >&.mini{
+                        &.mini{
                             margin-top: 16px; //태블릿: 14px //모바일: 16px
                             >a{
                                 @include font(14px, 500, #ccc); //태블릿: 20px //모바일: 14px
@@ -589,9 +595,9 @@ nav{
                 }//ul.head_lnb //(gnb1_투썸플레이스 소개의 lnb)
 
                 //태블릿, 모바일 알아서 바꿔보삼
-                >&.active{
+                &.active{
                     >a{
-                        >&:before{
+                        &:before{
                             margin-right: 10px;
                         }
                         
@@ -616,7 +622,7 @@ nav{
             >ul.sideMenu{
                 >li{
                     text-align: left; //모바일: left
-                    >&:not(:last-child){margin-bottom: 14px;} //태블릿: 16px //모바일: 14px
+                    &:not(:last-child){margin-bottom: 14px;} //태블릿: 16px //모바일: 14px
                     >a{
                         @include font(14px, 500, #999); //태블릿: 16px //모바일: 14px
                     }
@@ -946,7 +952,7 @@ nav{
                             border-radius: 50%;
                             margin-right: 12px;
 
-                            >&:nth-of-type(1){ //현재 페이지
+                            &:nth-of-type(1){ //현재 페이지
                                 width: 20px;
                                 background: black;
                                 opacity: 1;
@@ -1261,7 +1267,7 @@ nav{
 
                         >li{
 
-                            >&:nth-of-type(1){ //현재 페이지
+                            &:nth-of-type(1){ //현재 페이지
     
                             }
                         }//>li
@@ -1526,7 +1532,7 @@ nav{
 
                         >li{
 
-                            >&:nth-of-type(1){ //현재 페이지
+                            &:nth-of-type(1){ //현재 페이지
     
                             }
                         }//>li
