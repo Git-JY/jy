@@ -65,7 +65,7 @@ header{
             >a{
                 display: inline-block;
                 width: 152px; height: 21px; //헤더 로고 크기 //커졌을 때 198x27 //작아졌을 때 152x21
-                background: url('../../header/img/Logo_#{$headerColor}.svg') center center / 100% 100% no-repeat scroll;
+                background: url('../../header/img/logo_#{$headerColor}.svg') center center / 100% 100% no-repeat scroll;
             }
         }//h1.Logo
         //- - - - - - - - - -(gnb와 lnb전체)- - - - - - - - - -
@@ -134,7 +134,7 @@ header{
 
         >.head_El{
             >h1.Logo>a{
-                background: url('../../header/img/Logo_black.svg') center center / 100% 100% no-repeat scroll;
+                background: url('../../header/img/logo_black.svg') center center / 100% 100% no-repeat scroll;
             }
             >div.head_right{
                 >.Language{
@@ -166,7 +166,7 @@ header{
     
             >.head_El{
                 >h1.Logo>a{
-                    background: url('../../header/img/Logo_#{$headerColor}.svg') center center / 100% 100% no-repeat scroll;
+                    background: url('../../header/img/logo_#{$headerColor}.svg') center center / 100% 100% no-repeat scroll;
                 }
                 >div.head_right{
                     >.Language{

@@ -105,7 +105,7 @@ header > .head_El > h1.Logo > a {
   display: inline-block;
   width: 152px;
   height: 21px;
-  background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
+  background: url("../../header/img/logo_white.svg") center center/100% 100% no-repeat scroll;
 }
 header > .head_El > ul.head_gnb_horizontal {
   display: flex;
@@ -168,7 +168,7 @@ header:hover {
   box-shadow: 0px 5px 20px rgba(120, 120, 120, 0.15);
 }
 header:hover > .head_El > h1.Logo > a {
-  background: url("../../header/img/Logo_black.svg") center center/100% 100% no-repeat scroll;
+  background: url("../../header/img/logo_black.svg") center center/100% 100% no-repeat scroll;
 }
 header:hover > .head_El > div.head_right > .Language {
   border: 1px solid black;
@@ -191,7 +191,7 @@ header:hover > .head_El > div.head_right > .verMenu_btn {
     box-shadow: none;
   }
   header:hover > .head_El > h1.Logo > a {
-    background: url("../../header/img/Logo_white.svg") center center/100% 100% no-repeat scroll;
+    background: url("../../header/img/logo_white.svg") center center/100% 100% no-repeat scroll;
   }
   header:hover > .head_El > div.head_right > .Language {
     border: 1px solid white;
