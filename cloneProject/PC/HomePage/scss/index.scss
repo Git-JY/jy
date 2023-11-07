@@ -2910,6 +2910,7 @@ div.fullPage{
 
 //기업단체구매 버튼 + 스크롤최상단이동 버튼
 div.wrapper_Btn{
+    pointer-events: none;
     transition: all .5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 
     position: fixed; right: 24px; bottom: 24px;
@@ -2918,6 +2919,7 @@ div.wrapper_Btn{
     @include flex(center,flex-end){flex-direction: column};
 
     >a.bulkPurchase_btn{
+        pointer-events: fill;
         width: 191px; height: 72px; //태블릿: 168x56 
         border-radius: 36px; //태블릿: 18px 
         background-color: rgba(213,0,55,0.9);
@@ -2935,6 +2937,7 @@ div.wrapper_Btn{
         }
     }
     >div.moveScrollTop_btn{
+        pointer-events: fill;
         width: 64px; height: 64px; //태블릿: 56x56 //모바일: 48x48
         background-color: rgba(120,120,120,0.7);
         cursor: pointer;
