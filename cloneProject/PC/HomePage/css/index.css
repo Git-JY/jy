@@ -2513,6 +2513,7 @@ div.fullPage > p > span {
 }
 
 div.wrapper_Btn {
+  pointer-events: none;
   transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
   position: fixed;
   right: 24px;
@@ -2526,6 +2527,7 @@ div.wrapper_Btn {
   flex-direction: column;
 }
 div.wrapper_Btn > a.bulkPurchase_btn {
+  pointer-events: fill;
   width: 191px;
   height: 72px;
   border-radius: 36px;
@@ -2547,6 +2549,7 @@ div.wrapper_Btn > a.bulkPurchase_btn::after {
   margin-left: 12px;
 }
 div.wrapper_Btn > div.moveScrollTop_btn {
+  pointer-events: fill;
   width: 64px;
   height: 64px;
   background-color: rgba(120, 120, 120, 0.7);
